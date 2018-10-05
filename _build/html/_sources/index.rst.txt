@@ -1,0 +1,22 @@
+
+Simmons Ocean Atlas
+===================
+
+
+Welcome to Simmons Ocean Atlas Project
+======================================
+
+Code block example.::
+  print 'hello world'
+  >>
+
+Guide
+^^^^^
+.. toctree::
+   :maxdepth: 2
+
+   overview
+   catalog
+   getting_started
+   tutorials
+   API_reference
