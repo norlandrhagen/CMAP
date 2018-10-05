@@ -12,16 +12,16 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'Simmons Ocean Atlas'
-copyright = '2018, Raphael Hagen'
-author = 'Raphael Hagen'
+copyright = '2018, Mohammad Dehghani  & Raphael Hagen'
+author = 'Mohammad Dehghani & Raphael Hagen'
 
 # The short X.Y version
 version = ''
@@ -74,18 +74,36 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+html_theme = 'sphinx_rtd_theme'
 
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-#
-# html_theme_options = {}
+
+# A shorter title for the navigation bar.  Default is the same as html_title.
+html_short_title = 'Simmons Ocean Atlas'
+
+# The name of an image file (relative to this directory) to place at the top
+# of the sidebar.
+html_logo = '_static/caustics_grid.png'
+
+# The name of an image file (relative to this directory) to use as a favicon of
+# the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
+# pixels large.
+
+#html_favicon = '_static/favicon.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# adapted from: http://rackerlabs.github.io/docs-rackspace/tools/rtd-tables.html
+# and
+# https://github.com/rtfd/sphinx_rtd_theme/issues/117
+def setup(app):
+    #app.add_stylesheet('theme_overrides.css')
+    app.add_stylesheet('custom.css')
+
+
+
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
