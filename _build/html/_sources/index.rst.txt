@@ -1,9 +1,6 @@
 
-Simmons Ocean Atlas
-===================
 
-
-Welcome to Simmons Ocean Atlas Project
+Welcome to Simmons Ocean Atlas
 ======================================
 
 Code block example.::
