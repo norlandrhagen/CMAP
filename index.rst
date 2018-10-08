@@ -38,7 +38,3 @@ The Simmons Ocean Atlas is an open source database service to integrate, visuali
   :caption: API Reference
 
   API_ref/API_reference
-   .. catalog
-   .. getting_started
-   .. tutorials
-   .. API_reference

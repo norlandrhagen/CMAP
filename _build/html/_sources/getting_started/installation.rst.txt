@@ -13,7 +13,7 @@ Installation
 ============
 
 1. Install Anaconda Distribution
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 https://www.anaconda.com/download/
 
 2. Set up database drivers (only required on macOS)
