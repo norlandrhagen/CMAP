@@ -1,18 +1,6 @@
-
-
 Example of Plots
 ================
-|
-|
 
-Time Series
-^^^^^^^^^^^
-
-.. raw:: html
-   :file: TS.html
-
-|
-|
 
 
 Regional Map
@@ -20,3 +8,9 @@ Regional Map
 
 .. raw:: html
    :file: RM.html
+
+
+Time Series
+^^^^^^^^^^^
+.. raw:: html
+   :file: TS.html

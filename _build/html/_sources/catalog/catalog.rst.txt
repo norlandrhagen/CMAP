@@ -14,5 +14,5 @@ Spatial Data Extent
 ===================
 
 
-Data Variable Descriptions and Meta Data
+Data Variable Descriptions and Metadata
 ========================================
