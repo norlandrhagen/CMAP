@@ -1,3 +1,18 @@
 
 Catalog
 =======
+All data included in the Simmons Ocean Atlas must have Date, Time, Latitude and Longitude.
+
+Temporal Data Extent
+====================
+
+.. image:: /_static/data_timeline_test.png
+   :width: 700px
+   :align: center
+
+Spatial Data Extent
+===================
+
+
+Data Variable Descriptions and Meta Data
+========================================

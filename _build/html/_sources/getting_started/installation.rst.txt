@@ -4,6 +4,7 @@ System Requirements
 - Anaconda Distribution Python 2.7 or 3.7
 - Python must be in the system path
 - Additional Python modules
+
    - pyodbc
    - dropbox
    - geopandas

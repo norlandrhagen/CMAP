@@ -1,6 +1,6 @@
 
 
-Welcome to the Simmons Ocean Atlas
+Simmons Ocean Atlas
 ======================================
 
 The Simmons Ocean Atlas is an open source database service to integrate, visualize, and analyze ocean datasets such as satellite data, in-situ observations, and model outputs. The project is supported by Simons Foundation.
@@ -18,7 +18,6 @@ The Simmons Ocean Atlas is an open source database service to integrate, visuali
   :caption: Gallery
 
   gallery/example_gallery
-
 
 
 .. toctree::

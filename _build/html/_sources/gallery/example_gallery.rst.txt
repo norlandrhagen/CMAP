@@ -1,2 +1,22 @@
-Example Gallery
-===============
+
+
+Example of Plots
+================
+|
+|
+
+Time Series
+^^^^^^^^^^^
+
+.. raw:: html
+   :file: TS.html
+
+|
+|
+
+
+Regional Map
+^^^^^^^^^^^^
+
+.. raw:: html
+   :file: RM.html
