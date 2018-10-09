@@ -104,7 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html#temporal-data-extent">Temporal Data Extent</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html#spatial-data-extent">Spatial Data Extent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html#data-variable-descriptions-and-meta-data">Data Variable Descriptions and Meta Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html#data-variable-descriptions-and-metadata">Data Variable Descriptions and Metadata</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -203,24 +203,21 @@
 </div>
 <div class="section" id="set-up-database-drivers-only-required-on-macos">
 <h2>2. Set up database drivers (only required on macOS)<a class="headerlink" href="#set-up-database-drivers-only-required-on-macos" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><div class="line-block">
-<div class="line">$ /usr/bin/ruby -e “$(curl -fsSL <a class="reference external" href="https://raw.githubusercontent.com/Homebrew/install/master/install">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</div>
-<div class="line">$ brew install unixodbc</div>
-<div class="line">$ brew install freetds –with-unixodbc</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir <span class="nb">test</span>
+<span class="gp">$</span> /usr/bin/ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span>
+<span class="gp">$</span> brew install unixodbc
+<span class="gp">$</span> brew install freetds --with-unixodbc
+</pre></div>
 </div>
-</div></blockquote>
 </div>
 <div class="section" id="install-additional-python-modules">
 <h2>3. Install Additional Python Modules<a class="headerlink" href="#install-additional-python-modules" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><div class="line-block">
-<div class="line">$ conda update –all</div>
-<div class="line">$ conda install pyodbc</div>
-<div class="line">$ conda install dropbox</div>
-<div class="line">$ conda install -c conda-forge geopandas</div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda update --all
+<span class="gp">$</span> conda install pyodbc
+<span class="gp">$</span> conda install dropbox
+<span class="gp">$</span> conda install -c conda-forge geopandas
+</pre></div>
 </div>
-</div></blockquote>
 </div>
 </div>
 
