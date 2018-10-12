@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Catalog &mdash; Simmons Ocean Atlas 0.0.1 documentation</title>
+  <title>Data Haronization &mdash; Simmons Ocean Atlas 0.0.1 documentation</title>
   
 
   
@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tutorials" href="../tutorials/tutorials.html" />
+    <link rel="next" title="Datasets" href="datasets.html" />
     <link rel="prev" title="Example of Plots" href="../gallery/example_gallery.html" />
     <link href="../_static/custom.css" rel="stylesheet" type="text/css">
 
@@ -96,10 +96,12 @@
 </ul>
 <p class="caption"><span class="caption-text">Data Catalog</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#temporal-data-extent">Temporal Data Extent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#spatial-data-extent">Spatial Data Extent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#data-variable-descriptions-and-metadata">Data Variable Descriptions and Metadata</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Haronization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-sets-available">Data Sets Available</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/Argo.html">Argo</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul>
@@ -153,7 +155,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Catalog</li>
+      <li>Data Haronization</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -172,32 +174,90 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="catalog">
-<h1>Catalog<a class="headerlink" href="#catalog" title="Permalink to this headline">¶</a></h1>
-<p>All data included in the Simmons Ocean Atlas must have Date, Time, Latitude and Longitude.</p>
-</div>
-<div class="section" id="temporal-data-extent">
-<h1>Temporal Data Extent<a class="headerlink" href="#temporal-data-extent" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="../_images/data_timeline_test.png"><img alt="../_images/data_timeline_test.png" class="align-center" src="../_images/data_timeline_test.png" style="width: 700px;" /></a>
-</div>
-<div class="section" id="spatial-data-extent">
-<h1>Spatial Data Extent<a class="headerlink" href="#spatial-data-extent" title="Permalink to this headline">¶</a></h1>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get active layer:</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">layer</span> <span class="o">=</span> <span class="n">iface</span><span class="o">.</span><span class="n">activeLayer</span><span class="p">()</span>
-
-<span class="c1"># Print its name, and its number of features:</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">name</span><span class="p">())</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="s1">&#39;DAMSELFISH Distributions&#39;</span>
-
-<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">featureCount</span><span class="p">())</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="mi">231</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="data-variable-descriptions-and-metadata">
-<h1>Data Variable Descriptions and Metadata<a class="headerlink" href="#data-variable-descriptions-and-metadata" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">mkdir test</span>
-</pre></div>
+  <div class="section" id="data-haronization">
+<span id="catalog"></span><h1>Data Haronization<a class="headerlink" href="#data-haronization" title="Permalink to this headline">¶</a></h1>
+<p>All data in the Simmons Ocean Atlas should be structured in the format:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="20%" />
+<col width="22%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>DATE</td>
+<td>TIME</td>
+<td>LATITUDE</td>
+<td>LONGITUDE</td>
+<td>DATA VARIABLE(S)</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="data-sets-available">
+<h2>Data Sets Available<a class="headerlink" href="#data-sets-available" title="Permalink to this headline">¶</a></h2>
+<p>Spatial and Temporal Resolutions are approximate - for more detail see each dataset documentation</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="17%" />
+<col width="11%" />
+<col width="9%" />
+<col width="9%" />
+<col width="20%" />
+<col width="15%" />
+<col width="10%" />
+<col width="8%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Datset Name</th>
+<th class="head">Spatial Coverage</th>
+<th class="head">Sensor Type</th>
+<th class="head">Make</th>
+<th class="head">Spatial Resolution</th>
+<th class="head">Temporal Resolution</th>
+<th class="head">Start Date</th>
+<th class="head">End Date</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="datasets/Argo.html#argo"><span class="std std-ref">Argo</span></a></td>
+<td><a class="reference internal" href="../_images/buoy.png"><img alt="float" class="align-middle" src="../_images/buoy.png" style="width: 51.2px; height: 51.2px;" /></a></td>
+<td><a class="reference internal" href="../_images/argo.png"><img alt="argo" class="align-middle" src="../_images/argo.png" style="width: 25.0px; height: 50.0px;" /></a></td>
+<td>Observation</td>
+<td>~ 3° X 3°</td>
+<td>Irregular</td>
+<td>2002-09-08</td>
+<td>2018-06-07</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="datasets/SST.html#sst"><span class="std std-ref">SST</span></a></td>
+<td><a class="reference internal" href="../_images/globe.png"><img alt="globe" class="align-middle" src="../_images/globe.png" style="width: 51.2px; height: 51.2px;" /></a></td>
+<td><a class="reference internal" href="../_images/satellite.png"><img alt="sat" class="align-middle" src="../_images/satellite.png" style="width: 51.2px; height: 51.2px;" /></a></td>
+<td>Observation</td>
+<td>1/4° X 1/4°</td>
+<td>Daily</td>
+<td>2013-01-01</td>
+<td>2017-05-15</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="datasets/SeaFlow.html#seaflow"><span class="std std-ref">SeaFlow</span></a></td>
+<td><a class="reference internal" href="../_images/seaflow.png"><img alt="seaflow" class="align-middle" src="../_images/seaflow.png" style="width: 56.25px; height: 60.15px;" /></a></td>
+<td><a class="reference internal" href="../_images/cruise.jpg"><img alt="cruise" class="align-middle" src="../_images/cruise.jpg" style="width: 71.4px; height: 71.4px;" /></a></td>
+<td>Observation</td>
+<td>1/2° X 1/2°</td>
+<td>Three Minutes</td>
+<td>2010-22-10</td>
+<td>2017-06-13</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="datasets/Darwin.html#darwin"><span class="std std-ref">Darwin</span></a></td>
+<td><a class="reference internal" href="../_images/globe.png"><img alt="globe" class="align-middle" src="../_images/globe.png" style="width: 51.2px; height: 51.2px;" /></a></td>
+<td><a class="reference internal" href="../_images/comp.png"><img alt="comp" class="align-middle" src="../_images/comp.png" style="width: 51.2px; height: 51.2px;" /></a></td>
+<td>Model</td>
+<td>1/2° X 1/2°</td>
+<td>Monthly</td>
+<td>2013-08-11</td>
+<td>2013-09-04</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
@@ -209,7 +269,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../tutorials/tutorials.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="datasets.html" class="btn btn-neutral float-right" title="Datasets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../gallery/example_gallery.html" class="btn btn-neutral" title="Example of Plots" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
