@@ -27,11 +27,12 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="API Reference" href="../API_ref/API_reference.html" />
-    <link rel="prev" title="Catalog" href="../catalog/catalog.html" />
-    <link href="../_static/custom.css" rel="stylesheet" type="text/css">
+    <link rel="prev" title="Darwin" href="../catalog/datasets/Darwin.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 
   
@@ -96,10 +97,14 @@
 </ul>
 <p class="caption"><span class="caption-text">Data Catalog</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html#temporal-data-extent">Temporal Data Extent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html#spatial-data-extent">Spatial Data Extent</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html#data-variable-descriptions-and-meta-data">Data Variable Descriptions and Meta Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">Data Harmonization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets.html">Datasets</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/Argo.html">Argo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/SST.html">SST</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/SeaFlow.html">SeaFlow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/Darwin.html">Darwin</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Tutorials</span></p>
 <ul class="current">
@@ -187,7 +192,7 @@
         <a href="../API_ref/API_reference.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../catalog/catalog.html" class="btn btn-neutral" title="Catalog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../catalog/datasets/Darwin.html" class="btn btn-neutral" title="Darwin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -241,7 +246,18 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
 
 </body>
 </html>

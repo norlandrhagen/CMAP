@@ -27,10 +27,11 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Overview" href="getting_started/overview.html" />
-    <link href="_static/custom.css" rel="stylesheet" type="text/css">
+    <link href="_static/style.css" rel="stylesheet" type="text/css">
 
 
   
@@ -95,9 +96,15 @@
 </ul>
 <p class="caption"><span class="caption-text">Data Catalog</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="catalog/catalog.html">Data Haronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catalog/datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog/catalog.html">Data Sets Available</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="catalog/datasets/Argo.html">Argo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog/datasets/Argo.html#dataset-description">Dataset Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog/datasets/Argo.html#table-of-variables">Table of Variables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog/datasets/Argo.html#data-source">Data Source</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog/datasets/Argo.html#how-to-acknowledge">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog/datasets/Argo.html#version-history">Version History</a></li>
 <li class="toctree-l1"><a class="reference internal" href="catalog/datasets/SST.html">SST</a></li>
 <li class="toctree-l1"><a class="reference internal" href="catalog/datasets/SeaFlow.html">SeaFlow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="catalog/datasets/Darwin.html">Darwin</a></li>
@@ -193,16 +200,10 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Data Catalog</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="catalog/catalog.html">Data Haronization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="catalog/catalog.html#data-sets-available">Data Sets Available</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog/catalog.html">Data Sets Available</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="catalog/datasets.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catalog/datasets/Argo.html">Argo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catalog/datasets/SST.html">SST</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catalog/datasets/SeaFlow.html">SeaFlow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catalog/datasets/Darwin.html">Darwin</a></li>
-</ul>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Tutorials</span></p>
@@ -281,7 +282,18 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
 
 </body>
 </html>

@@ -21,11 +21,14 @@ The Simmons Ocean Atlas is an open source database service to integrate, visuali
 
 
 .. toctree::
-  :maxdepth: 3
+  :maxdepth: 1
   :caption: Data Catalog
 
   catalog/catalog
-  catalog/datasets
+
+.. toctree::
+  :hidden:
+
   catalog/datasets/Argo
   catalog/datasets/SST
   catalog/datasets/SeaFlow
