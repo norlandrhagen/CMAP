@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Simmons Ocean Atlas'
+project = 'Simons Ocean Atlas'
 copyright = '2018, Mohammad Dehghani  & Raphael Hagen'
 author = 'Mohammad Dehghani & Raphael Hagen'
 
@@ -39,6 +39,13 @@ release = '0.0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+   'sphinx.ext.autodoc',
+   'sphinx.ext.autosummary',
+   'sphinx.ext.doctest',
+   'sphinx.ext.coverage',
+   'sphinx.ext.githubpages',
+   'numpydoc.numpydoc'
+
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -82,7 +89,10 @@ html_short_title = 'Simmons Ocean Atlas'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = '_static/caustics_grid.png'
+# html_logo = '_static/caustics_grid.png'
+html_logo = '_static/soa_logo.png'
+
+
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32

@@ -4,4 +4,4 @@ API Reference
 
 Link to GitHub:
 
-| https://github.com/mdashkezari/opedia
+`opedia <https://github.com/mdashkezari/opedia>`_.

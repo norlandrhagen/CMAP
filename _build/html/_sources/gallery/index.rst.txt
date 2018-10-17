@@ -1,0 +1,38 @@
+
+.. This doc is to configure gallery
+
+.. _example-gallery:
+
+Example Gallery
+---------------
+
+This gallery contains a selection of examples of the plots Altair can create.
+
+Some may seem fairly complicated at first glance, but they are built by combining a simple set of declarative building blocks.
+
+Many draw upon sample datasets compiled by the
+
+
+.. _gallery-category-Simple Charts:
+
+Simple Charts
+~~~~~~~~~~~~~
+
+.. raw:: html
+
+      <span class="gallery">
+
+      <a class="imagegroup" href="scatter_tooltips.html">
+        <span class="image" alt="Scatter Plot with Tooltips" style="background-image: url(/_static/scatter_tooltips-thumb.png);"></span>
+        <span class="image-title">Scatter Plot with Tooltips</span>
+      </a>
+
+
+      </span>
+
+      <div style='clear:both;'></div>
+
+.. toctree::
+  :hidden:
+
+  scatter_tooltips
