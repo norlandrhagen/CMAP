@@ -6,7 +6,7 @@ Regional Map
 ************
 .. raw:: html
 
-    <iframe src="../_static/RM.html"   height="550px" width="90%">></iframe>
+    <iframe src="../_static/RM.html"   frameborder = 0 height="550px" width="100%">></iframe>
 
 
 
@@ -14,4 +14,4 @@ Time Series
 ************
 .. raw:: html
 
-    <iframe src="../_static/TS.html"  height="850px" width="70%">></iframe>
+    <iframe src="../_static/TS.html"  frameborder = 0  height="850px" width="100%">></iframe>

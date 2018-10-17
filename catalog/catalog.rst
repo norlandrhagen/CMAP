@@ -5,8 +5,8 @@
 
 
 
-Data Sets Available
-===================
+Data Catalog
+============
 
 .. |globe| image:: /_static/catalog_thumbnails/globe.png
    :scale: 10%
@@ -29,7 +29,7 @@ Data Sets Available
    :scale: 15%
    :align: middle
 
-.. |argo| image:: /_static/catalog_thumbnails/argo.png
+.. |argo| image:: /_static/catalog_thumbnails/float_simple.png
    :scale: 10%
    :align: middle
 

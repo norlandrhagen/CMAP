@@ -46,7 +46,7 @@ extensions = [
    'sphinx.ext.githubpages'
 
 ]
-
+ 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -69,11 +69,16 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path .
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store'
+'catalog/datasets/Argo',
+'catalog/datasets/SST',
+'catalog/datasets/SeaFlow',
+'catalog/datasets/Darwin'
+
+]
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
-
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -89,7 +94,7 @@ html_short_title = 'Simmons Ocean Atlas'
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 # html_logo = '_static/caustics_grid.png'
-html_logo = '_static/soa_logo.png'
+html_logo = '_static/soa_logo_small.png'
 
 
 
