@@ -43,8 +43,7 @@ extensions = [
    'sphinx.ext.autosummary',
    'sphinx.ext.doctest',
    'sphinx.ext.coverage',
-   'sphinx.ext.githubpages',
-   'numpydoc.numpydoc'
+   'sphinx.ext.githubpages'
 
 ]
 
