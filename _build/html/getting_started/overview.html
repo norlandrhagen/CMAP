@@ -165,7 +165,24 @@
 <p>The Simons Ocean Atlas is an open source database service to integrate, visualize, and analyze ocean datasets such as satellite data, in-situ observations, and model outputs.
 The project is supported by Simons Foundation.</p>
 <p><strong>Data structure</strong></p>
-<p>All of the data sets in the Simmons Ocean Atlas have the same basic structure of: [Time, Lat, Long, Depth, Variable]</p>
+<p>All data in the Simmons Ocean Atlas should be structured in the format:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="20%" />
+<col width="22%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>DATE</td>
+<td>TIME</td>
+<td>LATITUDE</td>
+<td>LONGITUDE</td>
+<td>DATA VARIABLE(S)</td>
+</tr>
+</tbody>
+</table>
 <p>The temporal and spatial resolution between data sets varies, but summaries of these coverages are provided within <a class="reference internal" href="../catalog/catalog.html#catalog"><span class="std std-ref">Data Catalog</span></a>.</p>
 <div class="section" id="installation">
 <h2>1.1. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
