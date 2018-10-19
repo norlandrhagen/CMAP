@@ -27,7 +27,7 @@ Dataset Description
 
 
 .. figure:: ../../_static/LCS/grid.png
-   :width: 80%
+   :width: 100%
 
 
 **LCS (Lagrangian Coherent Structures)** is a daily-global altimetry-derived [link to altimetry data set] and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.
@@ -38,6 +38,7 @@ A grid of passive tracers (hypothetical massless particles) is initialized over 
    \begin{equation} \label{Eq:Lyapunov}
    \Lambda = \lim_{|\delta x(t_0)| \to 0}  \lim_{t \to \infty} \frac{1}{t} \log \frac{\delta x(t)}{\delta x(t_0)}
    \end{equation}
+
 
 such that :math:`\Lambda` is the Lyapunov exponent, and :math:`\delta x(t)`, :math:`\delta x(0)` represent the separation between the tracers at times :math:`t` and :math:`t_0`, receptively.
 
