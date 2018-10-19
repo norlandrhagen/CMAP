@@ -7,18 +7,19 @@
 LCS
 ***
 
-.. |points| image:: /_static/catalog_thumbnails/points.png
-   :scale: 6%
-   :align: middle
-.. |argo| image:: /_static/catalog_thumbnails/float_simple.png
+.. |globe| image:: /_static/catalog_thumbnails/globe.png
    :scale: 10%
+   :align: middle
+.. |sat| image:: /_static/catalog_thumbnails/satellite.png
+   :scale: 10%
+   :align: middle
 
 
 
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`Argo`            |     |points|   |  |argo|     | Observation |      Irregular             |        Irregular     |  2002-09-08  | 2018-06-07 |
+| :ref:`LCS`             |     |globe|    | |sat|       | Observation |     1/25° X 1/25°          |         Daily        |  2014-01-01  | 2017-05-01 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
@@ -37,16 +38,13 @@ HTML table generated through python/sql script will live here
 Data Source
 ***********
 
-These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.
-
-(http://www.argo.ucsd.edu,  http://argo.jcommops.org).
-
-The Argo Program is part of the Global Ocean Observing System.
-
-http://doi.org/10.17882/42182
+Opedia
+Simons Ocean Atlas
 
 How to Acknowledge
 ******************
+
+https://github.com/mdashkezari/CS
 
 Version History
 ***************

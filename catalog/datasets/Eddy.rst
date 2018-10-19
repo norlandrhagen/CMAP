@@ -7,26 +7,26 @@
 Eddy
 ****
 
-.. |points| image:: /_static/catalog_thumbnails/points.png
-   :scale: 6%
-   :align: middle
-.. |argo| image:: /_static/catalog_thumbnails/float_simple.png
+.. |globe| image:: /_static/catalog_thumbnails/globe.png
    :scale: 10%
+   :align: middle
+.. |sat| image:: /_static/catalog_thumbnails/satellite.png
+   :scale: 10%
+   :align: middle
 
 
 
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`Argo`            |     |points|   |  |argo|     | Observation |      Irregular             |        Irregular     |  2002-09-08  | 2018-06-07 |
+| :ref:`Eddy`            |     |globe|    | |sat|       | Observation |     1/25° X 1/25°          |         Daily        |  2014-01-01  | 2017-05-01 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
 *******************
 
-Argo, the broad-scale global array of temperature/salinity profiling floats, is a major component of the ocean observing system. Deployment of floats began in 2000. Conceptually, Argo builds on the existing upper-ocean thermal networks, extending their spatial and temporal coverage, depth range and accuracy, and enhancing them through addition of salinity and velocity measurements. The name Argo is chosen to emphasize the strong complementary relationship of the global float array with the Jason altimeter mission. For the first time, the physical state of the upper ocean is systematically measured and assimilated in near real-time.
+A novel altimetry-based machine learning approach for eddy identification and characterization. The machine learning models use daily maps of geostrophic velocity anomalies and are trained according to the phase angle between the zonal and meridional components at each grid point. The trained models are then used to identify the corresponding eddy phase patterns and to predict the lifetime of a detected eddy structure.
 
-Argo consists of nearly 3200 floats and has a rough spatial resolution of ~ 3° X 3°
 
 Table of Variables
 ******************
@@ -37,16 +37,15 @@ HTML table generated through python/sql script will live here
 Data Source
 ***********
 
-These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.
+Opedia
 
-(http://www.argo.ucsd.edu,  http://argo.jcommops.org).
+Simons Ocean Atlas
 
-The Argo Program is part of the Global Ocean Observing System.
-
-http://doi.org/10.17882/42182
 
 How to Acknowledge
 ******************
+
+https://github.com/eddML
 
 Version History
 ***************

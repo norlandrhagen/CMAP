@@ -7,26 +7,27 @@
 Wind
 ****
 
-.. |points| image:: /_static/catalog_thumbnails/points.png
-   :scale: 6%
-   :align: middle
-.. |argo| image:: /_static/catalog_thumbnails/float_simple.png
+.. |globe| image:: /_static/catalog_thumbnails/globe.png
    :scale: 10%
+   :align: middle
+.. |sat| image:: /_static/catalog_thumbnails/satellite.png
+   :scale: 10%
+   :align: middle
 
 
 
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`Argo`            |     |points|   |  |argo|     | Observation |      Irregular             |        Irregular     |  2002-09-08  | 2018-06-07 |
+| :ref:`Wind`            |     |globe|    | |sat|       | Observation |     1/4° X 1/4°            |     Six Hourly       |  2012-11-15  | 2017-12-04 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
 *******************
 
-Argo, the broad-scale global array of temperature/salinity profiling floats, is a major component of the ocean observing system. Deployment of floats began in 2000. Conceptually, Argo builds on the existing upper-ocean thermal networks, extending their spatial and temporal coverage, depth range and accuracy, and enhancing them through addition of salinity and velocity measurements. The name Argo is chosen to emphasize the strong complementary relationship of the global float array with the Jason altimeter mission. For the first time, the physical state of the upper ocean is systematically measured and assimilated in near real-time.
+The IFREMER CERSAT Global Blended Mean Wind Fields include wind components (meridional and zonal), wind module, wind stress.
+The associated error estimates are also provided. They are estimated from scatterometers ASCAT and OSCAT retrievals and from ECMWF operational wind analysis with a horizontal resolution of 0.25x0.25 degrees and 6 hours in time, and available at synoptic time 00h:00; 06h:00; 12h:00; 18h:00 since January, 1st 2013.
 
-Argo consists of nearly 3200 floats and has a rough spatial resolution of ~ 3° X 3°
 
 Table of Variables
 ******************
@@ -37,13 +38,9 @@ HTML table generated through python/sql script will live here
 Data Source
 ***********
 
-These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.
+http://marine.copernicus.eu/
 
-(http://www.argo.ucsd.edu,  http://argo.jcommops.org).
-
-The Argo Program is part of the Global Ocean Observing System.
-
-http://doi.org/10.17882/42182
+Bentamy A., H-L Ayina, P. Queffeulou, D. Croize-Fillon ; 2006 : Improved Near Real Time Surface Wind Resolution over The Mediterranean Sea. Submitted to Ocean Journal.
 
 How to Acknowledge
 ******************
