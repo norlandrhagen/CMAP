@@ -6,46 +6,46 @@
 SOCAT
 *****
 
-.. |points| image:: /_static/catalog_thumbnails/points.png
-   :scale: 6%
-   :align: middle
-.. |argo| image:: /_static/catalog_thumbnails/float_simple.png
+.. |cruise| image:: /_static/catalog_thumbnails/cruise.jpg
    :scale: 10%
+   :align: middle
+
+
+.. |seaflow| image:: /_static/catalog_thumbnails/seaflow.png
+   :scale: 15%
+   :align: middle
 
 
 
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`Argo`            |     |points|   |  |argo|     | Observation |      Irregular             |        Irregular     |  2002-09-08  | 2018-06-07 |
+| :ref:`SOCAT`           |     |seaflow|  |  |cruise|   | Observation |     1/2° X 1/2°            |        Irregular     |  2003-01-06  | 2015-12-21 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
 *******************
 
-Argo, the broad-scale global array of temperature/salinity profiling floats, is a major component of the ocean observing system. Deployment of floats began in 2000. Conceptually, Argo builds on the existing upper-ocean thermal networks, extending their spatial and temporal coverage, depth range and accuracy, and enhancing them through addition of salinity and velocity measurements. The name Argo is chosen to emphasize the strong complementary relationship of the global float array with the Jason altimeter mission. For the first time, the physical state of the upper ocean is systematically measured and assimilated in near real-time.
-
-Argo consists of nearly 3200 floats and has a rough spatial resolution of ~ 3° X 3°
+The Surface Ocean CO₂ Atlas (SOCAT) is a synthesis activity for quality-controlled, surface ocean fCO₂ (fugacity of carbon dioxide) observations by the international marine carbon research community (>100 contributors). SOCAT data is publicly available, discoverable and citable. SOCAT enables quantification of the ocean carbon sink and ocean acidification and evaluation of ocean biogeochemical models. SOCAT, which celebrates its 10th anniversary in 2017, represents a milestone in biogeochemical and climate research and in informing policy.
 
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
-
+HTML table generated through python/sql script will live here 
 
 Data Source
 ***********
 
-These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.
+https://www.socat.info/
 
-(http://www.argo.ucsd.edu,  http://argo.jcommops.org).
-
-The Argo Program is part of the Global Ocean Observing System.
-
-http://doi.org/10.17882/42182
+An update to the Surface Ocean CO2 Atlas (SOCAT version 2). Earth System Science Data 6: 69-90.
+https://www.earth-syst-sci-data.net/6/69/2014/
 
 How to Acknowledge
 ******************
+
+doi:10.5194/essd-6-69-2014
+
 
 Version History
 ***************

@@ -5,26 +5,26 @@
 SeaFlow
 *******
 
-.. |points| image:: /_static/catalog_thumbnails/points.png
-   :scale: 6%
-   :align: middle
-.. |argo| image:: /_static/catalog_thumbnails/float_simple.png
+.. |cruise| image:: /_static/catalog_thumbnails/cruise.jpg
    :scale: 10%
+   :align: middle
+
+.. |seaflow| image:: /_static/catalog_thumbnails/seaflow.png
+   :scale: 15%
+   :align: middle
 
 
 
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`Argo`            |     |points|   |  |argo|     | Observation |      Irregular             |        Irregular     |  2002-09-08  | 2018-06-07 |
+| :ref:`SeaFlow`         |     |seaflow|  | |cruise|    | Observation |     1/2° X 1/2°            |    Three Minutes     |  2010-22-10  | 2017-06-13 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
 *******************
 
-Argo, the broad-scale global array of temperature/salinity profiling floats, is a major component of the ocean observing system. Deployment of floats began in 2000. Conceptually, Argo builds on the existing upper-ocean thermal networks, extending their spatial and temporal coverage, depth range and accuracy, and enhancing them through addition of salinity and velocity measurements. The name Argo is chosen to emphasize the strong complementary relationship of the global float array with the Jason altimeter mission. For the first time, the physical state of the upper ocean is systematically measured and assimilated in near real-time.
-
-Argo consists of nearly 3200 floats and has a rough spatial resolution of ~ 3° X 3°
+SeaFlow is a novel underway flow cytometer created at UW by Jarred Swalwell that is designed to measure continuously the abundance and composition of microbial populations, making it possible to analyze the equivalent of one sample every three minutes. The instrument collects information about the size and pigment content of an individual cell and counts several thousands cells every second in real-time. The instrument utilizes light scattering and autofluorescence properties of individual cells to discriminate and quantify different cell populations that span 0.5-15 micrometer in size. The instrument is semi-autonomous and can be controlled remotely via Satellite connection.SeaFlow data are processed at the Armbrust Lab by Francois Ribalet. Abundance and optical properties of of the different microbial populations can be visualized using our web interface created by Chris Berthiaume.
 
 Table of Variables
 ******************
@@ -35,13 +35,8 @@ HTML table generated through python/sql script will live here
 Data Source
 ***********
 
-These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.
-
-(http://www.argo.ucsd.edu,  http://argo.jcommops.org).
-
-The Argo Program is part of the Global Ocean Observing System.
-
-http://doi.org/10.17882/42182
+Simons Ocean Atlas
+Armbrust Lab, UW
 
 How to Acknowledge
 ******************

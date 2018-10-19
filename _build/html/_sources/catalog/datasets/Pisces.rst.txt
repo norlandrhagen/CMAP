@@ -6,26 +6,25 @@
 Pisces
 ******
 
-.. |points| image:: /_static/catalog_thumbnails/points.png
-   :scale: 6%
-   :align: middle
-.. |argo| image:: /_static/catalog_thumbnails/float_simple.png
+.. |globe| image:: /_static/catalog_thumbnails/globe.png
    :scale: 10%
+   :align: middle
 
-
+.. |comp| image:: /_static/catalog_thumbnails/comp.png
+   :scale: 10%
+   :align: middle
 
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`Argo`            |     |points|   |  |argo|     | Observation |      Irregular             |        Irregular     |  2002-09-08  | 2018-06-07 |
+| :ref:`Pisces`          |     |globe|    | |comp|      |   Model     |     1/2° X 1/2°            |         Weekly       | 2011-12-31   | 2017-12-09 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
 *******************
 
-Argo, the broad-scale global array of temperature/salinity profiling floats, is a major component of the ocean observing system. Deployment of floats began in 2000. Conceptually, Argo builds on the existing upper-ocean thermal networks, extending their spatial and temporal coverage, depth range and accuracy, and enhancing them through addition of salinity and velocity measurements. The name Argo is chosen to emphasize the strong complementary relationship of the global float array with the Jason altimeter mission. For the first time, the physical state of the upper ocean is systematically measured and assimilated in near real-time.
+Produced by Mercator Ocean in Toulouse, France, is a global Ocean Biogeochemical analysis product at 1/2°. It is providing a 7-days mean global forecast updated weekly as well as 3D global ocean biogeochemical weekly mean analysis for the past 2 years updated every week. This product includes weekly mean files of dissolved iron, nitrate, phosphate, silicate, dissolved oxygen, chlorophyll concentration, phytoplankton concentration and primary production parameters from the top to the bottom of the Global Ocean on a 1/2° regular grid projection interpolated from the 1/4° ARAKAWA-C native grid. Vertical coverage includes 50 levels ranging from 0 to 5500 meters.
 
-Argo consists of nearly 3200 floats and has a rough spatial resolution of ~ 3° X 3°
 
 Table of Variables
 ******************
@@ -36,13 +35,10 @@ HTML table generated through python/sql script will live here
 Data Source
 ***********
 
-These data were collected and made freely available by the International Argo Program and the national programs that contribute to it.
-
-(http://www.argo.ucsd.edu,  http://argo.jcommops.org).
-
-The Argo Program is part of the Global Ocean Observing System.
-
-http://doi.org/10.17882/42182
+http://marine.copernicus.eu
+http://cmems-resources.cls.fr/documents/PUM/CMEMS-GLO-PUM-001-014.pdf
+Aumont O. : PISCES. In prep (For Geoscientific Model Development
+Aumont, O. and Bopp, L. “Globalizing results from ocean in situ iron fertilization studies”. GlobalBiogeochem. Cycles. 20 (2):10–1029 (2006)
 
 How to Acknowledge
 ******************
