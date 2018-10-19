@@ -25,9 +25,31 @@ LCS
 Dataset Description
 *******************
 
-Argo, the broad-scale global array of temperature/salinity profiling floats, is a major component of the ocean observing system. Deployment of floats began in 2000. Conceptually, Argo builds on the existing upper-ocean thermal networks, extending their spatial and temporal coverage, depth range and accuracy, and enhancing them through addition of salinity and velocity measurements. The name Argo is chosen to emphasize the strong complementary relationship of the global float array with the Jason altimeter mission. For the first time, the physical state of the upper ocean is systematically measured and assimilated in near real-time.
 
-Argo consists of nearly 3200 floats and has a rough spatial resolution of ~ 3° X 3°
+.. figure:: ../../_static/LCS/grid.png
+   :width: 80%
+
+
+**LCS (Lagrangian Coherent Structures)** is a daily-global altimetry-derived [link to altimetry data set] and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.
+
+A grid of passive tracers (hypothetical massless particles) is initialized over the global domain with an initial uniform spacing of 4 km x 4 km. A flow map is then approximated by integrating particle trajectories for a fix period of time, :math:`\tau=15` days. At its fundamental levels, local Lyapunov exponents provide a metric for exponential rate of divergence for a pair of adjacent tracers:
+
+.. math::
+   \begin{equation} \label{Eq:Lyapunov}
+   \Lambda = \lim_{|\delta x(t_0)| \to 0}  \lim_{t \to \infty} \frac{1}{t} \log \frac{\delta x(t)}{\delta x(t_0)}
+   \end{equation}
+
+such that :math:`\Lambda` is the Lyapunov exponent, and :math:`\delta x(t)`, :math:`\delta x(0)` represent the separation between the tracers at times :math:`t` and :math:`t_0`, receptively.
+
+
+After integrating the particles for the fixed period of time, :math:`\tau=15`, FTLE fields are computed to demonstrate the local dispersion as well as local displacements (see example figures below). The particles can be integrated either forward or backward in time. The local maxima of the FTLE scalar field (ridges) can be interpreted as stable and unstable manifolds of the flow field in the case of forward and backward integration, respectively.
+
+
+.. figure:: ../../_static/LCS/displacement_dispersion.png
+   :width: 100%
+
+Please refer to the documentation below for more detailed information regarding FTLE mathematical framework.
+
 
 Table of Variables
 ******************
@@ -41,10 +63,12 @@ Data Source
 Opedia
 Simons Ocean Atlas
 
+https://github.com/mdashkezari/opedia/tree/master/CS
+https://github.com/mdashkezari/opedia/tree/master/CS/docs
+
 How to Acknowledge
 ******************
 
-https://github.com/mdashkezari/CS
 
 Version History
 ***************

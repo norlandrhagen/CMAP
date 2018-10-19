@@ -193,8 +193,21 @@
 </div>
 <div class="section" id="dataset-description">
 <h1>Dataset Description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h1>
-<p>Argo, the broad-scale global array of temperature/salinity profiling floats, is a major component of the ocean observing system. Deployment of floats began in 2000. Conceptually, Argo builds on the existing upper-ocean thermal networks, extending their spatial and temporal coverage, depth range and accuracy, and enhancing them through addition of salinity and velocity measurements. The name Argo is chosen to emphasize the strong complementary relationship of the global float array with the Jason altimeter mission. For the first time, the physical state of the upper ocean is systematically measured and assimilated in near real-time.</p>
-<p>Argo consists of nearly 3200 floats and has a rough spatial resolution of ~ 3° X 3°</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/grid.png"><img alt="../../_images/grid.png" src="../../_images/grid.png" style="width: 80%;" /></a>
+</div>
+<p><strong>LCS (Lagrangian Coherent Structures)</strong> is a daily-global altimetry-derived [link to altimetry data set] and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.</p>
+<p>A grid of passive tracers (hypothetical massless particles) is initialized over the global domain with an initial uniform spacing of 4 km x 4 km. A flow map is then approximated by integrating particle trajectories for a fix period of time, <span class="math notranslate nohighlight">\(\tau=15\)</span> days. At its fundamental levels, local Lyapunov exponents provide a metric for exponential rate of divergence for a pair of adjacent tracers:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation} \label{Eq:Lyapunov}
+\Lambda = \lim_{|\delta x(t_0)| \to 0}  \lim_{t \to \infty} \frac{1}{t} \log \frac{\delta x(t)}{\delta x(t_0)}
+\end{equation}\]</div>
+<p>such that <span class="math notranslate nohighlight">\(\Lambda\)</span> is the Lyapunov exponent, and <span class="math notranslate nohighlight">\(\delta x(t)\)</span>, <span class="math notranslate nohighlight">\(\delta x(0)\)</span> represent the separation between the tracers at times <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(t_0\)</span>, receptively.</p>
+<p>After integrating the particles for the fixed period of time, <span class="math notranslate nohighlight">\(\tau=15\)</span>, FTLE fields are computed to demonstrate the local dispersion as well as local displacements (see example figures below). The particles can be integrated either forward or backward in time. The local maxima of the FTLE scalar field (ridges) can be interpreted as stable and unstable manifolds of the flow field in the case of forward and backward integration, respectively.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/displacement_dispersion.png"><img alt="../../_images/displacement_dispersion.png" src="../../_images/displacement_dispersion.png" style="width: 100%;" /></a>
+</div>
+<p>Please refer to the documentation below for more detailed information regarding FTLE mathematical framework.</p>
 </div>
 <div class="section" id="table-of-variables">
 <h1>Table of Variables<a class="headerlink" href="#table-of-variables" title="Permalink to this headline">¶</a></h1>
@@ -204,10 +217,11 @@
 <h1>Data Source<a class="headerlink" href="#data-source" title="Permalink to this headline">¶</a></h1>
 <p>Opedia
 Simons Ocean Atlas</p>
+<p><a class="reference external" href="https://github.com/mdashkezari/opedia/tree/master/CS">https://github.com/mdashkezari/opedia/tree/master/CS</a>
+<a class="reference external" href="https://github.com/mdashkezari/opedia/tree/master/CS/docs">https://github.com/mdashkezari/opedia/tree/master/CS/docs</a></p>
 </div>
 <div class="section" id="how-to-acknowledge">
 <h1>How to Acknowledge<a class="headerlink" href="#how-to-acknowledge" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/mdashkezari/CS">https://github.com/mdashkezari/CS</a></p>
 </div>
 <div class="section" id="version-history">
 <h1>Version History<a class="headerlink" href="#version-history" title="Permalink to this headline">¶</a></h1>
