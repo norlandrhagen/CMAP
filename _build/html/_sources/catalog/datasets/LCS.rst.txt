@@ -57,7 +57,7 @@ Table of Variables
 
 HTML table generated through python/sql script will live here
 
-
+  
 Data Source
 ***********
 
