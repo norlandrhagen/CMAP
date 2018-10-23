@@ -37,33 +37,3 @@ Project Process Flow
 ^^^^^^^^^^^^^^^^^^^^
 
 Simons Foundation supports various ocean research programs and cruise expeditions. The results of these endeavors are shared with the scientific community and general public through the Simons Ocean Atlas. All data sets are first registered in formal digital archive repositories (such as zenodo.org) and obtain academically citable Digital Object Identifiers (DOI). The atlas also encompass a wide range of external data sets such as global satellite data and model outputs (see catalog [link to catalog]). We then ingest all data sets into a database system using the data structure mentioned above.  Finally, the application layer provides the user with the access to the database system where data set subsets can be retrieved and visualized.
-
-
-
-
-
-Installation
-^^^^^^^^^^^^
-
-**1. Install Anaconda Distribution**
-
-https://www.anaconda.com/download/
-
-**2. Set up database drivers (only required on macOS)**
-
-.. code::
-
-    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    $ brew install unixodbc
-    $ brew install freetds --with-unixodbc
-
-**Install Additional Python Modules**
-
-
-.. code::
-
-    $ conda install shapely
-    $ conda install fiona
-    $ conda install -c conda-forge geopandas
-
-    $ pip install opedia

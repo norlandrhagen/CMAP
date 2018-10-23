@@ -91,7 +91,8 @@ html_short_title = 'Simmons Ocean Atlas'
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 # html_logo = '_static/caustics_grid.png'
-html_logo = '_static/soa_logo_small.png'
+# html_logo = '_static/soa_logo_small.png'
+html_logo = '_static/earth_wind.gif'
 
 
 

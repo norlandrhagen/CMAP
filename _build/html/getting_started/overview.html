@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Example of Plots" href="../gallery/example_gallery.html" />
+    <link rel="next" title="2. Installation" href="installation.html" />
     <link rel="prev" title="Simons Ocean Atlas" href="../index.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -57,7 +57,7 @@
 
           
             
-            <img src="../_static/soa_logo_small.png" class="logo" alt="Logo"/>
+            <img src="../_static/earth_wind.gif" class="logo" alt="Logo"/>
           
           </a>
 
@@ -90,13 +90,13 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#project-mission">1.1. Project Mission</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#project-process-flow">1.2. Project Process Flow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installation">1.3. Installation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../gallery/example_gallery.html">2. Example of Plots</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">3. Data Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">4. Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../API_ref/API_reference.html">5. API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery/example_gallery.html">3. Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">4. Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">5. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API_ref/API_reference.html">6. API Reference</a></li>
 </ul>
 
             
@@ -196,25 +196,6 @@ have different dimensions and resolutions.</p>
 <h2>1.2. Project Process Flow<a class="headerlink" href="#project-process-flow" title="Permalink to this headline">¶</a></h2>
 <p>Simons Foundation supports various ocean research programs and cruise expeditions. The results of these endeavors are shared with the scientific community and general public through the Simons Ocean Atlas. All data sets are first registered in formal digital archive repositories (such as zenodo.org) and obtain academically citable Digital Object Identifiers (DOI). The atlas also encompass a wide range of external data sets such as global satellite data and model outputs (see catalog [link to catalog]). We then ingest all data sets into a database system using the data structure mentioned above.  Finally, the application layer provides the user with the access to the database system where data set subsets can be retrieved and visualized.</p>
 </div>
-<div class="section" id="installation">
-<h2>1.3. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p><strong>1. Install Anaconda Distribution</strong></p>
-<p><a class="reference external" href="https://www.anaconda.com/download/">https://www.anaconda.com/download/</a></p>
-<p><strong>2. Set up database drivers (only required on macOS)</strong></p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-$ brew install unixodbc
-$ brew install freetds --with-unixodbc
-</pre></div>
-</div>
-<p><strong>Install Additional Python Modules</strong></p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install shapely
-$ conda install fiona
-$ conda install -c conda-forge geopandas
-
-$ pip install opedia
-</pre></div>
-</div>
-</div>
 </div>
 
 
@@ -225,7 +206,7 @@ $ pip install opedia
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../gallery/example_gallery.html" class="btn btn-neutral float-right" title="2. Example of Plots" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="2. Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral" title="Simons Ocean Atlas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

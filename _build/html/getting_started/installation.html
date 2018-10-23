@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1.2.1. System Requirements &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
+  <title>2. Installation &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Example of Plots" href="../gallery/example_gallery.html" />
+    <link rel="next" title="3. Gallery" href="../gallery/example_gallery.html" />
     <link rel="prev" title="1. Overview" href="overview.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -57,7 +57,7 @@
 
           
             
-            <img src="../_static/soa_logo_small.png" class="logo" alt="Logo"/>
+            <img src="../_static/earth_wind.gif" class="logo" alt="Logo"/>
           
           </a>
 
@@ -87,33 +87,12 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="overview.html">1. Overview</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="overview.html#project-mission">1.1. Project Mission</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="overview.html#data-requirements">1.2. Data Requirements</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">1.2.1. System Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#installation">1.2.2. Installation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#install-anaconda-distribution">1.2.2.1. 1. Install Anaconda Distribution</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#set-up-database-drivers-only-required-on-macos">1.2.2.2. 2. Set up database drivers (only required on macOS)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#install-additional-python-modules">1.2.2.3. 3. Install Additional Python Modules</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../gallery/example_gallery.html">2. Example of Plots</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">3. Data Sets Available</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/Argo.html">4. Argo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/Argo.html#dataset-description">5. Dataset Description</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/Argo.html#table-of-variables">6. Table of Variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/Argo.html#data-source">7. Data Source</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/Argo.html#how-to-acknowledge">8. How to Acknowledge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/Argo.html#version-history">9. Version History</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/SST.html">10. SST</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/SeaFlow.html">11. SeaFlow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/datasets/Darwin.html">12. Darwin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">13. Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../API_ref/API_reference.html">14. API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery/example_gallery.html">3. Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">4. Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">5. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API_ref/API_reference.html">6. API Reference</a></li>
 </ul>
 
             
@@ -159,9 +138,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="overview.html">1. Overview</a> &raquo;</li>
-        
-      <li>1.2.1. System Requirements</li>
+      <li>2. Installation</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,47 +157,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="system-requirements">
-<h1>1.2.1. System Requirements<a class="headerlink" href="#system-requirements" title="Permalink to this headline">¶</a></h1>
-<ul>
-<li><p class="first">Anaconda Distribution Python 2.7 or 3.7</p>
-</li>
-<li><p class="first">Python must be in the system path</p>
-</li>
-<li><p class="first">Additional Python modules</p>
-<blockquote>
-<div><ul class="simple">
-<li>pyodbc</li>
-<li>dropbox</li>
-<li>geopandas</li>
-</ul>
-</div></blockquote>
-</li>
-</ul>
-</div>
-<div class="section" id="installation">
-<h1>1.2.2. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="install-anaconda-distribution">
-<h2>1.2.2.1. 1. Install Anaconda Distribution<a class="headerlink" href="#install-anaconda-distribution" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="installation">
+<h1>2. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p><strong>1. Install Anaconda Distribution</strong></p>
 <p><a class="reference external" href="https://www.anaconda.com/download/">https://www.anaconda.com/download/</a></p>
-</div>
-<div class="section" id="set-up-database-drivers-only-required-on-macos">
-<h2>1.2.2.2. 2. Set up database drivers (only required on macOS)<a class="headerlink" href="#set-up-database-drivers-only-required-on-macos" title="Permalink to this headline">¶</a></h2>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir test
-$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+<p><strong>2. Set up database drivers (only required on macOS)</strong></p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 $ brew install unixodbc
 $ brew install freetds --with-unixodbc
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-additional-python-modules">
-<h2>1.2.2.3. 3. Install Additional Python Modules<a class="headerlink" href="#install-additional-python-modules" title="Permalink to this headline">¶</a></h2>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda update --all
-$ conda install pyodbc
-$ conda install dropbox
+<p><strong>Install Additional Python Modules</strong></p>
+<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install shapely
+$ conda install fiona
 $ conda install -c conda-forge geopandas
+
+$ pip install opedia
 </pre></div>
-</div>
 </div>
 </div>
 
@@ -232,7 +185,7 @@ $ conda install -c conda-forge geopandas
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../gallery/example_gallery.html" class="btn btn-neutral float-right" title="2. Example of Plots" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../gallery/example_gallery.html" class="btn btn-neutral float-right" title="3. Gallery" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="overview.html" class="btn btn-neutral" title="1. Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -265,11 +218,21 @@ $ conda install -c conda-forge geopandas
 
     
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
         <script type="text/javascript" src="../_static/jquery.js"></script>
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
 
   

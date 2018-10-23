@@ -16,7 +16,7 @@ Simons Ocean Atlas
   :numbered: 4
 
   getting_started/overview.rst
-
+  getting_started/installation.rst
   gallery/example_gallery
   catalog/catalog
 
