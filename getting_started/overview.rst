@@ -4,14 +4,10 @@
 .. _Simmons: https://www.thesimmonsfoundation.org/
 
 
-Overview
-========
-
-The **Simons Ocean Atlas** is an open source database service to unify, visualize, and analyze ocean data sets such as field campaign observations, remote sensing satellite data, and model outputs. The project is supported by the Simmons_ Foundation .
 
 
 Project Mission
-^^^^^^^^^^^^^^^
+===============
 
 
 

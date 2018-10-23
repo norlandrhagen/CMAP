@@ -1,7 +1,7 @@
 :orphan:
 
 
-.. _Description: https://podaac.jpl.nasa.gov/dataset/AVHRR_OI-NCEI-L4-GLOB-v2.0
+.. _Here: https://podaac.jpl.nasa.gov/dataset/AVHRR_OI-NCEI-L4-GLOB-v2.0
 
 .. _SST:
 
@@ -26,9 +26,9 @@ Sea Surface Temperature
 Dataset Description
 *******************
 
-Description	A Group for High Resolution Sea Surface Temperature (GHRSST) global Level 4 sea surface temperature analysis produced daily on a 0.25 degree grid at the NOAA National Centers for Environmental Information. This product uses optimal interpolation (OI) by interpolating and extrapolating SST observations from different sources, resulting in a smoothed complete field. The sources of data are satellite (AVHRR) and in situ platforms (i.e., ships and buoys), and the specific datasets employed may change over. At the marginal ice zone, sea ice concentrations are used to generate proxy SSTs. A preliminary version of this file is produced in near-real time (1-day latency), and then replaced with a final version after 2 weeks. Note that this is the AVHRR-ONLY (AVHRR-OI), available from September 1, 1981, but there is a companion SST product that includes microwave satellite data, available from June 2002.
+The Simmons Ocean Atlas contains **Sea Surface Temperature** records from 2013-01-01 - 2017-05-15 collected from the Group for High Resolution Sea Surface Temperature (GHRSST) project.  Data is gathered from the from a combination of in-situ sensors and satellite radiometer missions. The data is an interpolated product with the spatial resolution of 0.25 degrees and a daily temporal resolution.
 
-Description_
+More information can be found Here_
 
 
 Table of Variables
