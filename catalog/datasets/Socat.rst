@@ -31,7 +31,11 @@ The Surface Ocean CO₂ Atlas (SOCAT) is a synthesis activity for quality-contro
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here 
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/SOCAT/SOCAT.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
 
 Data Source
 ***********

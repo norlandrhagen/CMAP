@@ -34,8 +34,11 @@ Description_
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+.. raw:: html
 
+    <iframe src="../../_static/var_tables/Near-Real-Time%20SST%20AVHRR_OI/Near-Real-Time%20SST%20AVHRR_OI.html"  frameborder = 0 height = '200px' width="100%">></iframe>
+
+|
 
 Data Source
 ***********

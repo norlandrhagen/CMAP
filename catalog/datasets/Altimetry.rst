@@ -31,7 +31,13 @@ Previously distributed by Aviso+, no change in the scientific content."  http://
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/Reprocessed%20Altimetry/Reprocessed%20Altimetry.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+    
+|
+
 
 
 Data Source

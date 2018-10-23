@@ -32,8 +32,11 @@ The associated error estimates are also provided. They are estimated from scatte
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+.. raw:: html
 
+    <iframe src="../../_static/var_tables/Near-Real-Time%20Wind/Near-Real-Time%20Wind.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
 
 Data Source
 ***********

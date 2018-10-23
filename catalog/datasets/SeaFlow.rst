@@ -29,8 +29,11 @@ SeaFlow is a novel underway flow cytometer created at UW by Jarred Swalwell that
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+.. raw:: html
 
+    <iframe src="../../_static/var_tables/SeaFlow/SeaFlow.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
 
 Data Source
 ***********

@@ -58,8 +58,42 @@ Sampling at Station ALOHA typically begins with sediment trap deployment followe
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
 
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/HOT_PP/HOT_PP.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/HOT_ParticleFlux/HOT_ParticleFlux.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/HOT_Macrozooplankton/HOT_Macrozooplankton.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/HOT_EpiMicroscopy/HOT_EpiMicroscopy.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/HOT_CTD/HOT_CTD.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/HOT_Bottle_ALOHA/HOT_Bottle_ALOHA.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
 
 Data Source
 ***********

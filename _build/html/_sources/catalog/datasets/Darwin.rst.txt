@@ -30,8 +30,11 @@ The Darwin Project is an initiative to advance the development and application o
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+.. raw:: html
 
+    <iframe src="../../_static/var_tables/Darwin-MITgcm%20Climatology/Darwin-MITgcm%20Climatology.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
 
 Data Source
 ***********

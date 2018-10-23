@@ -31,8 +31,11 @@ For the Global Ocean and Atlantic Satellite Observations, ACRI-ST company (Sophi
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+.. raw:: html
 
+    <iframe src="../../_static/var_tables/Reprocessed%20CHL_OI/Reprocessed%20CHL_OI.html"  frameborder = 0 height = '200px' width="100%">></iframe>
+
+|
 
 Data Source
 ***********

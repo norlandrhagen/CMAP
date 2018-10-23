@@ -55,9 +55,12 @@ Please refer to the documentation below for more detailed information regarding 
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+.. raw:: html
 
-  
+    <iframe src="../../_static/var_tables/LCS/LCS.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
+
 Data Source
 ***********
 

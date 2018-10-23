@@ -31,8 +31,18 @@ A novel altimetry-based machine learning approach for eddy identification and ch
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+.. raw:: html
 
+    <iframe src="../../_static/var_tables/Eddy%20(Chelton)/Eddy%20(Chelton).html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/Eddy%20(ML)/Eddy%20(ML).html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+
+|
 
 Data Source
 ***********

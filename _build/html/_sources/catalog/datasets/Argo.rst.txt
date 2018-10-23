@@ -32,8 +32,11 @@ Argo consists of nearly 3200 floats and has a rough spatial resolution of ~ 3° 
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+.. raw:: html
 
+    <iframe src="../../_static/var_tables/Argo_BGC_REP/Argo_BGC_REP.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+    
+|
 
 Data Source
 ***********

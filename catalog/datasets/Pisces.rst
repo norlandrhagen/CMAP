@@ -29,8 +29,11 @@ Produced by Mercator Ocean in Toulouse, France, is a global Ocean Biogeochemical
 Table of Variables
 ******************
 
-HTML table generated through python/sql script will live here
+.. raw:: html
 
+    <iframe src="../../_static/var_tables/Mercator-Pisces/Mercator-Pisces.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
 
 Data Source
 ***********
