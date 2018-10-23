@@ -1,5 +1,7 @@
 :orphan:
 
+.. _Here: http://cmems-resources.cls.fr/documents/QUID/CMEMS-OC-QUID-009-030-032-033-081-082-083-085-086.pdf
+
 .. _Chlorophyll:
 
 
@@ -25,7 +27,11 @@ Chlorophyll
 Dataset Description
 *******************
 
-For the Global Ocean and Atlantic Satellite Observations, ACRI-ST company (Sophia Antipolis, France) is providing Chlorophyll-a products based on the Copernicus-GlobColour processor.
+The Simmons Ocean Atlas contains **Chlorophyll Concentration** records from 2012-01-01 - 2016-12-31 collected from the Ocean Colour Thematic Center which is part of the Copernicus Marine Environment Monitoring Service. The data is generated from ESA and NASA satellite missions, specifically from MERIS, SeaWiFS and MODIS.
+The dataset has a spatial resolution of 4km X 4km and a daily temporal resolution.
+
+More information can be found Here_
+
 
 
 Table of Variables
@@ -41,6 +47,7 @@ Data Source
 ***********
 
 http://marine.copernicus.eu/
+
 http://cmems-resources.cls.fr/documents/QUID/CMEMS-OC-QUID-009-030-032-033-081-082-083-085-086.pdf
 
 How to Acknowledge
