@@ -8,7 +8,7 @@ Simons Ocean Atlas
    :scale: 70 %
    :align: center
 
-The Simons Ocean Atlas is an open source database service to unify, visualize, and analyze ocean data sets such as field campaign observations, remote sensing satellite data, and model outputs. The project is supported by the Simmons Foundation .
+The Simons Ocean Atlas is an open source database service to unify, visualize, and analyze ocean data sets such as field campaign observations, remote sensing satellite data, and model outputs. The project is supported by the Simons Foundation .
 
 .. toctree::
   :maxdepth: 3

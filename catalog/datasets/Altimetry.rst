@@ -25,8 +25,11 @@ Altimetry
 Dataset Description
 *******************
 
-Multi-mission altimeter satellite gridded sea surface heights and derived variables computed with respect to a twenty-year mean.
-Previously distributed by Aviso+, no change in the scientific content."  http://marine.copernicus.eu/
+
+The Simmons Ocean Atlas contains **Satellite Altimetry** records from 2013-01-01 - 2017-05-15 collected from the Copernicus Marine Environment Monitoring Service. The dataset is generated from remotely sensed satellite data and contains multiple ocean altimetry products.
+The dataset has a spatial resolution of 1/4° X 1/4° and a daily temporal resolution.
+
+
 
 Table of Variables
 ******************
@@ -35,7 +38,7 @@ Table of Variables
 .. raw:: html
 
     <iframe src="../../_static/var_tables/Reprocessed%20Altimetry/Reprocessed%20Altimetry.html"  frameborder = 0 height = '300px' width="100%">></iframe>
-    
+
 |
 
 
@@ -44,6 +47,7 @@ Data Source
 ***********
 
 http://marine.copernicus.eu/
+
 http://cmems-resources.cls.fr/documents/PUM/CMEMS-SL-PUM-008-032-051.pdf
 
 How to Acknowledge
