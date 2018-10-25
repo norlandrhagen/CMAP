@@ -1,22 +1,25 @@
 
+.. _Simons: https://www.simonsfoundation.org/
+
 
 Simons Ocean Atlas
-======================================
+==================
 
+|
 
-.. figure:: _static/caustics_grid.png
+.. figure:: _static/altair_splash.png
    :scale: 70 %
    :align: center
 
-The Simons Ocean Atlas is an open source database service to unify, visualize, and analyze ocean data sets such as field campaign observations, remote sensing satellite data, and model outputs. The project is supported by the Simons Foundation .
+|
+
+The Simons Ocean Atlas is an open source database service to unify, visualize, and analyze ocean data sets such as field campaign observations, remote sensing satellite data, and model outputs. The project is supported by the Simons_ Foundation .
 
 .. toctree::
   :maxdepth: 3
-  :caption: Contents:
-  :numbered: 4
 
   getting_started/overview.rst
-  getting_started/installation.rst
+  getting_started/getting_started.rst
   gallery/example_gallery
   catalog/catalog
 

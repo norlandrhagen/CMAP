@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
+  <title>Getting Started &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
   
 
   
@@ -87,7 +87,13 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mac-os-x">Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#linux">Linux</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../gallery/example_gallery.html">Gallery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">Data Catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
@@ -137,13 +143,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Installation</li>
+      <li>Getting Started</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/getting_started/installation.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/getting_started/getting_started.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -175,20 +181,18 @@
     margin-right: 4px;  /* make room for the exclamation icon */
 }
 </style>
+<div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>The Simons Ocean Atlas is currently in development, but can be used in its present state.</p>
+<p>The two options for using the Ocean Atlas to visualize data are either through a GUI (Graphical User Interface) for Windows and Mac OSX or through a command line interface for Windows, Mac OSX or Linux.</p>
+<p>Future developments of the Simmons Ocean Atlas should be HTML browser based and operating system agnostic.</p>
+</div>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
 <p><strong>1. Install Anaconda Distribution</strong></p>
-<p><a class="reference external" href="https://www.anaconda.com/download/">https://www.anaconda.com/download/</a></p>
-<p><strong>2. Set up database drivers (only required on macOS)</strong></p>
-<p>To install the notebook and Altair with conda, run the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install -c conda-forge altair vega_datasets notebook vega
-</pre></div>
-</div>
-<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-$ brew install unixodbc
-$ brew install freetds --with-unixodbc
-</pre></div>
-</div>
+<p><a class="reference external" href="https://www.anaconda.com/download/">Anaconda</a></p>
 <p><strong>Install Additional Python Modules</strong></p>
 <div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ conda install shapely
 $ conda install fiona
@@ -196,6 +200,37 @@ $ conda install -c conda-forge geopandas
 
 $ pip install opedia
 </pre></div>
+</div>
+</div>
+<div class="section" id="mac-os-x">
+<h2>Mac OS X<a class="headerlink" href="#mac-os-x" title="Permalink to this headline">¶</a></h2>
+<p><strong>1. Install Anaconda Distribution</strong></p>
+<p><a class="reference external" href="https://www.anaconda.com/download/">Anaconda</a></p>
+<p><strong>2. Install Additional Python Modules</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+$ brew install unixodbc
+$ brew install freetds --with-unixodbc
+
+$ conda install shapely
+$ conda install fiona
+$ conda install -c conda-forge geopandas
+$ pip install opedia
+</pre></div>
+</div>
+</div>
+<div class="section" id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h2>
+<p><strong>1. Install Anaconda Distribution</strong></p>
+<p><a class="reference external" href="https://www.anaconda.com/download/">Anaconda</a></p>
+<p><strong>Install Additional Python Modules</strong></p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>$ conda install -c anaconda unixodbc
+$ conda install -c anaconda freetds
+$ conda install shapely
+$ conda install fiona
+$ conda install -c conda-forge geopandas
+$ pip install opedia
+</pre></div>
+</div>
 </div>
 </div>
 

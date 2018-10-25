@@ -1,15 +1,17 @@
 
 
 
-.. _Simmons: https://www.thesimmonsfoundation.org/
+.. _Simons: https://www.simonsfoundation.org/
 
 
 
 
-Project Mission
-===============
+Overview
+========
 
-
+.. figure:: ../_static/caustics_grid.png
+   :scale: 70 %
+   :align: center
 
 We, the oceanographers, have the best known job; it involves going to beach (and sea sometimes) and observe!
 
@@ -22,9 +24,9 @@ The project's goal is to establish a unifying data structure and streamline the 
 
 **Data structure**
 
-+------+----------+-----------+------------------+------------------+
-| Time | Latitude | Longitude | Depth (optional) | DATA VARIABLE(S) |
-+------+----------+-----------+------------------+------------------+
++------+-----+------+-------------------+-----------------+-----+-----------------+
+| time | lat | long | depth {if exists} | <:math:`var_1`> | ... | <:math:`var_n`> |
++------+-----+------+-------------------+-----------------+-----+-----------------+
 
 The temporal and spatial resolution between data sets varies, but summaries of these coverages are provided within :ref:`Catalog`.
 
@@ -32,4 +34,4 @@ The temporal and spatial resolution between data sets varies, but summaries of t
 Project Process Flow
 ^^^^^^^^^^^^^^^^^^^^
 
-Simons Foundation supports various ocean research programs and cruise expeditions. The results of these endeavors are shared with the scientific community and general public through the Simons Ocean Atlas. All data sets are first registered in formal digital archive repositories (such as zenodo.org) and obtain academically citable Digital Object Identifiers (DOI). The atlas also encompass a wide range of external data sets such as global satellite data and model outputs (see catalog [link to catalog]). We then ingest all data sets into a database system using the data structure mentioned above.  Finally, the application layer provides the user with the access to the database system where data set subsets can be retrieved and visualized.
+Simons Foundation supports various ocean research programs and cruise expeditions. The results of these endeavors are shared with the scientific community and general public through the Simons Ocean Atlas. All data sets are first registered in formal digital archive repositories (such as zenodo.org) and obtain academically citable Digital Object Identifiers (DOI). The atlas also encompass a wide range of external data sets such as global satellite data and model outputs (see  :ref:`Catalog`. We then ingest all data sets into a database system using the data structure mentioned above.  Finally, the application layer provides the user with the access to the database system where data set subsets can be retrieved and visualized.

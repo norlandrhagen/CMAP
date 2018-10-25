@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Project Mission" href="getting_started/overview.html" />
+    <link rel="next" title="Overview" href="getting_started/overview.html" />
     <link href="_static/style.css" rel="stylesheet" type="text/css">
 
 
@@ -84,14 +84,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="getting_started/overview.html">1. Project Mission</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started/installation.html">2. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gallery/example_gallery.html">3. Gallery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catalog/catalog.html">4. Data Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">5. Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="API_ref/API_reference.html">6. API Reference</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery/example_gallery.html">Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog/catalog.html">Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="API_ref/API_reference.html">API Reference</a></li>
 </ul>
 
             
@@ -156,31 +155,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="simons-ocean-atlas">
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="simons-ocean-atlas">
 <h1>Simons Ocean Atlas<a class="headerlink" href="#simons-ocean-atlas" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="_images/caustics_grid.png"><img alt="_images/caustics_grid.png" src="_images/caustics_grid.png" style="width: 840.0px; height: 630.0px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
 </div>
-<p>The Simons Ocean Atlas is an open source database service to unify, visualize, and analyze ocean data sets such as field campaign observations, remote sensing satellite data, and model outputs. The project is supported by the Simons Foundation .</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/altair_splash.png"><img alt="_images/altair_splash.png" src="_images/altair_splash.png" style="width: 791.0px; height: 293.29999999999995px;" /></a>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The Simons Ocean Atlas is an open source database service to unify, visualize, and analyze ocean data sets such as field campaign observations, remote sensing satellite data, and model outputs. The project is supported by the <a class="reference external" href="https://www.simonsfoundation.org/">Simons</a> Foundation .</p>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="getting_started/overview.html">1. Project Mission</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="getting_started/overview.html#project-process-flow">1.1. Project Process Flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/overview.html#project-process-flow">Project Process Flow</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started/installation.html">2. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="gallery/example_gallery.html">3. Gallery</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="gallery/example_gallery.html#regional-map">3.1. Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gallery/example_gallery.html#time-series">3.2. Time Series</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/getting_started.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/getting_started.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/getting_started.html#windows">Windows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/getting_started.html#mac-os-x">Mac OS X</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started/getting_started.html#linux">Linux</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="catalog/catalog.html">4. Data Catalog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="catalog/catalog.html#coverage-and-sensor-type-key">4.1. Coverage and Sensor Type Key</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery/example_gallery.html">Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gallery/example_gallery.html#regional-map">Regional Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gallery/example_gallery.html#time-series">Time Series</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">5. Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="API_ref/API_reference.html">6. API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog/catalog.html">Data Catalog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="catalog/catalog.html#coverage-and-sensor-type-key">Coverage and Sensor Type Key</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="API_ref/API_reference.html">API Reference</a></li>
 </ul>
 </div>
 </div>
@@ -193,7 +222,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="getting_started/overview.html" class="btn btn-neutral float-right" title="1. Project Mission" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="getting_started/overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

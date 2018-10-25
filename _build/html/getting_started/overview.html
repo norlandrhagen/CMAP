@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. Project Mission &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
+  <title>Overview &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Installation" href="installation.html" />
+    <link rel="next" title="Installation" href="installation.html" />
     <link rel="prev" title="Simons Ocean Atlas" href="../index.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -85,17 +85,16 @@
               
             
             
-              <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Project Mission</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#project-process-flow">1.1. Project Process Flow</a></li>
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-process-flow">Project Process Flow</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">2. Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gallery/example_gallery.html">3. Gallery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">4. Data Catalog</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">5. Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../API_ref/API_reference.html">6. API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery/example_gallery.html">Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API_ref/API_reference.html">API Reference</a></li>
 </ul>
 
             
@@ -141,7 +140,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>1. Project Mission</li>
+      <li>Overview</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -160,8 +159,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="project-mission">
-<h1>1. Project Mission<a class="headerlink" href="#project-mission" title="Permalink to this headline">¶</a></h1>
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+</style>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/caustics_grid.png"><img alt="../_images/caustics_grid.png" src="../_images/caustics_grid.png" style="width: 840.0px; height: 630.0px;" /></a>
+</div>
 <p>We, the oceanographers, have the best known job; it involves going to beach (and sea sometimes) and observe!</p>
 <p>We probe the oceans to shed light on their underlying physical, chemical, and biological dynamics. Analyzing these observations, however, often require gathering more concurrent data such as satellite measurements and model estimates. Handling satellite and model data sets are particularly challenging because they:
 are scattered all over the web and might not be trivial to discover
@@ -171,25 +192,29 @@ have different dimensions and resolutions.</p>
 <p><strong>Data structure</strong></p>
 <table border="1" class="docutils">
 <colgroup>
-<col width="10%" />
-<col width="16%" />
-<col width="17%" />
-<col width="29%" />
-<col width="29%" />
+<col width="8%" />
+<col width="7%" />
+<col width="8%" />
+<col width="25%" />
+<col width="23%" />
+<col width="7%" />
+<col width="23%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>Time</td>
-<td>Latitude</td>
-<td>Longitude</td>
-<td>Depth (optional)</td>
-<td>DATA VARIABLE(S)</td>
+<tr class="row-odd"><td>time</td>
+<td>lat</td>
+<td>long</td>
+<td>depth {if exists}</td>
+<td>&lt;<span class="math notranslate nohighlight">\(var_1\)</span>&gt;</td>
+<td>…</td>
+<td>&lt;<span class="math notranslate nohighlight">\(var_n\)</span>&gt;</td>
 </tr>
 </tbody>
 </table>
 <p>The temporal and spatial resolution between data sets varies, but summaries of these coverages are provided within <a class="reference internal" href="../catalog/catalog.html#catalog"><span class="std std-ref">Data Catalog</span></a>.</p>
 <div class="section" id="project-process-flow">
-<h2>1.1. Project Process Flow<a class="headerlink" href="#project-process-flow" title="Permalink to this headline">¶</a></h2>
-<p>Simons Foundation supports various ocean research programs and cruise expeditions. The results of these endeavors are shared with the scientific community and general public through the Simons Ocean Atlas. All data sets are first registered in formal digital archive repositories (such as zenodo.org) and obtain academically citable Digital Object Identifiers (DOI). The atlas also encompass a wide range of external data sets such as global satellite data and model outputs (see catalog [link to catalog]). We then ingest all data sets into a database system using the data structure mentioned above.  Finally, the application layer provides the user with the access to the database system where data set subsets can be retrieved and visualized.</p>
+<h2>Project Process Flow<a class="headerlink" href="#project-process-flow" title="Permalink to this headline">¶</a></h2>
+<p>Simons Foundation supports various ocean research programs and cruise expeditions. The results of these endeavors are shared with the scientific community and general public through the Simons Ocean Atlas. All data sets are first registered in formal digital archive repositories (such as zenodo.org) and obtain academically citable Digital Object Identifiers (DOI). The atlas also encompass a wide range of external data sets such as global satellite data and model outputs (see  <a class="reference internal" href="../catalog/catalog.html#catalog"><span class="std std-ref">Data Catalog</span></a>. We then ingest all data sets into a database system using the data structure mentioned above.  Finally, the application layer provides the user with the access to the database system where data set subsets can be retrieved and visualized.</p>
 </div>
 </div>
 
@@ -201,7 +226,7 @@ have different dimensions and resolutions.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="installation.html" class="btn btn-neutral float-right" title="2. Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../index.html" class="btn btn-neutral" title="Simons Ocean Atlas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
