@@ -4,12 +4,24 @@
 Gallery
 -------
 
-This gallery contains a selection of examples of the plots Altair can create.
+This gallery contains examples of the visualizations that can be created in the Simons Ocean Atlas.
 
-Some may seem fairly complicated at first glance, but they are built by combining a simple set of declarative building blocks.
 
-Many draw upon sample datasets compiled by the `Vega <https://vega.github.io/vega/>`_ project. To access them yourself, install `vega_datasets <https://github.com/altair-viz/vega_datasets>`_.
 
-.. code-block:: none
 
-   $ pip install vega_datasets
+Maps
+^^^^
+
+.. raw:: html
+
+    <iframe src="../_static/RM_large.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+
+
+
+
+Plots
+^^^^^
+
+.. raw:: html
+
+    <iframe src="../_static/TS.html"  frameborder = 0  height="850px" width="100%">></iframe>
