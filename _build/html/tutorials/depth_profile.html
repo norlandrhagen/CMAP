@@ -26,6 +26,7 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/altair-plot.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -166,7 +167,30 @@
             
   <div class="section" id="plot-depth-profile">
 <h1>Plot Depth Profile<a class="headerlink" href="#plot-depth-profile" title="Permalink to this headline">¶</a></h1>
+<p>Create depth profile plots using model and BGC-Argo float profiles.</p>
+<p>Note:
+Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</p>
+<p>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° X 1/2° .</p>
+<p>Argo float data set has irregular temporal and spatial resolution.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="k">import</span> <span class="n">plotDepthProfile</span> <span class="k">as</span> <span class="n">DEP</span>
+
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblPISCES_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblArgoMerge_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Chl_Climatology&#39;</span><span class="p">]</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CHL&#39;</span><span class="p">,</span> <span class="s1">&#39;argo_merge_chl_adj&#39;</span><span class="p">,</span> <span class="s1">&#39;chl01_darwin_clim&#39;</span><span class="p">]</span>
+<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>   <span class="c1"># PISCES is a weekly model, and here we are using monthly climatology of Darwin model</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
+<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;20&#39;</span>
+<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;24&#39;</span>
+<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-170&#39;</span>
+<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-150&#39;</span>
+<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;1500&#39;</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;DEP&#39;</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="kc">False</span>      <span class="c1"># True if you you want to download data</span>
+
+<span class="n">DEP</span><span class="o">.</span><span class="n">plotDepthProfile</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+</pre></div>
 </div>
+<iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
 
 
            </div>
@@ -224,6 +248,9 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
     
 
   

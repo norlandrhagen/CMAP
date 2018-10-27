@@ -26,6 +26,7 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/altair-plot.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -166,7 +167,30 @@
             
   <div class="section" id="plot-regional-map">
 <h1>Plot Regional Map<a class="headerlink" href="#plot-regional-map" title="Permalink to this headline">¶</a></h1>
+<p><strong>Create a regional map using satellite and modeled data</strong></p>
+<p>Notes:</p>
+<p>The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</p>
+<p>Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="k">import</span> <span class="n">plotRegional</span> <span class="k">as</span> <span class="n">REG</span>
+
+
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblsst_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">]</span>    <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;Fe&#39;</span><span class="p">]</span>                            <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
+<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;20&#39;</span>
+<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;50&#39;</span>
+<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-180&#39;</span>
+<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-100&#39;</span>
+<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;0.5&#39;</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;regional&#39;</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="kc">False</span>       <span class="c1"># True if you you want to download data</span>
+
+<span class="n">REG</span><span class="o">.</span><span class="n">regionalMap</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+</pre></div>
 </div>
+<iframe src="../_static/RM_large.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
 
 
            </div>
@@ -224,6 +248,9 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
     
 
   

@@ -26,6 +26,7 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/altair-plot.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
@@ -166,6 +167,12 @@
             
   <div class="section" id="retrieve-data-catalog">
 <h1>Retrieve Data Catalog<a class="headerlink" href="#retrieve-data-catalog" title="Permalink to this headline">¶</a></h1>
+<p>Dataset descriptions and variables names can be accessed through the <a class="reference internal" href="../catalog/catalog.html#catalog"><span class="std std-ref">Data Catalog</span></a> or through the getCatalog.py script.</p>
+<p>This short Python script will pull all of the variables in the opedia database and write them to a .csv file in ./data/catalog.csv.</p>
+<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pull catalog from opedia database:</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">opedia</span> <span class="k">import</span> <span class="n">getCatalog</span>
+</pre></div>
+</div>
 </div>
 
 
@@ -224,6 +231,9 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@3"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
     
 
   
