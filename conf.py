@@ -45,9 +45,7 @@ extensions = [
    'sphinx.ext.coverage',
    'sphinx.ext.mathjax',
    'sphinx.ext.viewcode',
-   'sphinx.ext.githubpages',
-   'altair.sphinxext.altairplot',
-
+   'sphinx.ext.githubpages'
        # IPython console
     'IPython.sphinxext.ipython_console_highlighting',
     'IPython.sphinxext.ipython_directive',
