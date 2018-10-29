@@ -13,7 +13,7 @@ The Simons Ocean Atlas is currently in development, but can be used in its prese
 
 The two options for using the Ocean Atlas to visualize data are either through a GUI (Graphical User Interface) for Windows and Mac OSX or through a command line interface for Windows, Mac OSX or Linux.
 
-Future developments of the Simmons Ocean Atlas should be HTML browser based and operating system agnostic.
+Future developments of the Simons Ocean Atlas should be HTML browser based and operating system agnostic.
 
 Windows
 ^^^^^^^
