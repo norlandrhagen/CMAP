@@ -46,4 +46,4 @@ Argo float data set has irregular temporal and spatial resolution.
 
 .. raw:: html
 
-    <iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+    <iframe src="../_static/depth_profile.html"  frameborder = 0  height="1600px" width="100%">></iframe>
