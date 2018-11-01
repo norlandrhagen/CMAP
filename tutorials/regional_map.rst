@@ -2,6 +2,9 @@
 Plot Regional Map
 =================
 
+Code Tutorial
+^^^^^^^^^^^^^
+
 
 **Create a regional map using satellite and modeled data**
 
@@ -34,11 +37,13 @@ Satellite SST data set is a daily-global product with spatial resolution  1/4° 
 
 
 
-
-
 .. raw:: html
 
     <iframe src="../_static/RM_large.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+
+
+GUI Tutorial
+^^^^^^^^^^^^
 
 
 .. raw:: html
