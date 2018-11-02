@@ -9,7 +9,7 @@
 Overview
 ========
 
-.. figure:: ../_static/doc_structure.png
+.. figure:: ../_static/process_flow.png
    :scale: 75 %
    :align: center
 
