@@ -2,11 +2,6 @@
 Tutorials
 =========
 
-
-The tutorials include both GUI and script approaches. The GUI tutorials may include a video demonstration and the script approach include example code.
-
-
-
 .. |rm| image:: /_static/tutorial_pics/regional_map.png
    :scale: 33%
    :align: middle
@@ -21,6 +16,10 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
    :scale: 33%
    :align: middle
    :target: depth_profile.html
+
+
+The tutorials include both GUI and script approaches. The GUI tutorials may include a video demonstration and the script approach include example code.
+
 
 
 +------------------------+-----------------------------+--------------------------------+

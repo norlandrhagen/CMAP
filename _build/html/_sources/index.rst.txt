@@ -7,7 +7,7 @@ Simons Ocean Atlas
 
 |
 
-.. figure:: _static/altair_splash.png
+.. figure:: _static/caustics_grid.png
    :scale: 70 %
    :align: center
 

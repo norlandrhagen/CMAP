@@ -9,8 +9,8 @@
 Overview
 ========
 
-.. figure:: ../_static/caustics_grid.png
-   :scale: 70 %
+.. figure:: ../_static/doc_structure.png
+   :scale: 75 %
    :align: center
 
 We, the oceanographers, have the best known job; it involves going to beach (and sea sometimes) and observe!

@@ -45,7 +45,6 @@ Satellite SST data set is a daily-global product with spatial resolution  1/4° 
 GUI Tutorial
 ^^^^^^^^^^^^
 
-
 .. raw:: html
 
     <iframe src="https://www.youtube.com/embed/N8ZKF64xp1c?rel=0"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
