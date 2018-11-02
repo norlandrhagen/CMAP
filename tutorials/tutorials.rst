@@ -38,6 +38,7 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
 | Plot Cruise            |        Plot Lagrangian      |         Plot Eddy              |
 +------------------------+-----------------------------+--------------------------------+
 
+ 
 
 
 .. toctree::
