@@ -6,6 +6,8 @@ Getting Started
 ===============
 
 
+
+
 Installation
 ^^^^^^^^^^^^
 
@@ -23,10 +25,12 @@ Windows
 Anaconda_
 
 
+
 **Install Additional Python Modules**
 
 
-.. code-block:: rst
+
+.. code-block:: console
 
     $ conda install shapely
     $ conda install fiona
@@ -47,7 +51,7 @@ Anaconda_
 
 **2. Install Additional Python Modules**
 
-.. code-block:: rst
+.. code-block:: console
 
     $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     $ brew install unixodbc
@@ -73,7 +77,7 @@ Anaconda_
 **Install Additional Python Modules**
 
 
-.. code-block:: rst
+.. code-block:: console
 
     $ conda install -c anaconda unixodbc
     $ conda install -c anaconda freetds

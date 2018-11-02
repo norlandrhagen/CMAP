@@ -16,7 +16,7 @@ Darwin_Climatology is a monthly climatology version of the Darwin model with spa
 
 Argo float data set has irregular temporal and spatial resolution.
 
-.. code:: python
+.. code-block:: python
 
 
     from opedia import plotDepthProfile as DEP

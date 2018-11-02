@@ -88,7 +88,6 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gallery/index.html">Gallery</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">Data Catalog</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="tutorials.html">Tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="get_catalog.html">Retrieve Data Catalog</a></li>
@@ -98,6 +97,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../API_ref/API_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ/FAQ.html">FAQ</a></li>
 </ul>
 
             
@@ -171,7 +171,7 @@
 Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</p>
 <p>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° X 1/2° .</p>
 <p>Argo float data set has irregular temporal and spatial resolution.</p>
-<div class="code python highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="k">import</span> <span class="n">plotDepthProfile</span> <span class="k">as</span> <span class="n">DEP</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotDepthProfile</span> <span class="k">as</span> <span class="n">DEP</span>
 
 <span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblPISCES_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblArgoMerge_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Chl_Climatology&#39;</span><span class="p">]</span>
 <span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CHL&#39;</span><span class="p">,</span> <span class="s1">&#39;argo_merge_chl_adj&#39;</span><span class="p">,</span> <span class="s1">&#39;chl01_darwin_clim&#39;</span><span class="p">]</span>
@@ -184,7 +184,7 @@ Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 
 <span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
 <span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;1500&#39;</span>
 <span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;DEP&#39;</span>
-<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="kc">False</span>      <span class="c1"># True if you you want to download data</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
 
 <span class="n">DEP</span><span class="o">.</span><span class="n">plotDepthProfile</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
 </pre></div>

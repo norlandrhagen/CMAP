@@ -14,7 +14,8 @@ The Pisces model is a weekly-averaged global model with spatial resolution  1/2�
 
 Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .
 
-.. code:: python
+.. code-block:: python
+
 
 
     from opedia import plotRegional as REG
@@ -24,16 +25,17 @@ Satellite SST data set is a daily-global product with spatial resolution  1/4° 
     variables = ['sst', 'Fe']                            # see catalog.csv  for the complete list of tables and variable names
     startDate = '2016-04-30'
     endDate = '2016-04-30'
-    lat1 = '20'
-    lat2 = '50'
+    lat1 = '10'
+    lat2 = '70'
     lon1 = '-180'
-    lon2 = '-100'
+    lon2 = '-80'
     depth1 = '0'
     depth2 = '0.5'
     fname = 'regional'
     exportDataFlag = False       # True if you you want to download data
 
     REG.regionalMap(tables, variables, startDate, endDate, lat1, lat2, lon1, lon2, depth1, depth2, fname, exportDataFlag)
+
 
 
 

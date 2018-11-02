@@ -18,15 +18,15 @@ Satellite wind data set is a 6-hourly global product with spatial resolution 1/4
 
 Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .
 
-.. code:: python
+.. code-block:: python
 
 
     from opedia import plotTS as TS
 
-    tables = ['tblWind_NRT', 'tblAltimetry_REP', 'tblPISCES_NRT']
-    variables = ['wind_stress', 'sla', 'NO3']
+    tables = ['tblSST_AVHRR_OI_NRT', 'tblAltimetry_REP', 'tblPISCES_NRT']    # see catalog.csv  for the complete list of tables and variable names
+    variables = ['sst', 'sla', 'NO3']                                        # see catalog.csv  for the complete list of tables and variable names
     startDate = '2016-03-29'
-    endDate = '2016-04-29'
+    endDate = '2016-05-29'
     lat1 = '25'
     lat2 = '30'
     lon1 = '-160'
@@ -37,6 +37,7 @@ Satellite Altimetry data set is a daily-global product with spatial resolution 1
     exportDataFlag = False      # True if you you want to download data
 
     TS.plotTS(tables, variables, startDate, endDate, lat1, lat2, lon1, lon2, depth1, depth2, fname, exportDataFlag)
+
 
 
 
