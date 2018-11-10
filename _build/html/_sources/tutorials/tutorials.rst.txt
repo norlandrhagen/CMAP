@@ -2,6 +2,12 @@
 Tutorials
 =========
 
+
+.. |gc| image:: /_static/tutorial_pics/regional_map.png
+   :scale: 33%
+   :align: middle
+   :target: get_catalog.html
+
 .. |rm| image:: /_static/tutorial_pics/regional_map.png
    :scale: 33%
    :align: middle
@@ -23,24 +29,39 @@ Tutorials
   :target: depth_profile.html
 
 
+.. |ret| image:: /_static/tutorial_pics/depth_profile.png
+   :scale: 33%
+   :align: middle
+   :target: retrieve_data.html
+
+.. |sql| image:: /_static/tutorial_pics/depth_profile.png
+  :scale: 33%
+  :align: middle
+  :target: sql.html
+
+
+
 The tutorials include both GUI and script approaches. The GUI tutorials may include a video demonstration and the script approach include example code.
 
 
 
 +------------------------+-----------------------------+--------------------------------+
-| |rm|                   |    |ts|                     |             |dep|              |
+| |gc|                   |    |rm|                     |             |ts|               |
 +------------------------+-----------------------------+--------------------------------+
-| Regional Map           |         Time Series         |         Depth Profile          |
+| Retrieve Data Catalog  |         Regional Map        |         Time Series            |
 +------------------------+-----------------------------+--------------------------------+
-| |ct|                   |    |dep|                    |             |ts|               |
+| |dep|                  |    |ct|                     |             |ts|               |
 +------------------------+-----------------------------+--------------------------------+
-| Cruise Track           |         Sectional Map       |         Mutual Trend           |
+| Depth Profile          |         Cruise Track        |         Mutual Trend           |
 +------------------------+-----------------------------+--------------------------------+
 | |ts|                   |    |ts|                     |            |dep|               |
 +------------------------+-----------------------------+--------------------------------+
 | Plot Cruise            |        Plot Lagrangian      |         Plot Eddy              |
 +------------------------+-----------------------------+--------------------------------+
-
+| |ts|                   |    |ret|                    |            |sql|               |
++------------------------+-----------------------------+--------------------------------+
+| Plot Cruise            |        Retrieve Data        |         SQL Queries            |
++------------------------+-----------------------------+--------------------------------+
 
 
 
@@ -52,4 +73,4 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
   depth_profile
   cruise_track
   retrieve_data
-  sql  
+  sql
