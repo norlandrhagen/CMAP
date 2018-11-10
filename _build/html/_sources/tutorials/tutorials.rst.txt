@@ -17,6 +17,11 @@ Tutorials
    :align: middle
    :target: depth_profile.html
 
+.. |ct| image:: /_static/tutorial_pics/depth_profile.png
+  :scale: 33%
+  :align: middle
+  :target: depth_profile.html
+
 
 The tutorials include both GUI and script approaches. The GUI tutorials may include a video demonstration and the script approach include example code.
 
@@ -25,11 +30,11 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
 +------------------------+-----------------------------+--------------------------------+
 | |rm|                   |    |ts|                     |             |dep|              |
 +------------------------+-----------------------------+--------------------------------+
-| Regional Map           |         Time Series         |         Regional Map           |
+| Regional Map           |         Time Series         |         Depth Profile          |
 +------------------------+-----------------------------+--------------------------------+
-| |ts|                   |    |dep|                    |             |ts|               |
+| |ct|                   |    |dep|                    |             |ts|               |
 +------------------------+-----------------------------+--------------------------------+
-| Historam               |         Sectional Map       |         Mutual Trend           |
+| Cruise Track           |         Sectional Map       |         Mutual Trend           |
 +------------------------+-----------------------------+--------------------------------+
 | |ts|                   |    |ts|                     |            |dep|               |
 +------------------------+-----------------------------+--------------------------------+
@@ -45,3 +50,6 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
   regional_map
   time_series
   depth_profile
+  cruise_track
+  retrieve_data
+  sql  

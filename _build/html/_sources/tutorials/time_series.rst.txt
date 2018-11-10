@@ -3,6 +3,8 @@ Plot Time Series
 ================
 
 
+Code Tutorial
+^^^^^^^^^^^^^
 
 
 **Create a Time Series plot using satellite and modeled data**
@@ -48,3 +50,29 @@ Satellite Altimetry data set is a daily-global product with spatial resolution 1
 .. raw:: html
 
     <iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+
+
+
+
+GUI Tutorial
+^^^^^^^^^^^^
+|
+
+Mac OSX
+-------
+
+
+.. raw:: html
+
+    <iframe src="https://www.youtube.com/embed/AHXeqUXwEbA"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
+
+
+|
+|
+
+Windows
+-------
+
+.. raw:: html
+
+    <iframe src="https://www.youtube.com/embed/TINRwJwMBYo"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>

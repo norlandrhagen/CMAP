@@ -3,9 +3,8 @@ Plot Depth Profile
 ==================
 
 
-Code Tutorial
-^^^^^^^^^^^^^
 
+Visualize Data
 
 Create depth profile plots using model and BGC-Argo float profiles.
 
@@ -53,7 +52,7 @@ Argo float data set has irregular temporal and spatial resolution.
 
 
 GUI Tutorial
-------------
+^^^^^^^^^^^^
 |
 
 Mac OSX
@@ -73,4 +72,4 @@ Windows
 
 .. raw:: html
 
-    <iframe src="https://www.youtube.com/embed/ZoTE1d_f1Fc"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/lHB21UWl-jw"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
