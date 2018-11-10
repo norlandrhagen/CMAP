@@ -96,10 +96,10 @@
 <li class="toctree-l2"><a class="reference internal" href="depth_profile.html">Plot Depth Profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Plot Depth Profile</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Retrieve Data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#space-time-subset">Space-Time Subset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#time-series-subset">Time Series Subset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#space-time">Space-Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-series">Time-Series</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#depth-profile">Depth Profile</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#section-subset">Section Subset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#depth-profile-subset">Depth Profile Subset</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="sql.html">SQL Queries</a></li>
@@ -175,110 +175,82 @@
             
   <div class="section" id="retrieve-data">
 <h1>Retrieve Data<a class="headerlink" href="#retrieve-data" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="space-time-subset">
-<h2>Space-Time Subset<a class="headerlink" href="#space-time-subset" title="Permalink to this headline">¶</a></h2>
-<p><strong>Create a Time Series plot using satellite and modeled data</strong></p>
-<p><strong>Note:</strong></p>
-<p>Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).</p>
-<p>Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .</p>
-<p>Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotTS</span> <span class="k">as</span> <span class="n">TS</span>
+<div class="section" id="space-time">
+<h2>Space-Time<a class="headerlink" href="#space-time" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial shows how to retrieve a generic distribution of a variable within a predefined space-time domain. You need to know the variable and table names, both which can be found in the catalog. Data is retrieved in form of a dataframe with time, space, and variable columns.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">subset</span>
 
-<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblSST_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblAltimetry_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPISCES_NRT&#39;</span><span class="p">]</span>    <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;sla&#39;</span><span class="p">,</span> <span class="s1">&#39;NO3&#39;</span><span class="p">]</span>                                        <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-03-29&#39;</span>
-<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-05-29&#39;</span>
-<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;25&#39;</span>
-<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;30&#39;</span>
-<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-160&#39;</span>
-<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-155&#39;</span>
-<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;5&#39;</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;TS&#39;</span>
-<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
+<span class="c1">############## set parameters ################</span>
+<span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;tblsst_AVHRR_OI_NRT&#39;</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;sst&#39;</span>
+<span class="n">dt1</span> <span class="o">=</span> <span class="s1">&#39;2016-06-01&#39;</span>
+<span class="n">dt2</span> <span class="o">=</span> <span class="s1">&#39;2016-06-05&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="o">-</span><span class="mi">160</span><span class="p">,</span> <span class="o">-</span><span class="mi">158</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="c1">##############################################</span>
 
-<span class="n">TS</span><span class="o">.</span><span class="n">plotTS</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">spaceTime</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">dt1</span><span class="p">,</span> <span class="n">dt2</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">)</span>    <span class="c1"># retrieves a DataFrame</span>
+<span class="c1">#df.to_csv(&#39;data.csv&#39;, index=False)      # save the retrieved data into a csv file</span>
 </pre></div>
 </div>
-<iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
-<div class="section" id="time-series-subset">
-<h2>Time Series Subset<a class="headerlink" href="#time-series-subset" title="Permalink to this headline">¶</a></h2>
-<p><strong>Create a Time Series plot using satellite and modeled data</strong></p>
-<p><strong>Note:</strong></p>
-<p>Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).</p>
-<p>Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .</p>
-<p>Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotTS</span> <span class="k">as</span> <span class="n">TS</span>
+</div>
+<div class="section" id="time-series">
+<h2>Time-Series<a class="headerlink" href="#time-series" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial shows how to retrieve time series of a variable within a predefined space-time domain. You need to know the variable and table names, both which can be found in the catalog. The timeSeries function computes the mean and standard deviation of the variable per time period. Data is retrieved in form of a dataframe with time, space, and variable columns.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">subset</span>
 
-<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblSST_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblAltimetry_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPISCES_NRT&#39;</span><span class="p">]</span>    <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;sla&#39;</span><span class="p">,</span> <span class="s1">&#39;NO3&#39;</span><span class="p">]</span>                                        <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-03-29&#39;</span>
-<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-05-29&#39;</span>
-<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;25&#39;</span>
-<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;30&#39;</span>
-<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-160&#39;</span>
-<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-155&#39;</span>
-<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;5&#39;</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;TS&#39;</span>
-<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
+<span class="c1">############## set parameters ################</span>
+<span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;tblsst_AVHRR_OI_NRT&#39;</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;sst&#39;</span>
+<span class="n">dt1</span> <span class="o">=</span> <span class="s1">&#39;2016-06-01&#39;</span>
+<span class="n">dt2</span> <span class="o">=</span> <span class="s1">&#39;2016-07-01&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="o">-</span><span class="mi">160</span><span class="p">,</span> <span class="o">-</span><span class="mi">158</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+<span class="c1">##############################################</span>
 
-<span class="n">TS</span><span class="o">.</span><span class="n">plotTS</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">timeSeries</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">dt1</span><span class="p">,</span> <span class="n">dt2</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">)</span>    <span class="c1"># retrieves a DataFrame</span>
+<span class="c1">#df.to_csv(&#39;data.csv&#39;, index=False)      # save the retrieved data into a csv file</span>
 </pre></div>
 </div>
-<iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
+</div>
+<div class="section" id="depth-profile">
+<h2>Depth Profile<a class="headerlink" href="#depth-profile" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial shows how to retrieve depth profile of a variable within a predefined space-time domain. You need to know the variable and table names, both which can be found in the catalog. The depthProfile function computes the mean and standard deviation of the variable per depth period. Data is retrieved in form of a dataframe.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">subset</span>
+
+<span class="c1">############## set parameters ################</span>
+<span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;tblPisces_NRT&#39;</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;CHL&#39;</span>
+<span class="n">dt1</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
+<span class="n">dt2</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="o">-</span><span class="mi">160</span><span class="p">,</span> <span class="o">-</span><span class="mi">158</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6000</span>
+<span class="c1">##############################################</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">subset</span><span class="o">.</span><span class="n">depthProfile</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">dt1</span><span class="p">,</span> <span class="n">dt2</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">)</span>    <span class="c1"># retrieves a DataFrame</span>
+<span class="c1">#df.to_csv(&#39;data.csv&#39;, index=False)      # save the retrieved data into a csv file</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="section-subset">
 <h2>Section Subset<a class="headerlink" href="#section-subset" title="Permalink to this headline">¶</a></h2>
-<p><strong>Create a Time Series plot using satellite and modeled data</strong></p>
-<p><strong>Note:</strong></p>
-<p>Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).</p>
-<p>Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .</p>
-<p>Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotTS</span> <span class="k">as</span> <span class="n">TS</span>
+<p>This tutorial shows how to retrieve section profile of a variable within a predefined space-time domain. You need to know the variable and table names, both which can be found in the catalog. Data is retrieved in form of a dataframe with time, space, and variable columns.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">subset</span>
 
-<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblSST_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblAltimetry_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPISCES_NRT&#39;</span><span class="p">]</span>    <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;sla&#39;</span><span class="p">,</span> <span class="s1">&#39;NO3&#39;</span><span class="p">]</span>                                        <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-03-29&#39;</span>
-<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-05-29&#39;</span>
-<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;25&#39;</span>
-<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;30&#39;</span>
-<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-160&#39;</span>
-<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-155&#39;</span>
-<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;5&#39;</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;TS&#39;</span>
-<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
+<span class="c1">############## set parameters ################</span>
+<span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;tblPisces_NRT&#39;</span>
+<span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;Fe&#39;</span>
+<span class="n">dt1</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
+<span class="n">dt2</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="o">-</span><span class="mi">160</span><span class="p">,</span> <span class="o">-</span><span class="mi">158</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6000</span>
+<span class="c1">##############################################</span>
 
-<span class="n">TS</span><span class="o">.</span><span class="n">plotTS</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+<span class="n">subset</span><span class="o">.</span><span class="n">section</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">dt1</span><span class="p">,</span> <span class="n">dt2</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">)</span>    <span class="c1"># retrieves a DataFrame</span>
+<span class="c1">#df.to_csv(&#39;data.csv&#39;, index=False)      # save the retrieved data into a csv file</span>
 </pre></div>
 </div>
-<iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
-<div class="section" id="depth-profile-subset">
-<h2>Depth Profile Subset<a class="headerlink" href="#depth-profile-subset" title="Permalink to this headline">¶</a></h2>
-<p><strong>Create a Time Series plot using satellite and modeled data</strong></p>
-<p><strong>Note:</strong></p>
-<p>Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).</p>
-<p>Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .</p>
-<p>Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotTS</span> <span class="k">as</span> <span class="n">TS</span>
-
-<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblSST_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblAltimetry_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPISCES_NRT&#39;</span><span class="p">]</span>    <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;sla&#39;</span><span class="p">,</span> <span class="s1">&#39;NO3&#39;</span><span class="p">]</span>                                        <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-03-29&#39;</span>
-<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-05-29&#39;</span>
-<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;25&#39;</span>
-<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;30&#39;</span>
-<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-160&#39;</span>
-<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-155&#39;</span>
-<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;5&#39;</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;TS&#39;</span>
-<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
-
-<span class="n">TS</span><span class="o">.</span><span class="n">plotTS</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
-</pre></div>
 </div>
-<iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
 </div>
 
 

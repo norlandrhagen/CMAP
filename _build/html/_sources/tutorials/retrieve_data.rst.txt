@@ -3,167 +3,100 @@ Retrieve Data
 =============
 
 
-Space-Time Subset
-^^^^^^^^^^^^^^^^^
 
 
-**Create a Time Series plot using satellite and modeled data**
+Space-Time
+^^^^^^^^^^
 
-**Note:**
+This tutorial shows how to retrieve a generic distribution of a variable within a predefined space-time domain. You need to know the variable and table names, both which can be found in the catalog. Data is retrieved in form of a dataframe with time, space, and variable columns.
 
-Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).
-
-Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .
-
-Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .
 
 .. code-block:: python
 
+    from opedia import subset
 
-    from opedia import plotTS as TS
+    ############## set parameters ################
+    table = 'tblsst_AVHRR_OI_NRT'
+    variable = 'sst'
+    dt1 = '2016-06-01'
+    dt2 = '2016-06-05'
+    lat1, lat2, lon1, lon2 = 23, 24, -160, -158
+    depth1, depth2 = 0, 0
+    ##############################################
 
-    tables = ['tblSST_AVHRR_OI_NRT', 'tblAltimetry_REP', 'tblPISCES_NRT']    # see catalog.csv  for the complete list of tables and variable names
-    variables = ['sst', 'sla', 'NO3']                                        # see catalog.csv  for the complete list of tables and variable names
-    startDate = '2016-03-29'
-    endDate = '2016-05-29'
-    lat1 = '25'
-    lat2 = '30'
-    lon1 = '-160'
-    lon2 = '-155'
-    depth1 = '0'
-    depth2 = '5'
-    fname = 'TS'
-    exportDataFlag = False      # True if you you want to download data
-
-    TS.plotTS(tables, variables, startDate, endDate, lat1, lat2, lon1, lon2, depth1, depth2, fname, exportDataFlag)
+    df = subset.spaceTime(table, variable, dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2)    # retrieves a DataFrame
+    #df.to_csv('data.csv', index=False)      # save the retrieved data into a csv file
 
 
 
-.. raw:: html
-
-    <iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe>
 
 
 
-Time Series Subset
-^^^^^^^^^^^^^^^^^^
+Time-Series
+^^^^^^^^^^^
 
-
-**Create a Time Series plot using satellite and modeled data**
-
-**Note:**
-
-Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).
-
-Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .
-
-Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .
+This tutorial shows how to retrieve time series of a variable within a predefined space-time domain. You need to know the variable and table names, both which can be found in the catalog. The timeSeries function computes the mean and standard deviation of the variable per time period. Data is retrieved in form of a dataframe with time, space, and variable columns.
 
 .. code-block:: python
 
+    from opedia import subset
 
-    from opedia import plotTS as TS
+    ############## set parameters ################
+    table = 'tblsst_AVHRR_OI_NRT'
+    variable = 'sst'
+    dt1 = '2016-06-01'
+    dt2 = '2016-07-01'
+    lat1, lat2, lon1, lon2 = 23, 24, -160, -158
+    depth1, depth2 = 0, 0
+    ##############################################
 
-    tables = ['tblSST_AVHRR_OI_NRT', 'tblAltimetry_REP', 'tblPISCES_NRT']    # see catalog.csv  for the complete list of tables and variable names
-    variables = ['sst', 'sla', 'NO3']                                        # see catalog.csv  for the complete list of tables and variable names
-    startDate = '2016-03-29'
-    endDate = '2016-05-29'
-    lat1 = '25'
-    lat2 = '30'
-    lon1 = '-160'
-    lon2 = '-155'
-    depth1 = '0'
-    depth2 = '5'
-    fname = 'TS'
-    exportDataFlag = False      # True if you you want to download data
-
-    TS.plotTS(tables, variables, startDate, endDate, lat1, lat2, lon1, lon2, depth1, depth2, fname, exportDataFlag)
+    df = subset.timeSeries(table, variable, dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2)    # retrieves a DataFrame
+    #df.to_csv('data.csv', index=False)      # save the retrieved data into a csv file
 
 
 
-.. raw:: html
 
-    <iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+
+Depth Profile
+^^^^^^^^^^^^^
+
+This tutorial shows how to retrieve depth profile of a variable within a predefined space-time domain. You need to know the variable and table names, both which can be found in the catalog. The depthProfile function computes the mean and standard deviation of the variable per depth period. Data is retrieved in form of a dataframe.
+
+.. code-block:: python
+
+    from opedia import subset
+
+    ############## set parameters ################
+    table = 'tblPisces_NRT'
+    variable = 'CHL'
+    dt1 = '2016-04-30'
+    dt2 = '2016-04-30'
+    lat1, lat2, lon1, lon2 = 23, 24, -160, -158
+    depth1, depth2 = 0, 6000
+    ##############################################
+
+    df = subset.depthProfile(table, variable, dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2)    # retrieves a DataFrame
+    #df.to_csv('data.csv', index=False)      # save the retrieved data into a csv file
+
+
 
 Section Subset
 ^^^^^^^^^^^^^^
 
-
-**Create a Time Series plot using satellite and modeled data**
-
-**Note:**
-
-Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).
-
-Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .
-
-Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .
+This tutorial shows how to retrieve section profile of a variable within a predefined space-time domain. You need to know the variable and table names, both which can be found in the catalog. Data is retrieved in form of a dataframe with time, space, and variable columns.
 
 .. code-block:: python
 
+    from opedia import subset
 
-    from opedia import plotTS as TS
+    ############## set parameters ################
+    table = 'tblPisces_NRT'
+    variable = 'Fe'
+    dt1 = '2016-04-30'
+    dt2 = '2016-04-30'
+    lat1, lat2, lon1, lon2 = 22, 50, -160, -158
+    depth1, depth2 = 0, 6000
+    ##############################################
 
-    tables = ['tblSST_AVHRR_OI_NRT', 'tblAltimetry_REP', 'tblPISCES_NRT']    # see catalog.csv  for the complete list of tables and variable names
-    variables = ['sst', 'sla', 'NO3']                                        # see catalog.csv  for the complete list of tables and variable names
-    startDate = '2016-03-29'
-    endDate = '2016-05-29'
-    lat1 = '25'
-    lat2 = '30'
-    lon1 = '-160'
-    lon2 = '-155'
-    depth1 = '0'
-    depth2 = '5'
-    fname = 'TS'
-    exportDataFlag = False      # True if you you want to download data
-
-    TS.plotTS(tables, variables, startDate, endDate, lat1, lat2, lon1, lon2, depth1, depth2, fname, exportDataFlag)
-
-
-
-.. raw:: html
-
-    <iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe>
-
-
-
-
-Depth Profile Subset
-^^^^^^^^^^^^^^^^^^^^
-
-
-**Create a Time Series plot using satellite and modeled data**
-
-**Note:**
-
-Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).
-
-Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .
-
-Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .
-
-.. code-block:: python
-
-
-    from opedia import plotTS as TS
-
-    tables = ['tblSST_AVHRR_OI_NRT', 'tblAltimetry_REP', 'tblPISCES_NRT']    # see catalog.csv  for the complete list of tables and variable names
-    variables = ['sst', 'sla', 'NO3']                                        # see catalog.csv  for the complete list of tables and variable names
-    startDate = '2016-03-29'
-    endDate = '2016-05-29'
-    lat1 = '25'
-    lat2 = '30'
-    lon1 = '-160'
-    lon2 = '-155'
-    depth1 = '0'
-    depth2 = '5'
-    fname = 'TS'
-    exportDataFlag = False      # True if you you want to download data
-
-    TS.plotTS(tables, variables, startDate, endDate, lat1, lat2, lon1, lon2, depth1, depth2, fname, exportDataFlag)
-
-
-
-.. raw:: html
-
-    <iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+    subset.section(table, variable, dt1, dt2, lat1, lat2, lon1, lon2, depth1, depth2)    # retrieves a DataFrame
+    #df.to_csv('data.csv', index=False)      # save the retrieved data into a csv file
