@@ -1,6 +1,6 @@
 
-Plot Depth Profile
-==================
+Visualize Cruise Track
+======================
 
 
 
@@ -61,7 +61,7 @@ Mac OSX
 
 .. raw:: html
 
-    <iframe src="https://www.youtube.com/embed/kHTMvLb3qg8"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/cLY5R49JwCc"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
 
 
 |
@@ -73,3 +73,7 @@ Windows
 .. raw:: html
 
     <iframe src="https://www.youtube.com/embed/lHB21UWl-jw"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
+
+.. raw:: html
+
+    <iframe src="https://www.youtube.com/embed/cn--aL9VElU"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>

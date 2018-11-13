@@ -64,7 +64,7 @@ Mac OSX
 
 .. raw:: html
 
-    <iframe src="https://www.youtube.com/embed/AHXeqUXwEbA"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/1rq19EHAIAE"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
 
 
 |
@@ -75,4 +75,4 @@ Windows
 
 .. raw:: html
 
-    <iframe src="https://www.youtube.com/embed/TINRwJwMBYo"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VnxFzssDfAk"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>

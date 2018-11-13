@@ -5,9 +5,8 @@
 .. _Jupyter: https://github.com/mdashkezari/opedia/blob/master/notebooks/SimpleExamples.ipynb
 
 
-Plot Regional Map
-=================
-
+Plot Histogram
+==============
 
 
 
@@ -67,7 +66,7 @@ Mac OSX
 
 .. raw:: html
 
-    <iframe src="https://www.youtube.com/embed/XD0rW7gPuaQ"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/8nLbMXrKUYk"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
 
 
 |
@@ -78,4 +77,4 @@ Windows
 
 .. raw:: html
 
-    <iframe src="https://www.youtube.com/embed/_qD6a-7_DGY"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/XhWMyocZYeI"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
