@@ -42,16 +42,16 @@ Tutorials
    :align: middle
    :target: front.html
 
-.. |cd| image:: /_static/tutorial_pics/depth_profile.png
+.. |cd| image:: /_static/tutorial_pics/netcdf.png
   :align: middle
   :target: custom_data.html
 
 
-.. |rd| image:: /_static/tutorial_pics/depth_profile.png
+.. |rd| image:: /_static/tutorial_pics/retrieve_data.png
    :align: middle
    :target: retrieve_data.html
 
-.. |sql| image:: /_static/tutorial_pics/depth_profile.png
+.. |sql| image:: /_static/tutorial_pics/sql.png
   :align: middle
   :target: sql.html
 
