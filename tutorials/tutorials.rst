@@ -27,6 +27,7 @@ Tutorials
    :target: section_plot.html
 
 .. |ct| image:: /_static/tutorial_pics/cruise.png
+  :scale: 50%
   :align: middle
   :target: cruise_track.html
 
@@ -42,16 +43,16 @@ Tutorials
    :align: middle
    :target: front.html
 
-.. |cd| image:: /_static/tutorial_pics/netcdf.png
+.. |cd| image:: /_static/tutorial_pics/colocalize.png
   :align: middle
   :target: custom_data.html
 
 
-.. |rd| image:: /_static/tutorial_pics/retrieve_data.png
+.. |rd| image:: /_static/tutorial_pics/subset.png
    :align: middle
    :target: retrieve_data.html
 
-.. |sql| image:: /_static/tutorial_pics/sql.png
+.. |sql| image:: /_static/tutorial_pics/sql_2.png
   :align: middle
   :target: sql.html
 
@@ -74,11 +75,11 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
 +------------------------+------------------------+------------------------+
 | |lag|                  |    |ed|                |            |fr|        |
 +------------------------+------------------------+------------------------+
-|   Plot Lagrangian      |       Plot Eddy        |         Plot Front     |
+| Lagrangian Sampling    |      Eddy Sampling     |   Front Sampling       |
 +------------------------+------------------------+------------------------+
 | |cd|                   |    |rd|                |            |sql|       |
 +------------------------+------------------------+------------------------+
-| Custom Data            |        Retrieve Data   |         SQL Queries    |
+| Custom Data            | Retrieve Dataset Subset|         SQL Queries    |
 +------------------------+------------------------+------------------------+
 
 
