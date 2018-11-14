@@ -6,7 +6,7 @@ SQL Queries
 Regional Map SQL
 ^^^^^^^^^^^^^^^^^
 
-If you are familiar with SQL or T-SQL language, you can use "dfFetch()" function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a snapshot and plot a basic map.
+If you are familiar with SQL or T-SQL language, you can use "dbFetch()" function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a snapshot and plot a basic map.
 
 **Import the libraries**
 
@@ -76,7 +76,7 @@ If you are familiar with SQL or T-SQL language, you can use "dfFetch()" function
 Time Series SQL
 ^^^^^^^^^^^^^^^
 
-If you are familiar with SQL or T-SQL language, you can use "dfFetch()" function to execute any generic query and retrieve data. Below is a simple example showing how retrieve time series and plot.
+If you are familiar with SQL or T-SQL language, you can use "dbFetch()" function to execute any generic query and retrieve data. Below is a simple example showing how retrieve time series and plot.
 
 **Import the libraries**
 
@@ -136,7 +136,7 @@ If you are familiar with SQL or T-SQL language, you can use "dfFetch()" function
 Depth Profile SQL
 ^^^^^^^^^^^^^^^^^
 
-If you are familiar with SQL or T-SQL language, you can use "dfFetch()" function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a depth profile and plot.
+If you are familiar with SQL or T-SQL language, you can use "dbFetch()" function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a depth profile and plot.
 
 **Import the libraries**
 

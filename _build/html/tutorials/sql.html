@@ -92,12 +92,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="tutorials.html">Tutorials</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="get_catalog.html">Retrieve Data Catalog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="regional_map.html">Plot Regional Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time_series.html">Plot Time Series</a></li>
 <li class="toctree-l2"><a class="reference internal" href="depth_profile.html">Plot Depth Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="section_plot.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eddy.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom_data.html">Plot Regional Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section_plot.html">Section Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Visualize Cruise Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Lagrangian Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eddy.html">Eddy Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="front.html">Front Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_data.html">Colocalize Custom Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="retrieve_data.html">Retrieve Data</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">SQL Queries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#regional-map-sql">Regional Map SQL</a></li>
@@ -179,7 +182,7 @@
 <h1>SQL Queries<a class="headerlink" href="#sql-queries" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="regional-map-sql">
 <h2>Regional Map SQL<a class="headerlink" href="#regional-map-sql" title="Permalink to this headline">¶</a></h2>
-<p>If you are familiar with SQL or T-SQL language, you can use “dfFetch()” function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a snapshot and plot a basic map.</p>
+<p>If you are familiar with SQL or T-SQL language, you can use “dbFetch()” function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a snapshot and plot a basic map.</p>
 <p><strong>Import the libraries</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">db</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -233,7 +236,7 @@
 </div>
 <div class="section" id="time-series-sql">
 <h2>Time Series SQL<a class="headerlink" href="#time-series-sql" title="Permalink to this headline">¶</a></h2>
-<p>If you are familiar with SQL or T-SQL language, you can use “dfFetch()” function to execute any generic query and retrieve data. Below is a simple example showing how retrieve time series and plot.</p>
+<p>If you are familiar with SQL or T-SQL language, you can use “dbFetch()” function to execute any generic query and retrieve data. Below is a simple example showing how retrieve time series and plot.</p>
 <p><strong>Import the libraries</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">db</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
@@ -279,7 +282,7 @@
 </div>
 <div class="section" id="depth-profile-sql">
 <h2>Depth Profile SQL<a class="headerlink" href="#depth-profile-sql" title="Permalink to this headline">¶</a></h2>
-<p>If you are familiar with SQL or T-SQL language, you can use “dfFetch()” function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a depth profile and plot.</p>
+<p>If you are familiar with SQL or T-SQL language, you can use “dbFetch()” function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a depth profile and plot.</p>
 <p><strong>Import the libraries</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">db</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
