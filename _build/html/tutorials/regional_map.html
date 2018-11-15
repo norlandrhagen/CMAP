@@ -93,17 +93,15 @@
 <li class="toctree-l2"><a class="reference internal" href="get_catalog.html">Retrieve Data Catalog</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Plot Regional Map</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#code-tutorial">Code Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#gui-tutorial">GUI Tutorial</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#mac-osx">Mac OSX</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#gui-tutorials">GUI Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mac-osx">Mac OSX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="time_series.html">Plot Time Series</a></li>
 <li class="toctree-l2"><a class="reference internal" href="depth_profile.html">Plot Depth Profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Histogram</a></li>
-<li class="toctree-l2"><a class="reference internal" href="section_plot.html">Section Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section.html">Section Plot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Visualize Cruise Track</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Lagrangian Sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eddy.html">Eddy Sampling</a></li>
@@ -197,35 +195,36 @@
 <span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;Fe&#39;</span><span class="p">]</span>                            <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
 <span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
 <span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
-<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;10&#39;</span>
-<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;70&#39;</span>
-<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-180&#39;</span>
-<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-80&#39;</span>
-<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;0.5&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">70</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">80</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span>
 <span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;regional&#39;</span>
 <span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>       <span class="c1"># True if you you want to download data</span>
 
 <span class="n">REG</span><span class="o">.</span><span class="n">regionalMap</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
 </pre></div>
 </div>
-<iframe src="../_static/RM_large.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
-<div class="section" id="gui-tutorial">
-<h2>GUI Tutorial<a class="headerlink" href="#gui-tutorial" title="Permalink to this headline">¶</a></h2>
+<iframe src="../_static/tutorial_plots/regional.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="gui-tutorials">
+<h2>GUI Tutorials<a class="headerlink" href="#gui-tutorials" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+</div>
 <div class="section" id="mac-osx">
-<h3>Mac OSX<a class="headerlink" href="#mac-osx" title="Permalink to this headline">¶</a></h3>
+<h2>Mac OSX<a class="headerlink" href="#mac-osx" title="Permalink to this headline">¶</a></h2>
 <iframe src="https://www.youtube.com/embed/XD0rW7gPuaQ"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe><div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
 <iframe src="https://www.youtube.com/embed/_qD6a-7_DGY"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe></div>
-</div>
 </div>
 
 

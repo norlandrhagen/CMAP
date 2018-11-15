@@ -38,12 +38,9 @@ Jupyter_
     variables = ['sst', 'Fe']                            # see catalog.csv  for the complete list of tables and variable names
     startDate = '2016-04-30'
     endDate = '2016-04-30'
-    lat1 = '10'
-    lat2 = '70'
-    lon1 = '-180'
-    lon2 = '-80'
-    depth1 = '0'
-    depth2 = '0.5'
+    lat1, lat2 = 10, 70
+    lon1, lon2 = -180, -80
+    depth1, depth2 = 0, 0.5
     fname = 'regional'
     exportDataFlag = False       # True if you you want to download data
 
@@ -54,15 +51,17 @@ Jupyter_
 
 .. raw:: html
 
-    <iframe src="../_static/RM_large.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+    <iframe src="../_static/tutorial_plots/regional.html"  frameborder = 0  height="1000px" width="100%">></iframe>
 
+|
+|
 
-GUI Tutorial
-^^^^^^^^^^^^
+GUI Tutorials
+^^^^^^^^^^^^^
 |
 
 Mac OSX
--------
+^^^^^^^
 
 
 .. raw:: html
@@ -74,7 +73,7 @@ Mac OSX
 |
 
 Windows
--------
+^^^^^^^
 
 .. raw:: html
 

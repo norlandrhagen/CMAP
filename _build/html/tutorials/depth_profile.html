@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Plot Depth Profile" href="cruise_track.html" />
+    <link rel="next" title="Plot Histogram" href="histogram.html" />
     <link rel="prev" title="Plot Time Series" href="time_series.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
@@ -94,20 +94,19 @@
 <li class="toctree-l2"><a class="reference internal" href="regional_map.html">Plot Regional Map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time_series.html">Plot Time Series</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Plot Depth Profile</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#code-tutorial">Code Tutorial</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#gui-tutorial">GUI Tutorial</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mac-osx">Mac OSX</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-tutorial">Code Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gui-tutorials">GUI Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mac-osx">Mac OSX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Plot Depth Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="section_plot.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eddy.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom_data.html">Plot Regional Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section.html">Section Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Visualize Cruise Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Lagrangian Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eddy.html">Eddy Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="front.html">Front Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_data.html">Colocalize Custom Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="retrieve_data.html">Retrieve Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sql.html">SQL Queries</a></li>
 </ul>
@@ -191,39 +190,58 @@ Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 
 <p>Argo float data set has irregular temporal and spatial resolution.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotDepthProfile</span> <span class="k">as</span> <span class="n">DEP</span>
 
-<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblPISCES_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblArgoMerge_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Chl_Climatology&#39;</span><span class="p">]</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CHL&#39;</span><span class="p">,</span> <span class="s1">&#39;argo_merge_chl_adj&#39;</span><span class="p">,</span> <span class="s1">&#39;chl01_darwin_clim&#39;</span><span class="p">]</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblArgoMerge_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Chl_Climatology&#39;</span><span class="p">]</span>     <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;argo_merge_chl_adj&#39;</span><span class="p">,</span> <span class="s1">&#39;CHL&#39;</span><span class="p">]</span>                  <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
 <span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>   <span class="c1"># PISCES is a weekly model, and here we are using monthly climatology of Darwin model</span>
 <span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
-<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;20&#39;</span>
-<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;24&#39;</span>
-<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-170&#39;</span>
-<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-150&#39;</span>
-<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;1500&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">24</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">170</span><span class="p">,</span> <span class="o">-</span><span class="mi">150</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1500</span>
 <span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;DEP&#39;</span>
 <span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
 
 <span class="n">DEP</span><span class="o">.</span><span class="n">plotDepthProfile</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
 </pre></div>
 </div>
-<iframe src="../_static/depth_profile.html"  frameborder = 0  height="1600px" width="100%">></iframe><div class="section" id="gui-tutorial">
-<h3>GUI Tutorial<a class="headerlink" href="#gui-tutorial" title="Permalink to this headline">¶</a></h3>
+<iframe src="../_static/tutorial_plots/dep_01.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotDepthProfile</span> <span class="k">as</span> <span class="n">DEP</span>
+
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblHOT_PP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Chl_Climatology&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">]</span>     <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chl_hot&#39;</span><span class="p">,</span> <span class="s1">&#39;chl01_darwin_clim&#39;</span><span class="p">,</span> <span class="s1">&#39;CHL&#39;</span><span class="p">]</span>                  <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2015-04-30&#39;</span>   <span class="c1"># PISCES is a weekly model, and here we are using monthly climatology of Darwin model</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">24</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">159</span><span class="p">,</span> <span class="o">-</span><span class="mi">157</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">170</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;DEP&#39;</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
+
+<span class="n">DEP</span><span class="o">.</span><span class="n">plotDepthProfile</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+</pre></div>
+</div>
+<iframe src="../_static/tutorial_plots/dep_02.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="gui-tutorials">
+<h2>GUI Tutorials<a class="headerlink" href="#gui-tutorials" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="mac-osx">
-<h3>Mac OSX<a class="headerlink" href="#mac-osx" title="Permalink to this headline">¶</a></h3>
+<h2>Mac OSX<a class="headerlink" href="#mac-osx" title="Permalink to this headline">¶</a></h2>
 <iframe src="https://www.youtube.com/embed/oDa-iP8928A"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe><div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
 <iframe src="https://www.youtube.com/embed/ZoTE1d_f1Fc"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe></div>
-</div>
 </div>
 
 
@@ -234,7 +252,7 @@ Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cruise_track.html" class="btn btn-neutral float-right" title="Plot Depth Profile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="histogram.html" class="btn btn-neutral float-right" title="Plot Histogram" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="time_series.html" class="btn btn-neutral" title="Plot Time Series" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

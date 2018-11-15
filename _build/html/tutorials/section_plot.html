@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Section Plot &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
+  <title>Plot Histogram &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
   
 
   
@@ -95,7 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="time_series.html">Plot Time Series</a></li>
 <li class="toctree-l2"><a class="reference internal" href="depth_profile.html">Plot Depth Profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Histogram</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Section Plot</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Plot Histogram</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#code-tutorial">Code Tutorial</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gui-tutorial">GUI Tutorial</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#mac-osx">Mac OSX</a></li>
@@ -162,7 +162,7 @@
         
           <li><a href="tutorials.html">Tutorials</a> &raquo;</li>
         
-      <li>Section Plot</li>
+      <li>Plot Histogram</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -181,8 +181,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="section-plot">
-<h1>Section Plot<a class="headerlink" href="#section-plot" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="plot-histogram">
+<h1>Plot Histogram<a class="headerlink" href="#plot-histogram" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="code-tutorial">
 <h2>Code Tutorial<a class="headerlink" href="#code-tutorial" title="Permalink to this headline">¶</a></h2>
 <p><strong>Create a regional map using satellite and modeled data</strong></p>
@@ -190,26 +190,22 @@
 <p>The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</p>
 <p>Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .</p>
 <p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/SimpleExamples.ipynb">Jupyter</a></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotRegional</span> <span class="k">as</span> <span class="n">REG</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotDist</span> <span class="k">as</span> <span class="n">DIS</span>
 
-
-<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblsst_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">]</span>    <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;Fe&#39;</span><span class="p">]</span>                            <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblSST_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblArgoMerge_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblArgoMerge_REP&#39;</span><span class="p">]</span>           <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;argo_merge_temperature_adj&#39;</span><span class="p">,</span> <span class="s1">&#39;argo_merge_salinity_adj&#39;</span><span class="p">]</span>       <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
 <span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
 <span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
-<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;10&#39;</span>
-<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;70&#39;</span>
-<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-180&#39;</span>
-<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-80&#39;</span>
-<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;0.5&#39;</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;regional&#39;</span>
-<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>       <span class="c1"># True if you you want to download data</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">24</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">170</span><span class="p">,</span> <span class="mi">150</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1500</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;DEP&#39;</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
 
-<span class="n">REG</span><span class="o">.</span><span class="n">regionalMap</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+<span class="n">DIS</span><span class="o">.</span><span class="n">plotDist</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
 </pre></div>
 </div>
-<iframe src="../_static/RM_large.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
+<iframe src="../_static/tutorial_plots/hist.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
 <div class="section" id="gui-tutorial">
 <h2>GUI Tutorial<a class="headerlink" href="#gui-tutorial" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
@@ -217,14 +213,14 @@
 </div>
 <div class="section" id="mac-osx">
 <h3>Mac OSX<a class="headerlink" href="#mac-osx" title="Permalink to this headline">¶</a></h3>
-<iframe src="https://www.youtube.com/embed/v1NLEgqgYjo"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe><div class="line-block">
+<iframe src="https://www.youtube.com/embed/8nLbMXrKUYk"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe><div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
-<iframe src="https://www.youtube.com/embed/iv13GZ9Uomo"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe></div>
+<iframe src="https://www.youtube.com/embed/XhWMyocZYeI"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe></div>
 </div>
 </div>
 

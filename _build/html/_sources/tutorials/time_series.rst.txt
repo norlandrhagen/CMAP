@@ -25,16 +25,13 @@ Satellite Altimetry data set is a daily-global product with spatial resolution 1
 
     from opedia import plotTS as TS
 
-    tables = ['tblSST_AVHRR_OI_NRT', 'tblAltimetry_REP', 'tblPISCES_NRT']    # see catalog.csv  for the complete list of tables and variable names
+    tables = ['tblSST_AVHRR_OI_NRT', 'tblAltimetry_REP', 'tblPisces_NRT']    # see catalog.csv  for the complete list of tables and variable names
     variables = ['sst', 'sla', 'NO3']                                        # see catalog.csv  for the complete list of tables and variable names
     startDate = '2016-03-29'
     endDate = '2016-05-29'
-    lat1 = '25'
-    lat2 = '30'
-    lon1 = '-160'
-    lon2 = '-155'
-    depth1 = '0'
-    depth2 = '5'
+    lat1, lat2 = 25, 30
+    lon1, lon2 = -160, -155
+    depth1, depth2 = 0, 5
     fname = 'TS'
     exportDataFlag = False      # True if you you want to download data
 
@@ -49,17 +46,19 @@ Satellite Altimetry data set is a daily-global product with spatial resolution 1
 
 .. raw:: html
 
-    <iframe src="../_static/TS.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+    <iframe src="../_static/tutorial_plots/TS.html"  frameborder = 0  height="1000px" width="100%">></iframe>
 
 
+|
+|
 
 
-GUI Tutorial
-^^^^^^^^^^^^
+GUI Tutorials
+^^^^^^^^^^^^^
 |
 
 Mac OSX
--------
+^^^^^^^
 
 
 .. raw:: html
@@ -71,7 +70,7 @@ Mac OSX
 |
 
 Windows
--------
+^^^^^^^
 
 .. raw:: html
 

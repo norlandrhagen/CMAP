@@ -24,7 +24,7 @@ Tutorials
 
 .. |sp| image:: /_static/tutorial_pics/section.png
    :align: middle
-   :target: section_plot.html
+   :target: section.html
 
 .. |ct| image:: /_static/tutorial_pics/cruise.png
   :scale: 50%
@@ -90,7 +90,7 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
   time_series
   depth_profile
   histogram
-  section_plot
+  section
   cruise_track
   lagrangian
   eddy
