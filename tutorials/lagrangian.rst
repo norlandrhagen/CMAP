@@ -31,38 +31,46 @@ Jupyter_
 
 
 
-    from opedia import plotRegional as REG
+    from opedia import Lagrangian as LAG
+    import pandas as pd
+
+    fmt='%Y-%m-%d'
+    dt = 24*3600                                                          # propagation time step (day seconds)
+    direction = 1                                                         # propagation direction (forward/backward in time  <1> / <-1>)
+    startDate = '2016-01-01'                                              # propagation start date
+    endDate = '2016-02-01'                                                # propagation end date
+    lat0 = 36                                                             # starting poin latitude
+    lon0 = -73                                                            # starting poin longitude
+    fname = 'Tracer'                                                      # figure filename (and/or shape filename)
+    tables = ['tblSST_AVHRR_OI_NRT', 'tblDarwin_Plankton_Climatology']    # list of varaible table names
+    variables = ['sst', 'diazotroph_c10_darwin_clim']                     # list of variable names
+    spatialTolerance = 0.3                                                # colocalizer spatial tolerance (+/- degrees)
+    exportDataFlag = False                                                # export the cruise trajectory and colocalized data on disk
+    depth1 = 0                                                            # depth range start (m)
+    depth2 = 5                                                            # depth range end (m)
 
 
-    tables = ['tblsst_AVHRR_OI_NRT', 'tblPisces_NRT']    # see catalog.csv  for the complete list of tables and variable names
-    variables = ['sst', 'Fe']                            # see catalog.csv  for the complete list of tables and variable names
-    startDate = '2016-04-30'
-    endDate = '2016-04-30'
-    lat1 = '10'
-    lat2 = '70'
-    lon1 = '-180'
-    lon2 = '-80'
-    depth1 = '0'
-    depth2 = '0.5'
-    fname = 'regional'
-    exportDataFlag = False       # True if you you want to download data
+    df = pd.DataFrame()
+    df['time'], df['lat'], df['lon'] = LAG.propagate(direction, startDate, endDate, lat0, lon0, fmt, dt)
+    LAG.plotAlongTrack(dt, fmt, tables, variables, df, spatialTolerance, depth1, depth2, exportDataFlag, fname, marker='-', msize=30, clr='darkturquoise')
 
-    REG.regionalMap(tables, variables, startDate, endDate, lat1, lat2, lon1, lon2, depth1, depth2, fname, exportDataFlag)
 
 
 
 
 .. raw:: html
 
-    <iframe src="../_static/RM_large.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+    <iframe src="../_static/tutorial_plots/Tracer.html"  frameborder = 0  height="1600px" width="100%">></iframe>
 
+|
+|
 
-GUI Tutorial
-^^^^^^^^^^^^
+GUI Tutorials
+^^^^^^^^^^^^^
 |
 
 Mac OSX
--------
+^^^^^^^
 
 
 .. raw:: html
@@ -74,7 +82,7 @@ Mac OSX
 |
 
 Windows
--------
+^^^^^^^
 
 .. raw:: html
 

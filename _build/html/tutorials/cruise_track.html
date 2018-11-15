@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Lagrangian Sampling" href="lagrangian.html" />
-    <link rel="prev" title="Section Plot" href="section_plot.html" />
+    <link rel="prev" title="Section Plot" href="section.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 
@@ -95,7 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="time_series.html">Plot Time Series</a></li>
 <li class="toctree-l2"><a class="reference internal" href="depth_profile.html">Plot Depth Profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Histogram</a></li>
-<li class="toctree-l2"><a class="reference internal" href="section_plot.html">Section Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section.html">Section Plot</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Visualize Cruise Track</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#gui-tutorial">GUI Tutorial</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#mac-osx">Mac OSX</a></li>
@@ -188,25 +188,31 @@
 Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</p>
 <p>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° X 1/2° .</p>
 <p>Argo float data set has irregular temporal and spatial resolution.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotDepthProfile</span> <span class="k">as</span> <span class="n">DEP</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotCruise</span> <span class="k">as</span> <span class="n">CRS</span>
 
-<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblPISCES_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblArgoMerge_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Chl_Climatology&#39;</span><span class="p">]</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;CHL&#39;</span><span class="p">,</span> <span class="s1">&#39;argo_merge_chl_adj&#39;</span><span class="p">,</span> <span class="s1">&#39;chl01_darwin_clim&#39;</span><span class="p">]</span>
-<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>   <span class="c1"># PISCES is a weekly model, and here we are using monthly climatology of Darwin model</span>
-<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
-<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;20&#39;</span>
-<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;24&#39;</span>
-<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-170&#39;</span>
-<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-150&#39;</span>
-<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;1500&#39;</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;DEP&#39;</span>
-<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
+<span class="n">DB_Cruise</span> <span class="o">=</span> <span class="bp">True</span>                 <span class="c1"># &lt; True &gt; if cruise trajectory already exists in DB. &lt; False &gt; if arbiturary cruise file (e.g. virtual)</span>
+<span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;tblSeaFlow&#39;</span>            <span class="c1"># cruise table name or path to csv trajectory file</span>
+<span class="n">cruise</span> <span class="o">=</span> <span class="s1">&#39;SCOPE_16&#39;</span>              <span class="c1"># cruise name, or file name of the csv trajectory file</span>
+<span class="n">resampTau</span> <span class="o">=</span> <span class="s1">&#39;6H&#39;</span>                 <span class="c1"># resample the cruise trajectory making trajectory time-space resolution coarser: e.g. &#39;6H&#39; (6 hourly), &#39;3T&#39; (3 minutes), ... &#39;0&#39; (ignore)</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;alongTrack&#39;</span>             <span class="c1"># figure filename</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblSeaFlow&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Plankton_Climatology&#39;</span><span class="p">,</span> <span class="s1">&#39;tblCHL_OI_REP&#39;</span><span class="p">]</span>    <span class="c1"># list of varaible table names</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;picoeuk&#39;</span><span class="p">,</span> <span class="s1">&#39;picoeukaryote_c03_darwin_clim&#39;</span><span class="p">,</span> <span class="s1">&#39;chl&#39;</span><span class="p">]</span>               <span class="c1"># list of variable names</span>
+<span class="n">spatialTolerance</span> <span class="o">=</span> <span class="mf">0.3</span>           <span class="c1"># colocalizer spatial tolerance (+/- degrees)</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>           <span class="c1"># export the cruise trajectory and colocalized data on disk</span>
+<span class="n">depth1</span> <span class="o">=</span> <span class="mi">0</span>                      <span class="c1"># depth range start (m)</span>
+<span class="n">depth2</span> <span class="o">=</span> <span class="mi">5</span>                       <span class="c1"># depth range end (m)</span>
 
-<span class="n">DEP</span><span class="o">.</span><span class="n">plotDepthProfile</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">CRS</span><span class="o">.</span><span class="n">getCruiseTrack</span><span class="p">(</span><span class="n">DB_Cruise</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">cruise</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">CRS</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">resampTau</span><span class="p">)</span>
+<span class="n">loadedTrack</span> <span class="o">=</span> <span class="n">CRS</span><span class="o">.</span><span class="n">plotAlongTrack</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">cruise</span><span class="p">,</span> <span class="n">resampTau</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">spatialTolerance</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">msize</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">clr</span><span class="o">=</span><span class="s1">&#39;darkturquoise&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<iframe src="../_static/cruise-track.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="section" id="gui-tutorial">
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<iframe src="../_static/tutorial_plots/alongTrack.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="section" id="gui-tutorial">
 <h2>GUI Tutorial<a class="headerlink" href="#gui-tutorial" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -235,7 +241,7 @@ Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 
         <a href="lagrangian.html" class="btn btn-neutral float-right" title="Lagrangian Sampling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="section_plot.html" class="btn btn-neutral" title="Section Plot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="section.html" class="btn btn-neutral" title="Section Plot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
