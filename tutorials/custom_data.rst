@@ -2,12 +2,22 @@
 
 
 
-.. _Jupyter: https://github.com/mdashkezari/opedia/blob/master/notebooks/SimpleExamples.ipynb
+.. _Jupyter_Notebook: https://github.com/mdashkezari/opedia/blob/master/notebooks/Colocalize_Custom_Dataset.ipynb
 
 
 Colocalize Custom Dataset
 =========================
 
+Colocalize a virtual cruise with satellite chlorophyll data and picoeukaryote climatological estimates provided by Darwin model. The trajectory of the virtual cruise is stored in a .csv file.
+
+
+Notes:
+
+Satellite sea surface temperatue data used in this example is a daily-global near-real-time and optimally interpolated data set with 4km × 4km spatial resolution  1/4° X 1/4° .
+
+Satellite Chlorophyll data used in this example is a daily-global reprocessed and optimally interpolated data set with  4km × 4km  spatial resolution.
+
+Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° ×1 /2° .
 
 
 
@@ -15,46 +25,31 @@ Code Tutorial
 ^^^^^^^^^^^^^
 
 
-**Create a regional map using satellite and modeled data**
-
-Notes:
-
-The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).
-
-Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .
-
-
-Jupyter_
+Jupyter_Notebook_
 
 
 .. code-block:: python
 
 
 
-    from opedia import plotRegional as REG
+    from opedia import colocalize as COL
 
+    DB = False                            # < True > if source data exists in the database. < 0 > if the source data set is a spreadsheet file on disk.
+    source = './KM1314_ParticulateCobalamins_2018_06_12_vPublished.xlsx'            # the source table name (or full filename)
+    temporalTolerance = 1                # colocalizer temporal tolerance (+/- degrees)
+    latTolerance = 0.3                   # colocalizer meridional tolerance (+/- degrees)
+    lonTolerance = 0.3                   # colocalizer zonal tolerance (+/- degrees)
+    depthTolerance = 5                   # colocalizer depth tolerance (+/- meters)
+    tables = ['tblSST_AVHRR_OI_NRT', 'tblPisces_NRT', 'tblDarwin_Plankton_Climatology']    # list of varaible table names
+    variables = ['sst', 'Fe', 'picoeukaryote_c03_darwin_clim']                            # list of variable names
+    exportPath = './loaded.csv'         # path to save the colocalized data set
 
-    tables = ['tblsst_AVHRR_OI_NRT', 'tblPisces_NRT']    # see catalog.csv  for the complete list of tables and variable names
-    variables = ['sst', 'Fe']                            # see catalog.csv  for the complete list of tables and variable names
-    startDate = '2016-04-30'
-    endDate = '2016-04-30'
-    lat1 = '10'
-    lat2 = '70'
-    lon1 = '-180'
-    lon2 = '-80'
-    depth1 = '0'
-    depth2 = '0.5'
-    fname = 'regional'
-    exportDataFlag = False       # True if you you want to download data
-
-    REG.regionalMap(tables, variables, startDate, endDate, lat1, lat2, lon1, lon2, depth1, depth2, fname, exportDataFlag)
+    COL.matchSource(DB, source, temporalTolerance, latTolerance, lonTolerance, depthTolerance, tables, variables, exportPath)
 
 
 
 
-.. raw:: html
 
-    <iframe src="../_static/RM_large.html"  frameborder = 0  height="1600px" width="100%">></iframe>
 
 
 GUI Tutorial

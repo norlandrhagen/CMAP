@@ -181,17 +181,21 @@
             
   <div class="section" id="plot-depth-profile">
 <h1>Plot Depth Profile<a class="headerlink" href="#plot-depth-profile" title="Permalink to this headline">¶</a></h1>
+<p><strong>Create depth profile plots using model and BGC-Argo float profiles.</strong></p>
+<p>Note:</p>
+<ul class="simple">
+<li>Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</li>
+<li>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° X 1/2° .</li>
+<li>Argo float data set has irregular temporal and spatial resolution.</li>
+</ul>
 <div class="section" id="code-tutorial">
 <h2>Code Tutorial<a class="headerlink" href="#code-tutorial" title="Permalink to this headline">¶</a></h2>
-<p>Create depth profile plots using model and BGC-Argo float profiles.</p>
-<p>Note:
-Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</p>
-<p>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° X 1/2° .</p>
-<p>Argo float data set has irregular temporal and spatial resolution.</p>
+<p><strong>Visualize Argo in-situ data vs modeled data in a mid-depth to surface depth profile</strong></p>
+<p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/Plot_DepthProfile_01.ipynb">Jupyter Notebook 1</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotDepthProfile</span> <span class="k">as</span> <span class="n">DEP</span>
 
 <span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblArgoMerge_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Chl_Climatology&#39;</span><span class="p">]</span>     <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;argo_merge_chl_adj&#39;</span><span class="p">,</span> <span class="s1">&#39;CHL&#39;</span><span class="p">]</span>                  <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;argo_merge_chl_adj&#39;</span><span class="p">,</span> <span class="s1">&#39;CHL&#39;</span><span class="p">]</span>
 <span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>   <span class="c1"># PISCES is a weekly model, and here we are using monthly climatology of Darwin model</span>
 <span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
 <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">24</span>
@@ -206,6 +210,8 @@ Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 
 <iframe src="../_static/tutorial_plots/dep_01.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
 <div class="line"><br /></div>
 </div>
+<p><strong>Visualize HOT in-situ data vs modeled data in a low-depth to surface depth profile</strong></p>
+<p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/Plot_DepthProfile_02.ipynb">Jupyter Notebook 2</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotDepthProfile</span> <span class="k">as</span> <span class="n">DEP</span>
 
 <span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblHOT_PP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Chl_Climatology&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">]</span>     <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
@@ -223,7 +229,6 @@ Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 
 </div>
 <iframe src="../_static/tutorial_plots/dep_02.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
 <div class="line"><br /></div>
-<div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="gui-tutorials">
@@ -235,7 +240,6 @@ Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 
 <div class="section" id="mac-osx">
 <h2>Mac OSX<a class="headerlink" href="#mac-osx" title="Permalink to this headline">¶</a></h2>
 <iframe src="https://www.youtube.com/embed/oDa-iP8928A"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe><div class="line-block">
-<div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
 </div>

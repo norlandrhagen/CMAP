@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Retrieve Data" href="retrieve_data.html" />
-    <link rel="prev" title="Plot Regional Map" href="front.html" />
+    <link rel="prev" title="Front Sampling" href="front.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 
@@ -94,12 +94,12 @@
 <li class="toctree-l2"><a class="reference internal" href="regional_map.html">Plot Regional Map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time_series.html">Plot Time Series</a></li>
 <li class="toctree-l2"><a class="reference internal" href="depth_profile.html">Plot Depth Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="section_plot.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Plot Depth Profile</a></li>
-<li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Plot Regional Map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="eddy.html">Colocalize Eddy Track</a></li>
-<li class="toctree-l2"><a class="reference internal" href="front.html">Plot Regional Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section.html">Section Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Visualize Cruise Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Lagrangian Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eddy.html">Eddy Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="front.html">Front Sampling</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Colocalize Custom Dataset</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#code-tutorial">Code Tutorial</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gui-tutorial">GUI Tutorial</a><ul>
@@ -183,33 +183,30 @@
             
   <div class="section" id="colocalize-custom-dataset">
 <h1>Colocalize Custom Dataset<a class="headerlink" href="#colocalize-custom-dataset" title="Permalink to this headline">¶</a></h1>
+<p>Colocalize a virtual cruise with satellite chlorophyll data and picoeukaryote climatological estimates provided by Darwin model. The trajectory of the virtual cruise is stored in a .csv file.</p>
+<p>Notes:</p>
+<p>Satellite sea surface temperatue data used in this example is a daily-global near-real-time and optimally interpolated data set with 4km × 4km spatial resolution  1/4° X 1/4° .</p>
+<p>Satellite Chlorophyll data used in this example is a daily-global reprocessed and optimally interpolated data set with  4km × 4km  spatial resolution.</p>
+<p>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° ×1 /2° .</p>
 <div class="section" id="code-tutorial">
 <h2>Code Tutorial<a class="headerlink" href="#code-tutorial" title="Permalink to this headline">¶</a></h2>
-<p><strong>Create a regional map using satellite and modeled data</strong></p>
-<p>Notes:</p>
-<p>The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</p>
-<p>Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .</p>
-<p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/SimpleExamples.ipynb">Jupyter</a></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotRegional</span> <span class="k">as</span> <span class="n">REG</span>
+<p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/Colocalize_Custom_Dataset.ipynb">Jupyter_Notebook</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">colocalize</span> <span class="k">as</span> <span class="n">COL</span>
 
+<span class="n">DB</span> <span class="o">=</span> <span class="bp">False</span>                            <span class="c1"># &lt; True &gt; if source data exists in the database. &lt; 0 &gt; if the source data set is a spreadsheet file on disk.</span>
+<span class="n">source</span> <span class="o">=</span> <span class="s1">&#39;./KM1314_ParticulateCobalamins_2018_06_12_vPublished.xlsx&#39;</span>            <span class="c1"># the source table name (or full filename)</span>
+<span class="n">temporalTolerance</span> <span class="o">=</span> <span class="mi">1</span>                <span class="c1"># colocalizer temporal tolerance (+/- degrees)</span>
+<span class="n">latTolerance</span> <span class="o">=</span> <span class="mf">0.3</span>                   <span class="c1"># colocalizer meridional tolerance (+/- degrees)</span>
+<span class="n">lonTolerance</span> <span class="o">=</span> <span class="mf">0.3</span>                   <span class="c1"># colocalizer zonal tolerance (+/- degrees)</span>
+<span class="n">depthTolerance</span> <span class="o">=</span> <span class="mi">5</span>                   <span class="c1"># colocalizer depth tolerance (+/- meters)</span>
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblSST_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Plankton_Climatology&#39;</span><span class="p">]</span>    <span class="c1"># list of varaible table names</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;Fe&#39;</span><span class="p">,</span> <span class="s1">&#39;picoeukaryote_c03_darwin_clim&#39;</span><span class="p">]</span>                            <span class="c1"># list of variable names</span>
+<span class="n">exportPath</span> <span class="o">=</span> <span class="s1">&#39;./loaded.csv&#39;</span>         <span class="c1"># path to save the colocalized data set</span>
 
-<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblsst_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">]</span>    <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;Fe&#39;</span><span class="p">]</span>                            <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
-<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
-<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-04-30&#39;</span>
-<span class="n">lat1</span> <span class="o">=</span> <span class="s1">&#39;10&#39;</span>
-<span class="n">lat2</span> <span class="o">=</span> <span class="s1">&#39;70&#39;</span>
-<span class="n">lon1</span> <span class="o">=</span> <span class="s1">&#39;-180&#39;</span>
-<span class="n">lon2</span> <span class="o">=</span> <span class="s1">&#39;-80&#39;</span>
-<span class="n">depth1</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
-<span class="n">depth2</span> <span class="o">=</span> <span class="s1">&#39;0.5&#39;</span>
-<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;regional&#39;</span>
-<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>       <span class="c1"># True if you you want to download data</span>
-
-<span class="n">REG</span><span class="o">.</span><span class="n">regionalMap</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+<span class="n">COL</span><span class="o">.</span><span class="n">matchSource</span><span class="p">(</span><span class="n">DB</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">temporalTolerance</span><span class="p">,</span> <span class="n">latTolerance</span><span class="p">,</span> <span class="n">lonTolerance</span><span class="p">,</span> <span class="n">depthTolerance</span><span class="p">,</span> <span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">exportPath</span><span class="p">)</span>
 </pre></div>
 </div>
-<iframe src="../_static/RM_large.html"  frameborder = 0  height="1600px" width="100%">></iframe></div>
+</div>
 <div class="section" id="gui-tutorial">
 <h2>GUI Tutorial<a class="headerlink" href="#gui-tutorial" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
@@ -239,7 +236,7 @@
         <a href="retrieve_data.html" class="btn btn-neutral float-right" title="Retrieve Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="front.html" class="btn btn-neutral" title="Plot Regional Map" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="front.html" class="btn btn-neutral" title="Front Sampling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

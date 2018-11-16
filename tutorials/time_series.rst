@@ -1,24 +1,27 @@
 
+.. _Jupyter Notebook: https://github.com/mdashkezari/opedia/blob/master/notebooks/Plot_TimeSeries.ipynb
+
+
+
 Plot Time Series
 ================
+
+**Create a Time Series plot using satellite and modeled data**
+
+
+**Note:**
+
+- Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).
+- Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .
+- Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .
 
 
 Code Tutorial
 ^^^^^^^^^^^^^
 
 
-**Create a Time Series plot using satellite and modeled data**
+`Jupyter Notebook`_
 
-
-
-
-**Note:**
-
-Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).
-
-Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .
-
-Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .
 
 .. code-block:: python
 
@@ -39,23 +42,16 @@ Satellite Altimetry data set is a daily-global product with spatial resolution 1
 
 
 
-
-
-
-
-
 .. raw:: html
 
     <iframe src="../_static/tutorial_plots/TS.html"  frameborder = 0  height="1000px" width="100%">></iframe>
 
 
 |
-|
 
 
 GUI Tutorials
 ^^^^^^^^^^^^^
-|
 
 Mac OSX
 ^^^^^^^
@@ -66,7 +62,7 @@ Mac OSX
     <iframe src="https://www.youtube.com/embed/1rq19EHAIAE"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
 
 
-|
+
 |
 
 Windows

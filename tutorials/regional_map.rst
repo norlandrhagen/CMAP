@@ -2,12 +2,21 @@
 
 
 
-.. _Jupyter: https://github.com/mdashkezari/opedia/blob/master/notebooks/SimpleExamples.ipynb
+.. _Jupyter Notebook: https://github.com/mdashkezari/opedia/blob/master/notebooks/Plot_RegionalMap.ipynb
+
+
 
 
 Plot Regional Map
 =================
 
+
+**Create a regional map using satellite and modeled data**
+
+Notes:
+
+- The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).
+- Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .
 
 
 
@@ -15,17 +24,8 @@ Code Tutorial
 ^^^^^^^^^^^^^
 
 
-**Create a regional map using satellite and modeled data**
 
-Notes:
-
-The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).
-
-Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .
-
-
-Jupyter_
-
+`Jupyter Notebook`_
 
 .. code-block:: python
 
@@ -58,7 +58,6 @@ Jupyter_
 
 GUI Tutorials
 ^^^^^^^^^^^^^
-|
 
 Mac OSX
 ^^^^^^^
