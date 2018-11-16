@@ -96,7 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="depth_profile.html">Plot Depth Profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Histogram</a></li>
 <li class="toctree-l2"><a class="reference internal" href="section.html">Section Plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Visualize Cruise Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Colocalize Cruise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Lagrangian Sampling</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Eddy Sampling</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#code-tutorial">Code Tutorial</a></li>
@@ -181,12 +181,20 @@
             
   <div class="section" id="eddy-sampling">
 <h1>Eddy Sampling<a class="headerlink" href="#eddy-sampling" title="Permalink to this headline">¶</a></h1>
+<p><strong>Colocalize an Eddy path with model and satellite data</strong></p>
+<p>As far as oceanic observation methodology is concerned, one can consider two major class of observations:</p>
+<ul class="simple">
+<li>Eulerian</li>
+<li>Lagrangian</li>
+</ul>
+<p>Eulerian measurements are made at a fixed frame of reference which means the sensor is fixed at a given location and fluid is passing by. Lagrangian measurements are made from the perspective of water parcels which means the sensor propagates with the flow. This example demonstrates how to advect a passive tracer (massless particle) with the flow and construct a Lagrangian path. We then colocalize the Lagrangian path with other data sets (SST satellite and model-generated diazotroph concentration) to simulate a Lagrangian measurement.</p>
+<p>Notes:</p>
+<ul class="simple">
+<li>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution 1/2° X 1/2°</li>
+<li>Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .</li>
+</ul>
 <div class="section" id="code-tutorial">
 <h2>Code Tutorial<a class="headerlink" href="#code-tutorial" title="Permalink to this headline">¶</a></h2>
-<p><strong>Create a regional map using satellite and modeled data</strong></p>
-<p>Notes:</p>
-<p>The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</p>
-<p>Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .</p>
 <p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/SimpleExamples.ipynb">Jupyter</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">eddy</span> <span class="k">as</span> <span class="n">EDD</span>
 

@@ -9,19 +9,23 @@ Lagrangian Sampling
 ===================
 
 
-
-
 Code Tutorial
 ^^^^^^^^^^^^^
 
 
-**Create a regional map using satellite and modeled data**
+**Colocalize a Lagrangian path with model and satellite data**
+
+As far as oceanic observation methodology is concerned, one can consider two major class of observations:
+
+- Eulerian
+- Lagrangian
+
+Eulerian measurements are made at a fixed frame of reference which means the sensor is fixed at a given location and fluid is passing by. Lagrangian measurements are made from the perspective of water parcels which means the sensor propagates with the flow. This example demonstrates how to advect a passive tracer (massless particle) with the flow and construct a Lagrangian path. We then colocalize the Lagrangian path with other data sets (SST satellite and model-generated diazotroph concentration) to simulate a Lagrangian measurement.
 
 Notes:
 
-The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).
-
-Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .
+- Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution 1/2° X 1/2°
+- Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .
 
 
 Jupyter_
@@ -60,7 +64,7 @@ Jupyter_
 
 .. raw:: html
 
-    <iframe src="../_static/tutorial_plots/Tracer.html"  frameborder = 0  height="1600px" width="100%">></iframe>
+    <iframe src="../_static/tutorial_plots/Tracer.html"  frameborder = 0  height="1000px" width="100%">></iframe>
 
 |
 |

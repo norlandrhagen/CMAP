@@ -31,7 +31,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Eddy Sampling" href="eddy.html" />
-    <link rel="prev" title="Visualize Cruise Track" href="cruise_track.html" />
+    <link rel="prev" title="Colocalize Cruise" href="cruise_track.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 
@@ -96,7 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="depth_profile.html">Plot Depth Profile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Histogram</a></li>
 <li class="toctree-l2"><a class="reference internal" href="section.html">Section Plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Visualize Cruise Track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Colocalize Cruise</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Lagrangian Sampling</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#code-tutorial">Code Tutorial</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gui-tutorials">GUI Tutorials</a></li>
@@ -183,10 +183,18 @@
 <h1>Lagrangian Sampling<a class="headerlink" href="#lagrangian-sampling" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="code-tutorial">
 <h2>Code Tutorial<a class="headerlink" href="#code-tutorial" title="Permalink to this headline">¶</a></h2>
-<p><strong>Create a regional map using satellite and modeled data</strong></p>
+<p><strong>Colocalize a Lagrangian path with model and satellite data</strong></p>
+<p>As far as oceanic observation methodology is concerned, one can consider two major class of observations:</p>
+<ul class="simple">
+<li>Eulerian</li>
+<li>Lagrangian</li>
+</ul>
+<p>Eulerian measurements are made at a fixed frame of reference which means the sensor is fixed at a given location and fluid is passing by. Lagrangian measurements are made from the perspective of water parcels which means the sensor propagates with the flow. This example demonstrates how to advect a passive tracer (massless particle) with the flow and construct a Lagrangian path. We then colocalize the Lagrangian path with other data sets (SST satellite and model-generated diazotroph concentration) to simulate a Lagrangian measurement.</p>
 <p>Notes:</p>
-<p>The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).</p>
-<p>Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .</p>
+<ul class="simple">
+<li>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution 1/2° X 1/2°</li>
+<li>Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .</li>
+</ul>
 <p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/SimpleExamples.ipynb">Jupyter</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">Lagrangian</span> <span class="k">as</span> <span class="n">LAG</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -212,7 +220,7 @@
 <span class="n">LAG</span><span class="o">.</span><span class="n">plotAlongTrack</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">fmt</span><span class="p">,</span> <span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">df</span><span class="p">,</span> <span class="n">spatialTolerance</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">msize</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">clr</span><span class="o">=</span><span class="s1">&#39;darkturquoise&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<iframe src="../_static/tutorial_plots/Tracer.html"  frameborder = 0  height="1600px" width="100%">></iframe><div class="line-block">
+<iframe src="../_static/tutorial_plots/Tracer.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
@@ -246,7 +254,7 @@
         <a href="eddy.html" class="btn btn-neutral float-right" title="Eddy Sampling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cruise_track.html" class="btn btn-neutral" title="Visualize Cruise Track" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cruise_track.html" class="btn btn-neutral" title="Colocalize Cruise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -6,13 +6,14 @@
 Plot Histogram
 ==============
 
-**Create a regional map using satellite and modeled data**
+**Plot Distribution (Satellite, Core Argo Floats)
+Create histograms of sea surface temperature (satellite), and temperature / salinity measurements by Argo floats.**
 
-Notes:
 
-- The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).
-- Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .
+Note:
 
+- Satellite SST data set is a daily-global product with spatial resolution  14∘×14∘ .
+- Argo float data set has irregular temporal and spatial resolution.
 
 Code Tutorial
 ^^^^^^^^^^^^^

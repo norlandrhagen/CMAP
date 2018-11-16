@@ -8,9 +8,7 @@ Plot Depth Profile
 
 **Create depth profile plots using model and BGC-Argo float profiles.**
 
-
-
-Note:
+Notes:
 
 - Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).
 - Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° X 1/2° .
@@ -50,7 +48,14 @@ Code Tutorial
 
 |
 
-**Visualize HOT in-situ data vs modeled data in a low-depth to surface depth profile**
+**Create depth profile plots using model and in-situ measurements at station ALOHA**
+
+
+Notes:
+
+- Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  12∘×12∘ .
+- Pisces model is a weekly-averaged global model with spatial resolution  12∘×12∘  (data is available only at one-week intervals).
+- Station ALOHA is a fixed loaction at north of Hawaii:  22∘ 45′ N  158∘ W.
 
 `Jupyter Notebook 2`_
 

@@ -10,7 +10,8 @@ Colocalize Cruise
 
 
 
-**Colocalize Real Cruise**
+Real Cruise
+-----------
 
 Colocalize Darwin model and satellite data with cruise.
 Compare the underway (in-situ) picoeukaryote abundance measurements performed during the "Gradient1.0" (aka SCOPE_16) with satellite chlorophyll data and picoeukaryote climatological estimates provided by Darwin model.
@@ -22,8 +23,8 @@ Notes:
 - Satellite Chlorophyll data used in this example is a daily-global reprocessed and optimally interpolated data set with  4 km×4 km  spatial resolution.
 - Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  12∘×12∘ .
 
-Code Tutorial Real Cruise
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Code Tutorial
+-------------
 
 `Jupyter Notebook 1`_
 
@@ -59,8 +60,8 @@ Code Tutorial Real Cruise
     <iframe src="../_static/tutorial_plots/alongTrack.html"  frameborder = 0  height="1000px" width="100%">></iframe>
 
 
-Colocalize Virtual Cruise
--------------------------
+Virtual Cruise
+--------------
 
 
 Colocalize Darwin model, satellite data with a virtual cruise.
@@ -71,10 +72,11 @@ Notes:
 
 - Satellite sea surface temperatue data used in this example is a daily-global near-real-time and optimally interpolated data set with 4km × 4km spatial resolution  14∘×14∘ .
 - Satellite Chlorophyll data used in this example is a daily-global reprocessed and optimally interpolated data set with  4 km×4 km  spatial resolution.
-- Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  12∘×12∘ .
+- Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° X 1/2° .
 
-Code Tutorial Virtual Cruise
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Code Tutorial
+-------------
 
 `Jupyter Notebook 2`_
 

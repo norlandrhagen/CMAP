@@ -8,12 +8,12 @@
 Section Plot
 ============
 
-**Create a regional map using satellite and modeled data**
+**Create a depth profile of modeled colored dissolved organic matter**
 
 Notes:
 
-- The Pisces model is a weekly-averaged global model with spatial resolution  1/2° X 1/2°  (data is available only at one-week intervals).
-- Satellite SST data set is a daily-global product with spatial resolution  1/4° X 1/4° .
+- Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° X 1/2° .
+
 
 
 
