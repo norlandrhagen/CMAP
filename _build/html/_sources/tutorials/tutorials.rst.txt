@@ -4,6 +4,9 @@ Tutorials
 
 
 
+.. |cat| image:: /_static/tutorial_pics/catalog.png
+   :align: middle
+   :target: get_catalog.html
 
 .. |rm| image:: /_static/tutorial_pics/regional_map.png
    :align: middle
@@ -26,8 +29,16 @@ Tutorials
    :align: middle
    :target: section.html
 
+.. |esv| image:: /_static/tutorial_pics/esv.png
+  :align: middle
+  :target: ESV.html
+
+.. |xy| image:: /_static/tutorial_pics/xy.png
+  :align: middle
+  :target: XY.html
+
 .. |ct| image:: /_static/tutorial_pics/cruise.png
-  :scale: 50%
+  :scale: 40%
   :align: middle
   :target: cruise_track.html
 
@@ -65,13 +76,17 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
 
 
 +------------------------+------------------------+------------------------+
-| |rm|                   |    |ts|                |           |dep|        |
+| |cat|                  |    |rm|                |           |sp|         |
 +------------------------+------------------------+------------------------+
-|      Regional Map      |         Time Series    |  Depth Profile         |
+|     Get Catalog        |       Regional Map     |  Section Plot          |
 +------------------------+------------------------+------------------------+
-| |hst|                  |    |sp|                |             |ct|       |
+| |ts|                   |    |dep|               |             |xy|       |
 +------------------------+------------------------+------------------------+
-| Histogram              |        Section Plot    |         Cruise Track   |
+| Time Series            |      Depth Profile     |        Plot XY         |
++------------------------+------------------------+------------------------+
+| |hst|                  |    |esv|               |            |ct|        |
++------------------------+------------------------+------------------------+
+| Histogram              |       ESV Track        |         Cruise Track   |
 +------------------------+------------------------+------------------------+
 | |lag|                  |    |ed|                |            |fr|        |
 +------------------------+------------------------+------------------------+
@@ -87,9 +102,12 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
 
   get_catalog
   regional_map
+  section
   time_series
   depth_profile
+  XY
   histogram
+  ESV
   section
   cruise_track
   lagrangian

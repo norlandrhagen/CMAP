@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Plot Time Series &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Simons Ocean Atlas
+          
+
+          
+            
+            <img src="../_static/earth_wind.gif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">Data Catalog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../API_ref/API_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ/FAQ.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Simons Ocean Atlas</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Plot Time Series</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/XY.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plot-time-series">
+<h1>Plot Time Series<a class="headerlink" href="#plot-time-series" title="Permalink to this headline">¶</a></h1>
+<p><strong>Create a Time Series plot using satellite and modeled data</strong></p>
+<p><strong>Note:</strong></p>
+<ul class="simple">
+<li>Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).</li>
+<li>Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .</li>
+<li>Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .</li>
+</ul>
+<div class="section" id="code-tutorial">
+<h2>Code Tutorial<a class="headerlink" href="#code-tutorial" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/Plot_TimeSeries.ipynb">Jupyter Notebook</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotTS</span> <span class="k">as</span> <span class="n">TS</span>
+
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblSST_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblAltimetry_REP&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">]</span>    <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;sla&#39;</span><span class="p">,</span> <span class="s1">&#39;NO3&#39;</span><span class="p">]</span>                                        <span class="c1"># see catalog.csv  for the complete list of tables and variable names</span>
+<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2016-03-29&#39;</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2016-05-29&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">30</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">160</span><span class="p">,</span> <span class="o">-</span><span class="mi">155</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;TS&#39;</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>      <span class="c1"># True if you you want to download data</span>
+
+<span class="n">TS</span><span class="o">.</span><span class="n">plotTS</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+</pre></div>
+</div>
+<iframe src="../_static/tutorial_plots/TS.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="gui-tutorials">
+<h2>GUI Tutorials<a class="headerlink" href="#gui-tutorials" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="mac-osx">
+<h2>Mac OSX<a class="headerlink" href="#mac-osx" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/1rq19EHAIAE"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/VnxFzssDfAk"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Mohammad Dehghani  &amp; Raphael Hagen
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'../',
+              VERSION:'0.0.1',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>
