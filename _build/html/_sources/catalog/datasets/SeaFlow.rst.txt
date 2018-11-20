@@ -18,7 +18,7 @@ SeaFlow
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`SeaFlow`         |     |seaflow|  | |cruise|    | Observation |     1/2° X 1/2°            |    Three Minutes     |  2010-22-10  | 2017-06-13 |
+| :ref:`SeaFlow`         |     |seaflow|  | |cruise|    | Observation |       Irregular            |    Three Minutes     |  2010-22-10  | 2017-06-13 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
@@ -45,6 +45,7 @@ Data Source
 ***********
 
 Simons Ocean Atlas
+
 Armbrust Lab, UW
 
 How to Acknowledge

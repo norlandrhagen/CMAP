@@ -40,14 +40,18 @@ Data Source
 
 http://marine.copernicus.eu
 
+http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=GLOBAL_ANALYSIS_FORECAST_BIO_001_014
+
 http://cmems-resources.cls.fr/documents/PUM/CMEMS-GLO-PUM-001-014.pdf
+
+
+
+How to Acknowledge
+******************
 
 Aumont O. : PISCES. In prep (For Geoscientific Model Development
 
 Aumont, O. and Bopp, L. “Globalizing results from ocean in situ iron fertilization studies”. GlobalBiogeochem. Cycles. 20 (2):10–1029 (2006)
-
-How to Acknowledge
-******************
 
 Version History
 ***************

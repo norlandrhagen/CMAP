@@ -20,7 +20,7 @@ SOCAT
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`SOCAT`           |     |seaflow|  |  |cruise|   | Observation |     1/2° X 1/2°            |        Irregular     |  2003-01-06  | 2015-12-21 |
+| :ref:`SOCAT`           |     |seaflow|  |  |cruise|   | Observation |    Irregular               |        Irregular     |  2003-01-06  | 2015-12-21 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
@@ -43,12 +43,15 @@ Data Source
 https://www.socat.info/
 
 An update to the Surface Ocean CO2 Atlas (SOCAT version 2). Earth System Science Data 6: 69-90.
+
 https://www.earth-syst-sci-data.net/6/69/2014/
 
 How to Acknowledge
 ******************
 
 doi:10.5194/essd-6-69-2014
+
+https://doi.org/10.5194/essd-6-69-2014
 
 
 Version History

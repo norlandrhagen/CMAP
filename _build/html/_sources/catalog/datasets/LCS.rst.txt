@@ -19,15 +19,14 @@ LCS
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`LCS`             |     |globe|    | |sat|       | Observation |     1/25° X 1/25°          |         Daily        |  2014-01-01  | 2017-05-01 |
+| :ref:`LCS`             |     |globe|    | |sat|       | Observation |     0.04° X 0.04°          |         Daily        |  2014-01-01  | 2017-05-01 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
 *******************
 
 
-.. figure:: /catalog/figures/LCS/Grid.png
-   :width: 100%
+
 
 
 **LCS (Lagrangian Coherent Structures)** is a daily-global altimetry-derived [link to altimetry data set] and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.
@@ -42,6 +41,9 @@ A grid of passive tracers (hypothetical massless particles) is initialized over 
 
 such that :math:`\Lambda` is the Lyapunov exponent, and :math:`\delta x(t)`, :math:`\delta x(0)` represent the separation between the tracers at times :math:`t` and :math:`t_0`, receptively.
 
+
+.. figure:: /catalog/figures/LCS/Grid.png
+   :width: 50%
 
 After integrating the particles for the fixed period of time, :math:`\tau=15`, FTLE fields are computed to demonstrate the local dispersion as well as local displacements (see example figures below). The particles can be integrated either forward or backward in time. The local maxima of the FTLE scalar field (ridges) can be interpreted as stable and unstable manifolds of the flow field in the case of forward and backward integration, respectively.
 
@@ -64,11 +66,11 @@ Table of Variables
 Data Source
 ***********
 
-Opedia
 Simons Ocean Atlas
 
 https://github.com/mdashkezari/opedia/tree/master/CS
-https://github.com/mdashkezari/opedia/tree/master/CS/docs
+
+https://github.com/mdashkezari/opedia/tree/master/CS/docs/CS.pdf
 
 How to Acknowledge
 ******************

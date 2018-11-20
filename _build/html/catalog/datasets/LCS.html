@@ -183,7 +183,7 @@
 <td><a class="reference internal" href="../../_images/globe.png"><img alt="globe" class="align-middle" src="../../_images/globe.png" style="width: 51.2px; height: 51.2px;" /></a></td>
 <td><a class="reference internal" href="../../_images/satellite.png"><img alt="sat" class="align-middle" src="../../_images/satellite.png" style="width: 51.2px; height: 51.2px;" /></a></td>
 <td>Observation</td>
-<td>1/25° X 1/25°</td>
+<td>0.04° X 0.04°</td>
 <td>Daily</td>
 <td>2014-01-01</td>
 <td>2017-05-01</td>
@@ -193,9 +193,6 @@
 </div>
 <div class="section" id="dataset-description">
 <h1>Dataset Description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h1>
-<div class="figure">
-<a class="reference internal image-reference" href="../../_images/Grid.png"><img alt="../../_images/Grid.png" src="../../_images/Grid.png" style="width: 100%;" /></a>
-</div>
 <p><strong>LCS (Lagrangian Coherent Structures)</strong> is a daily-global altimetry-derived [link to altimetry data set] and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.</p>
 <p>A grid of passive tracers (hypothetical massless particles) is initialized over the global domain with an initial uniform spacing of 4 km x 4 km. A flow map is then approximated by integrating particle trajectories for a fix period of time, <span class="math notranslate nohighlight">\(\tau=15\)</span> days. At its fundamental levels, local Lyapunov exponents provide a metric for exponential rate of divergence for a pair of adjacent tracers:</p>
 <div class="math notranslate nohighlight">
@@ -203,6 +200,9 @@
 \Lambda = \lim_{|\delta x(t_0)| \to 0}  \lim_{t \to \infty} \frac{1}{t} \log \frac{\delta x(t)}{\delta x(t_0)}
 \end{equation}\]</div>
 <p>such that <span class="math notranslate nohighlight">\(\Lambda\)</span> is the Lyapunov exponent, and <span class="math notranslate nohighlight">\(\delta x(t)\)</span>, <span class="math notranslate nohighlight">\(\delta x(0)\)</span> represent the separation between the tracers at times <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(t_0\)</span>, receptively.</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/Grid.png"><img alt="../../_images/Grid.png" src="../../_images/Grid.png" style="width: 50%;" /></a>
+</div>
 <p>After integrating the particles for the fixed period of time, <span class="math notranslate nohighlight">\(\tau=15\)</span>, FTLE fields are computed to demonstrate the local dispersion as well as local displacements (see example figures below). The particles can be integrated either forward or backward in time. The local maxima of the FTLE scalar field (ridges) can be interpreted as stable and unstable manifolds of the flow field in the case of forward and backward integration, respectively.</p>
 <div class="figure">
 <a class="reference internal image-reference" href="../../_images/displacement_dispersion.png"><img alt="../../_images/displacement_dispersion.png" src="../../_images/displacement_dispersion.png" style="width: 100%;" /></a>
@@ -217,10 +217,9 @@
 </div>
 <div class="section" id="data-source">
 <h1>Data Source<a class="headerlink" href="#data-source" title="Permalink to this headline">¶</a></h1>
-<p>Opedia
-Simons Ocean Atlas</p>
-<p><a class="reference external" href="https://github.com/mdashkezari/opedia/tree/master/CS">https://github.com/mdashkezari/opedia/tree/master/CS</a>
-<a class="reference external" href="https://github.com/mdashkezari/opedia/tree/master/CS/docs">https://github.com/mdashkezari/opedia/tree/master/CS/docs</a></p>
+<p>Simons Ocean Atlas</p>
+<p><a class="reference external" href="https://github.com/mdashkezari/opedia/tree/master/CS">https://github.com/mdashkezari/opedia/tree/master/CS</a></p>
+<p><a class="reference external" href="https://github.com/mdashkezari/opedia/tree/master/CS/docs/CS.pdf">https://github.com/mdashkezari/opedia/tree/master/CS/docs/CS.pdf</a></p>
 </div>
 <div class="section" id="how-to-acknowledge">
 <h1>How to Acknowledge<a class="headerlink" href="#how-to-acknowledge" title="Permalink to this headline">¶</a></h1>

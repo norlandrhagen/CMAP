@@ -41,7 +41,11 @@ Table of Variables
 Data Source
 ***********
 
-http://marine.copernicus.eu/
+http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=WIND_GLO_WIND_L4_NRT_OBSERVATIONS_012_004
+
+
+http://cmems-resources.cls.fr/documents/PUM/CMEMS-WIND-PUM-012-004.pdf
+
 
 Bentamy A., H-L Ayina, P. Queffeulou, D. Croize-Fillon ; 2006 : Improved Near Real Time Surface Wind Resolution over The Mediterranean Sea. Submitted to Ocean Journal.
 

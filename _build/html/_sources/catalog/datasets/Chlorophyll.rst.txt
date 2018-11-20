@@ -46,7 +46,7 @@ Table of Variables
 Data Source
 ***********
 
-http://marine.copernicus.eu/
+http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=OCEANCOLOUR_GLO_CHL_L4_REP_OBSERVATIONS_009_082
 
 http://cmems-resources.cls.fr/documents/QUID/CMEMS-OC-QUID-009-030-032-033-081-082-083-085-086.pdf
 

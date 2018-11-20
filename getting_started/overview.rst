@@ -26,9 +26,9 @@ We probe the oceans to shed light on their underlying physical, chemical, and bi
 The project's goal is to establish a unifying data structure and streamline the process of extracting data subsets, data visualization, and synthesis analysis. We propose that the space and time information should act as the linking chain between data sets and every single data point must be annotated with its own space and time data. Therefore, all data sets hosted in the Simons Ocean Atlas have the following simple data structure:
 
 
-+------+-----+------+-------------------+-----------------+-----+-----------------+
-| time | lat | long | depth {if exists} | <:math:`var_1`> | ... | <:math:`var_n`> |
-+------+-----+------+-------------------+-----------------+-----+-----------------+
++------+-----+-----+-------------------+-----------------+-----+-----------------+
+| time | lat | lon | depth {if exists} | <:math:`var_1`> | ... | <:math:`var_n`> |
++------+-----+-----+-------------------+-----------------+-----+-----------------+
 
 
 

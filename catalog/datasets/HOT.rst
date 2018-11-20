@@ -10,15 +10,14 @@ HOT
    :scale: 10%
    :align: middle
 
-.. |points| image:: /_static/catalog_thumbnails/points.png
-   :scale: 6%
-   :align: middle
-
+.. |hot| image:: /_static/catalog_thumbnails/hot.png
+ :scale: 6%
+ :align: middle
 
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            |Spatial Coverage| Sensor Type |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
 +========================+================+=============+=============+============================+======================+==============+============+
-| :ref:`HOT`             |     |points|   |  |argo|     | Observation |      Irregular             |        Irregular     |  1988-10-31  | 2017-11-09 |
+| :ref:`HOT`             |     |hot|      |  |argo|     | Observation |      Irregular             |        Irregular     |  1988-10-31  | 2017-11-09 |
 +------------------------+----------------+-------------+-------------+----------------------------+----------------------+--------------+------------+
 
 Dataset Description
@@ -106,11 +105,9 @@ http://hahana.soest.hawaii.edu/hot/methods/pflux.html
 
 http://hahana.soest.hawaii.edu/hot/methods/plankton.html
 
-Al-Mutairi, H. and M.R. Landry. 2001. Active export of carbon and nitrogen at Station ALOHA by diel migrant zooplankton. Deep-Sea Res. II. 48: 2083- 2104.
 
 http://hahana.soest.hawaii.edu/hot/methods/epimicros.html
 
-Eppley, R.W., F.M.H. Reid and J.D.H. Strickland. 1970. Estimates of phytoplankton crop size, growth rate, and primary production, in The Ecology of the Plankton off La Jolla California in the Period April Through September, 1967, edited by H. J. D. Strickland, Bull. Scripps Inst. Oceanogr. 17, 33-42.
 
 http://hahana.soest.hawaii.edu/hot/methods/ctd.html
 
@@ -118,6 +115,9 @@ http://hahana.soest.hawaii.edu/hot/methods/ctd.html
 How to Acknowledge
 ******************
 
+Al-Mutairi, H. and M.R. Landry. 2001. Active export of carbon and nitrogen at Station ALOHA by diel migrant zooplankton. Deep-Sea Res. II. 48: 2083- 2104.
+
+Eppley, R.W., F.M.H. Reid and J.D.H. Strickland. 1970. Estimates of phytoplankton crop size, growth rate, and primary production, in The Ecology of the Plankton off La Jolla California in the Period April Through September, 1967, edited by H. J. D. Strickland, Bull. Scripps Inst. Oceanogr. 17, 33-42.
 
 
 Version History
