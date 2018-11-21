@@ -69,7 +69,7 @@ Tutorials
 
 
 
-  
+
 
 The tutorials include both GUI and script approaches. The GUI tutorials may include a video demonstration and the script approach include example code.
 
@@ -100,7 +100,10 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
 +------------------------+------------------------+------------------------+
 
 
+
 .. toctree::
+  :maxdepth: 1
+  :hidden:
 
   get_catalog
   regional_map

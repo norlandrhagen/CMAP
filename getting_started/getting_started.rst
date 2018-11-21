@@ -1,5 +1,7 @@
 
-.. _Anaconda: https://www.anaconda.com/download/
+.. _Anaconda Windows: https://www.anaconda.com/download/#windows
+.. _Anaconda macOS: https://www.anaconda.com/download/#macos
+.. _Anaconda Linux: https://www.anaconda.com/download/#linux
 
 
 
@@ -21,19 +23,28 @@ Windows
 
 **Install Anaconda Distribution (Prefer Python 3+)**
 
-Anaconda_
+`Anaconda Windows`_
 
+.. note::
 
+    When installing Anaconda for windows make sure to choose the: "**Add Anaconda to my PATH environment variable**" option.
+
+|
 
 **Install Additional Python Modules**
 
 
 
+.. note::
+
+    Run Command Prompt as Administrator and then enter:
+
 .. code-block:: none
 
-    $ pip install opedia
+    pip install opedia
 
 
+|
 
 macOS
 ^^^^^^^^
@@ -41,21 +52,24 @@ macOS
 
 **Install Anaconda Distribution (Prefer Python 3+)**
 
-Anaconda_
+`Anaconda macOS`_
 
 
 **Install Additional Python Modules**
 
+Open Terminal and then enter:
+
 .. code-block:: none
 
-    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    $ brew install unixodbc
-    $ brew install freetds --with-unixodbc
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew install unixodbc
+    brew install freetds --with-unixodbc
 
-    $ pip install opedia
+    pip install opedia
 
 
 
+|
 
 Linux
 ^^^^^
@@ -64,14 +78,15 @@ Linux
 
 **Install Anaconda Distribution (Prefer Python 3+)**
 
-Anaconda_
+`Anaconda Linux`_
 
 **Install Additional Python Modules**
 
+Open Terminal and then enter:
 
 .. code-block:: none
 
-    $ conda install -c anaconda unixodbc
-    $ conda install -c anaconda freetds
+    conda install -c anaconda unixodbc
+    conda install -c anaconda freetds
 
-    $ pip install opedia
+    pip install opedia

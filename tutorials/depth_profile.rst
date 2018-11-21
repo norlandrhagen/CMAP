@@ -96,13 +96,3 @@ Mac OSX
 .. raw:: html
 
     <iframe src="https://www.youtube.com/embed/oDa-iP8928A"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
-
-
-|
-
-Windows
-^^^^^^^
-
-.. raw:: html
-
-    <iframe src="https://www.youtube.com/embed/ZoTE1d_f1Fc"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>

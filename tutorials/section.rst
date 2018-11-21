@@ -8,7 +8,7 @@
 Section Plot
 ============
 
-**Create a depth profile of modeled colored dissolved organic matter**
+**Create a section plot of modeled colored dissolved organic matter**
 
 Notes:
 
