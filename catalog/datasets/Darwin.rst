@@ -10,7 +10,7 @@ Darwin
    :scale: 10%
    :align: middle
 
-.. |comp| image:: /_static/catalog_thumbnails/comp.png
+.. |comp| image:: /_static/catalog_thumbnails/comp_2.png
    :scale: 10%
    :align: middle
 

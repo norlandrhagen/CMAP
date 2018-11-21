@@ -6,7 +6,7 @@
 HOT
 ***
 
-.. |buoy| image:: /_static/catalog_thumbnails/buoy.png
+.. |buoy| image:: /_static/catalog_thumbnails/buoy_2.png
   :scale: 10%
   :align: middle
 

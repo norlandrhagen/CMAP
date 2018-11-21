@@ -14,6 +14,10 @@
 FAQ
 ===
 
+|
+
+
+
 Who to Contact
 --------------
 
@@ -25,7 +29,7 @@ If you have questions about using the Ocean Atlas feel free to contact either:
 Or join our Slack_ channel.
 
 
-
+|
 
 
 
@@ -34,6 +38,7 @@ How to Contribute
 
 You can contribute directly to the Simons Ocean Atlas via the Github_ page or you can make suggestions via email or Slack_.
 
+|
 
 How to suggest new datasets set to be added to database
 -------------------------------------------------------

@@ -14,14 +14,12 @@ Data Catalog
 .. |sat| image:: /_static/catalog_thumbnails/satellite.png
    :scale: 10%
    :align: middle
-.. |float| image:: /_static/catalog_thumbnails/buoy.png
-   :scale: 10%
-   :align: middle
-.. |cruise| image:: /_static/catalog_thumbnails/cruise2.png
+
+.. |cruise| image:: /_static/catalog_thumbnails/cruise_2.png
    :scale: 10%
    :align: middle
 
-.. |comp| image:: /_static/catalog_thumbnails/comp.png
+.. |comp| image:: /_static/catalog_thumbnails/comp_2.png
    :scale: 10%
    :align: middle
 
@@ -41,7 +39,7 @@ Data Catalog
   :scale: 12%
   :align: middle
 
-.. |buoy| image:: /_static/catalog_thumbnails/buoy.png
+.. |buoy| image:: /_static/catalog_thumbnails/buoy_2.png
   :scale: 10%
   :align: middle
 

@@ -5,7 +5,7 @@
 SeaFlow
 *******
 
-.. |cruise| image:: /_static/catalog_thumbnails/cruise2.png
+.. |cruise| image:: /_static/catalog_thumbnails/cruise_2.png
    :scale: 10%
    :align: middle
 
