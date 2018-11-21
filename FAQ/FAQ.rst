@@ -2,6 +2,11 @@
 
 
 
+.. _Slack: https://join.slack.com/t/simons-ocean-atlas/shared_invite/enQtNDg1NjkwOTM2OTgxLTY0NTY0ODM0N2E0NjkwZGVjMzdhM2E5NzJkYTE2OWFiMGEwYWE1ZmQyMDIwNGY2MzE1ZjE3MWM4Y2U5N2QzNmM
+
+
+
+
 
 
 
@@ -9,9 +14,20 @@
 FAQ
 ===
 
-6.1 who to contact (help desk)
+Who to Contact
+--------------
 
-6.2 how to contact (mailing list, slack, ... )
+If you have questions about using the Ocean Atlas feel free to contact either:
+
+- Raphael Hagen (nrhagen@uw.edu)
+- Mohammad D. Ashkezari (mdehghan@uw.edu)
+
+Or join our Slack_ channel.
+
+
+
+
+
 
 6.3 how to contribute (maybe this should have a dedicated section?)
 

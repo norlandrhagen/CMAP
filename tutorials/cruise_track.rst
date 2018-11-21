@@ -113,7 +113,7 @@ GUI Tutorial
 ^^^^^^^^^^^^
 |
 
-Mac OSX
+macOS
 -------
 
 

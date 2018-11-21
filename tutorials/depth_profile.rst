@@ -89,7 +89,7 @@ GUI Tutorials
 ^^^^^^^^^^^^^
 |
 
-Mac OSX
+macOS
 ^^^^^^^
 
 

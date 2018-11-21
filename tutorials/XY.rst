@@ -53,7 +53,7 @@ Code Tutorial
 GUI Tutorials
 ^^^^^^^^^^^^^
 
-Mac OSX
+macOS
 ^^^^^^^
 
 
