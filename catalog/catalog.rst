@@ -48,7 +48,7 @@ Data Catalog
 
 
 Specific data descriptions and variable tables can be found in each dataset table.
-  
+
 
 +------------------------+----------+----------+-------------+----------------------------+----------------------+--------------+------------+
 | Datset Name            | Coverage | Sensor   |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
