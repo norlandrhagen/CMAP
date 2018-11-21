@@ -1,19 +1,17 @@
 
-.. _Jupyter Notebook: https://github.com/mdashkezari/opedia/blob/master/notebooks/Plot_TimeSeries.ipynb
+.. _Jupyter Notebook: https://github.com/mdashkezari/opedia/blob/master/notebooks/Plot_ESV.ipynb
 
 
 
-Plot Time Series
-================
+Exact Amplicon Sequence Variants
+================================
 
-**Create a Time Series plot using satellite and modeled data**
+**Query by taxonomy level, clustering thereshold, and size fraction**
+
+The example below retrieves the "topN" number of most abundant sequenced organisms along track of the cruise. One can aggregate and visualize the relative abundance of the organisms according to their taxonomy, clustering levels, and size fractions. The cruise, 'ANT28-5', is an Atlantic latitudinal transect.
 
 
-**Note:**
-
-- Pisces model is a weekly-averaged global model with spatial resolution 1/2° X 1/2° (data is available only at one-week intervals).
-- Satellite wind data set is a 6-hourly global product with spatial resolution 1/4° X 1/4° .
-- Satellite Altimetry data set is a daily-global product with spatial resolution 1/4° X 1/4° .
+Thanks to Jed Fuhrman and Jesse McNichol (USC) for the beautiful dataset!
 
 
 Code Tutorial
@@ -26,48 +24,25 @@ Code Tutorial
 .. code-block:: python
 
 
-    from opedia import plotTS as TS
+    from opedia import esv
 
-    tables = ['tblSST_AVHRR_OI_NRT', 'tblAltimetry_REP', 'tblPisces_NRT']    # see catalog.csv  for the complete list of tables and variable names
-    variables = ['sst', 'sla', 'NO3']                                        # see catalog.csv  for the complete list of tables and variable names
-    startDate = '2016-03-29'
-    endDate = '2016-05-29'
-    lat1, lat2 = 25, 30
-    lon1, lon2 = -160, -155
-    depth1, depth2 = 0, 5
-    fname = 'TS'
-    exportDataFlag = False      # True if you you want to download data
+    ############## set parameters ################
+    # only plot the top_N number of most abundant organisms
+    topN = 5
+    # aggregate organisims by their taxa level
+    tax = ['domain', 'kingdom', 'phylum', 'class', 'order', 'genus', 'species'][5]
+    depth1 = 20
+    depth2 = depth1
+    cruise_name = 'ANT28-5'
+    cluster_level = [89, 92, 96, 97, 98, 99, 100][0]        # minimum similarity precentage to be clustred
+    size_frac_lower = [0.2, 3, 8][0]                        # size in micro-meter
+    size_frac_upper = [None, 3, 8][1]                       # size in micro-meter
+    ##############################################
 
-    TS.plotTS(tables, variables, startDate, endDate, lat1, lat2, lon1, lon2, depth1, depth2, fname, exportDataFlag)
+    esv.plotESVs(topN, tax, depth1, depth2, cruise_name, cluster_level, size_frac_lower, size_frac_upper)
 
 
 
 .. raw:: html
 
-    <iframe src="../_static/tutorial_plots/TS.html"  frameborder = 0  height="1000px" width="100%">></iframe>
-
-
-|
-
-
-GUI Tutorials
-^^^^^^^^^^^^^
-
-Mac OSX
-^^^^^^^
-
-
-.. raw:: html
-
-    <iframe src="https://www.youtube.com/embed/1rq19EHAIAE"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
-
-
-
-|
-
-Windows
-^^^^^^^
-
-.. raw:: html
-
-    <iframe src="https://www.youtube.com/embed/VnxFzssDfAk"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
+    <iframe src="../_static/tutorial_plots/esv.html"  frameborder = 0  height="1000px" width="100%">></iframe>
