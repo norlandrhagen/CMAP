@@ -26,8 +26,6 @@ Eddy
 Dataset Description
 *******************
 
-A novel altimetry-based machine learning approach for eddy identification and characterization. The machine learning models use daily maps of geostrophic velocity anomalies and are trained according to the phase angle between the zonal and meridional components at each grid point. The trained models are then used to identify the corresponding eddy phase patterns and to predict the lifetime of a detected eddy structure.
-
 
 Table of Variables
 ******************
