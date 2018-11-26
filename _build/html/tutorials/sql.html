@@ -186,23 +186,21 @@
 <div class="section" id="regional-map-sql">
 <h2>Regional Map SQL<a class="headerlink" href="#regional-map-sql" title="Permalink to this headline">¶</a></h2>
 <p>If you are familiar with SQL or T-SQL language, you can use “dbFetch()” function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a snapshot and plot a basic map.</p>
-<p><strong>Import the libraries</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">db</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Import the Libraries&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">db</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-</pre></div>
-</div>
-<p><strong>Define the plot</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+
+<span class="sd">&quot;&quot;&quot;Define the plot&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">lon</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">lon</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">lat</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">lat</span><span class="p">)],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">field</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> &#39;</span> <span class="o">+</span> <span class="n">dt1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<p><strong>Construct the query statement</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prepareQuery</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+
+<span class="sd">&quot;&quot;&quot;Construct the query statement&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">prepareQuery</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
 <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT [time], lat, lon, depth, </span><span class="si">%s</span><span class="s2"> FROM </span><span class="si">%s</span><span class="s2"> WHERE &quot;</span>
 <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;[time] BETWEEN&#39;</span><span class="si">%s</span><span class="s2">&#39; AND &#39;</span><span class="si">%s</span><span class="s2">&#39; AND &quot;</span>
 <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;lat BETWEEN </span><span class="si">%f</span><span class="s2"> AND </span><span class="si">%f</span><span class="s2"> AND &quot;</span>
@@ -211,10 +209,9 @@
 <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;ORDER BY [time], lat, lon, depth &quot;</span>
 <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">%</span> <span class="n">args</span>
 <span class="k">return</span> <span class="n">query</span>
-</pre></div>
-</div>
-<p><strong>Retrieve regional data and plot</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">############## set parameters ################</span>
+
+<span class="sd">&quot;&quot;&quot;Retrieve regional data and plot&quot;&quot;&quot;</span>
+<span class="c1">############## set parameters ################</span>
 <span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;tblPisces_NRT&#39;</span>
 <span class="n">field</span> <span class="o">=</span> <span class="s1">&#39;Fe&#39;</span>        <span class="c1"># Mole concentration of dissolved Iron</span>
 <span class="n">dt1</span> <span class="o">=</span> <span class="s1">&#39;2017-06-03&#39;</span>
@@ -240,21 +237,19 @@
 <div class="section" id="time-series-sql">
 <h2>Time Series SQL<a class="headerlink" href="#time-series-sql" title="Permalink to this headline">¶</a></h2>
 <p>If you are familiar with SQL or T-SQL language, you can use “dbFetch()” function to execute any generic query and retrieve data. Below is a simple example showing how retrieve time series and plot.</p>
-<p><strong>Import the libraries</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">db</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Import the libraries&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">db</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-</pre></div>
-</div>
-<p><strong>Define the plot</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+
+<span class="sd">&quot;&quot;&quot;Define the plot&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<p><strong>Construct the query statement</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prepareQuery</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+
+<span class="sd">&quot;&quot;&quot;Construct the query statement&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">prepareQuery</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT [time], AVG(lat) AS lat, AVG(lon) AS lon, AVG(</span><span class="si">%s</span><span class="s2">) AS </span><span class="si">%s</span><span class="s2"> FROM </span><span class="si">%s</span><span class="s2"> WHERE &quot;</span>
     <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;[time] BETWEEN&#39;</span><span class="si">%s</span><span class="s2">&#39; AND &#39;</span><span class="si">%s</span><span class="s2">&#39; AND &quot;</span>
     <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;lat BETWEEN </span><span class="si">%f</span><span class="s2"> AND </span><span class="si">%f</span><span class="s2"> AND &quot;</span>
@@ -263,10 +258,9 @@
     <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;ORDER BY [time] &quot;</span>
     <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">%</span> <span class="n">args</span>
     <span class="k">return</span> <span class="n">query</span>
-</pre></div>
-</div>
-<p><strong>Retrieve time-series data and plot</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">############## set parameters ################</span>
+
+<span class="sd">&quot;&quot;&quot;Retrieve time-series data and plot&quot;&quot;&quot;</span>
+<span class="c1">############## set parameters ################</span>
 <span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;tblsst_AVHRR_OI_NRT&#39;</span>
 <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;sst&#39;</span>
 <span class="n">dt1</span> <span class="o">=</span> <span class="s1">&#39;2016-06-01&#39;</span>
@@ -286,21 +280,19 @@
 <div class="section" id="depth-profile-sql">
 <h2>Depth Profile SQL<a class="headerlink" href="#depth-profile-sql" title="Permalink to this headline">¶</a></h2>
 <p>If you are familiar with SQL or T-SQL language, you can use “dbFetch()” function to execute any generic query and retrieve data. Below is a simple example showing how to retrieve a depth profile and plot.</p>
-<p><strong>Import the libraries</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">db</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Import the libraries&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">db</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-</pre></div>
-</div>
-<p><strong>Define the plot</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+
+<span class="sd">&quot;&quot;&quot;Define the plot&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;depth (m)&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-<p><strong>Construct the query statement</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prepareQuery</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+
+<span class="sd">&quot;&quot;&quot;Construct the query statement&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">prepareQuery</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
     <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT AVG(lat) AS lat, AVG(lon) AS lon, depth, AVG(</span><span class="si">%s</span><span class="s2">) AS </span><span class="si">%s</span><span class="s2"> FROM </span><span class="si">%s</span><span class="s2"> WHERE &quot;</span>
     <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;[time] BETWEEN &#39;</span><span class="si">%s</span><span class="s2">&#39; AND &#39;</span><span class="si">%s</span><span class="s2">&#39; AND &quot;</span>
     <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;lat BETWEEN </span><span class="si">%f</span><span class="s2"> AND </span><span class="si">%f</span><span class="s2"> AND &quot;</span>
@@ -310,10 +302,9 @@
     <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;ORDER BY depth &quot;</span>
     <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">%</span> <span class="n">args</span>
     <span class="k">return</span> <span class="n">query</span>
-</pre></div>
-</div>
-<p><strong>Retrieve regional data and plot</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">############## set parameters ################</span>
+
+<span class="sd">&quot;&quot;&quot;Retrieve regional data and plot&quot;&quot;&quot;</span>
+<span class="c1">############## set parameters ################</span>
 <span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;tblPisces_NRT&#39;</span>
 <span class="n">field</span> <span class="o">=</span> <span class="s1">&#39;CHL&#39;</span>
 <span class="n">dt1</span> <span class="o">=</span> <span class="s1">&#39;2016-06-01&#39;</span>

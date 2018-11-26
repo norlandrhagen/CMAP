@@ -30,7 +30,7 @@ This tutorial shows how to retrieve a generic distribution of a variable within 
 
 
 
-
+|
 
 Time-Series
 ^^^^^^^^^^^
@@ -54,7 +54,7 @@ This tutorial shows how to retrieve time series of a variable within a predefine
     #df.to_csv('data.csv', index=False)      # save the retrieved data into a csv file
 
 
-
+|
 
 
 Depth Profile
@@ -79,6 +79,7 @@ This tutorial shows how to retrieve depth profile of a variable within a predefi
     #df.to_csv('data.csv', index=False)      # save the retrieved data into a csv file
 
 
+|
 
 Section Subset
 ^^^^^^^^^^^^^^

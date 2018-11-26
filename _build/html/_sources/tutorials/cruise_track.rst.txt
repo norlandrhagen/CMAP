@@ -10,8 +10,8 @@ Colocalize Cruise
 
 
 
-Real Cruise
------------
+Example 1: Field Expedition
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Colocalize Darwin model and satellite data with cruise.
 Compare the underway (in-situ) picoeukaryote abundance measurements performed during the "Gradient1.0" (aka SCOPE_16) with satellite chlorophyll data and picoeukaryote climatological estimates provided by Darwin model.
@@ -53,16 +53,16 @@ Code Tutorial
 
 
 |
-|
+
 
 .. raw:: html
 
     <iframe src="../_static/tutorial_plots/alongTrack.html"  frameborder = 0  height="1000px" width="100%">></iframe>
 
+|
 
-Virtual Cruise
---------------
-
+Example 2: Virtual Cruise
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Colocalize Darwin model, satellite data with a virtual cruise.
 Colocalize a virtual cruise with satellite chlorophyll data and picoeukaryote climatological estimates provided by Darwin model. The trajectory of the virtual cruise is stored in a .csv file.

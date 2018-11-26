@@ -44,7 +44,7 @@ Code Tutorial
 
 .. raw:: html
 
-    <iframe src="../_static/tutorial_plots/XY.html"  frameborder = 0  height="1000px" width="100%">></iframe>
+    <iframe src="../_static/tutorial_plots/XY.html"  frameborder = 0  height="600px" width="100%">></iframe>
 
 
 |

@@ -10,8 +10,8 @@ SeaFlow
    :align: middle
 
 .. |seaflow| image:: /_static/catalog_thumbnails/seaflow.png
-   :scale: 15%
-   :align: middle
+  :scale: 10%
+  :align: middle
 
 
 +------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+

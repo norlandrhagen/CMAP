@@ -100,15 +100,19 @@
 <li class="toctree-l2"><a class="reference internal" href="ESV.html">Exact Amplicon Sequence Variants</a></li>
 <li class="toctree-l2"><a class="reference internal" href="section.html">Section Plot</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Colocalize Cruise</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#real-cruise">Real Cruise</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#code-tutorial">Code Tutorial</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#virtual-cruise">Virtual Cruise</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Code Tutorial</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#gui-tutorial">GUI Tutorial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-1-field-expedition">Example 1: Field Expedition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#code-tutorial">Code Tutorial</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-2-virtual-cruise">Example 2: Virtual Cruise</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Code Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gui-tutorial">GUI Tutorial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#macos">macOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Lagrangian Sampling</a></li>
@@ -189,8 +193,8 @@
             
   <div class="section" id="colocalize-cruise">
 <h1>Colocalize Cruise<a class="headerlink" href="#colocalize-cruise" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="real-cruise">
-<h2>Real Cruise<a class="headerlink" href="#real-cruise" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1-field-expedition">
+<h2>Example 1: Field Expedition<a class="headerlink" href="#example-1-field-expedition" title="Permalink to this headline">¶</a></h2>
 <p>Colocalize Darwin model and satellite data with cruise.
 Compare the underway (in-situ) picoeukaryote abundance measurements performed during the “Gradient1.0” (aka SCOPE_16) with satellite chlorophyll data and picoeukaryote climatological estimates provided by Darwin model.</p>
 <p>Notes:</p>
@@ -199,9 +203,8 @@ Compare the underway (in-situ) picoeukaryote abundance measurements performed du
 <li>Satellite Chlorophyll data used in this example is a daily-global reprocessed and optimally interpolated data set with  4 km×4 km  spatial resolution.</li>
 <li>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  12∘×12∘ .</li>
 </ul>
-</div>
 <div class="section" id="code-tutorial">
-<h2>Code Tutorial<a class="headerlink" href="#code-tutorial" title="Permalink to this headline">¶</a></h2>
+<h3>Code Tutorial<a class="headerlink" href="#code-tutorial" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/Colocalize_Cruise.ipynb">Jupyter Notebook 1</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotCruise</span> <span class="k">as</span> <span class="n">CRS</span>
 
@@ -225,11 +228,14 @@ Compare the underway (in-situ) picoeukaryote abundance measurements performed du
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
+</div>
+<iframe src="../_static/tutorial_plots/alongTrack.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
 <div class="line"><br /></div>
 </div>
-<iframe src="../_static/tutorial_plots/alongTrack.html"  frameborder = 0  height="1000px" width="100%">></iframe></div>
-<div class="section" id="virtual-cruise">
-<h2>Virtual Cruise<a class="headerlink" href="#virtual-cruise" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="example-2-virtual-cruise">
+<h2>Example 2: Virtual Cruise<a class="headerlink" href="#example-2-virtual-cruise" title="Permalink to this headline">¶</a></h2>
 <p>Colocalize Darwin model, satellite data with a virtual cruise.
 Colocalize a virtual cruise with satellite chlorophyll data and picoeukaryote climatological estimates provided by Darwin model. The trajectory of the virtual cruise is stored in a .csv file.</p>
 <p>Notes:</p>
@@ -238,9 +244,8 @@ Colocalize a virtual cruise with satellite chlorophyll data and picoeukaryote cl
 <li>Satellite Chlorophyll data used in this example is a daily-global reprocessed and optimally interpolated data set with  4 km×4 km  spatial resolution.</li>
 <li>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° X 1/2° .</li>
 </ul>
-</div>
 <div class="section" id="id1">
-<h2>Code Tutorial<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h3>Code Tutorial<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/mdashkezari/opedia/blob/master/notebooks/Colocalize_Virtual_Cruise.ipynb">Jupyter Notebook 2</a></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotCruise</span> <span class="k">as</span> <span class="n">CRS</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -267,22 +272,23 @@ Colocalize a virtual cruise with satellite chlorophyll data and picoeukaryote cl
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+</div>
+</div>
 <div class="section" id="gui-tutorial">
-<h3>GUI Tutorial<a class="headerlink" href="#gui-tutorial" title="Permalink to this headline">¶</a></h3>
+<h2>GUI Tutorial<a class="headerlink" href="#gui-tutorial" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-</div>
-</div>
 <div class="section" id="macos">
-<h2>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h2>
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
 <iframe src="https://www.youtube.com/embed/cLY5R49JwCc"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe><div class="line-block">
 <div class="line"><br /></div>
 </div>
 </div>
 <div class="section" id="windows">
-<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <iframe src="https://www.youtube.com/embed/lHB21UWl-jw"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe><iframe src="https://www.youtube.com/embed/cn--aL9VElU"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe></div>
+</div>
 </div>
 
 

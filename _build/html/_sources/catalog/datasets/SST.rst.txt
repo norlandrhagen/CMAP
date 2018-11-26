@@ -27,7 +27,7 @@ Sea Surface Temperature
 Dataset Description
 *******************
 
-The Simons Ocean Atlas contains **Sea Surface Temperature** records from 2013-01-01 - 2017-05-15 collected from the Group for High Resolution Sea Surface Temperature (GHRSST) project. Data is gathered from the from a combination of in-situ sensors and satellite radiometer missions. The data is an interpolated product with the spatial resolution of 0.25 degrees and a daily temporal resolution.
+The Simons Ocean Atlas contains **Sea Surface Temperature** records from 2013-01-01 through 2017-05-15 collected from the Group for High Resolution Sea Surface Temperature (GHRSST) project. Data is gathered from the from a combination of in-situ sensors and satellite radiometer missions. The data is an interpolated product with the spatial resolution of 0.25 degrees and a daily temporal resolution.
 
 More information can be found Here_
 
