@@ -26,16 +26,9 @@ Eddy
 Dataset Description
 *******************
 
-Sixteen years of sea-surface height (SSH) fields constructed by merging the measurements from two
-simultaneously operating altimeters are analyzed to investigate mesoscale variability in the global ocean.
-The prevalence of coherent mesoscale features (referred to here as ‘‘eddies’’) with radius scales of
-O(100 km) is readily apparent in these high-resolution SSH fields. An automated procedure for identifying
-and tracking mesoscale features based on their SSH signatures yields 35,891 eddies with lifetimes
-P16 weeks.
-These long-lived eddies, comprising approximately 1.15 million individual eddy observations,
-have an average lifetime of 32 weeks and an average propagation distance of 550 km. Their mean
-amplitude and a speed-based radius scale as defined by the automated procedure are 8 cm and 90 km,
-respectively.
+The Simons Ocean Atlas contains **Eddy** records from 2013-01-01 through 2017-05-15 collected from AVISO+. The dataset was developed and validated in between collaboration between Aviso+ and with D.Chelton  and M. Schlax at the Oregon State University.
+This dataset has a spatial resolution of 1/4° X 1/4° and a daily temporal resolution. Each Eddy has associated (cyclonic/anticyclonic), speed, radius metadata.
+
 
 Table of Variables
 ******************
@@ -55,6 +48,7 @@ https://www.aviso.altimetry.fr/en/data/products/value-added-products/global-meso
 How to Acknowledge
 ******************
 
+https://doi.org/10.1016/j.pocean.2011.01.002
 
 Version History
 ***************
