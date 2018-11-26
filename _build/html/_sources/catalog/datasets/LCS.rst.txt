@@ -42,8 +42,8 @@ A grid of passive tracers (hypothetical massless particles) is initialized over 
 such that :math:`\Lambda` is the Lyapunov exponent, and :math:`\delta x(t)`, :math:`\delta x(0)` represent the separation between the tracers at times :math:`t` and :math:`t_0`, receptively.
 
 
-.. figure:: /catalog/figures/LCS/Grid.png
-   :width: 50%
+.. figure:: /catalog/figures/LCS/grid_crop.png
+   :width: 75%
 
 After integrating the particles for the fixed period of time, :math:`\tau=15`, FTLE fields are computed to demonstrate the local dispersion as well as local displacements (see example figures below). The particles can be integrated either forward or backward in time. The local maxima of the FTLE scalar field (ridges) can be interpreted as stable and unstable manifolds of the flow field in the case of forward and backward integration, respectively.
 
