@@ -36,7 +36,7 @@ Code Tutorial
 
     DB_Cruise = True                 # < True > if cruise trajectory already exists in DB. < False > if arbiturary cruise file (e.g. virtual)
     source = 'tblSeaFlow'            # cruise table name or path to csv trajectory file
-    cruise = 'SCOPE_16'              # cruise name, or file name of the csv trajectory file
+    cruise = 'Gradients1.0'              # cruise name, or file name of the csv trajectory file
     resampTau = '6H'                 # resample the cruise trajectory making trajectory time-space resolution coarser: e.g. '6H' (6 hourly), '3T' (3 minutes), ... '0' (ignore)
     fname = 'alongTrack'             # figure filename
     tables = ['tblSeaFlow', 'tblDarwin_Plankton_Climatology', 'tblCHL_OI_REP']    # list of varaible table names

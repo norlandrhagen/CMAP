@@ -2,7 +2,7 @@
 
 
 
-.. _Jupyter: https://github.com/mdashkezari/opedia/blob/master/notebooks/SimpleExamples.ipynb
+.. _Jupyter: https://github.com/mdashkezari/opedia/blob/master/notebooks/Colocalize_Eddy.ipynb
 
 
 Eddy Sampling

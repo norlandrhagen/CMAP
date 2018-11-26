@@ -1,7 +1,8 @@
 
+.. _Github: https://github.com/mdashkezari/opedia/
+
+
 API Reference
 =============
 
-Link to GitHub:
-
-`opedia <https://github.com/mdashkezari/opedia>`_.
+Github_
