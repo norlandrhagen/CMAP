@@ -6,7 +6,7 @@
 SOCAT
 *****
 
-.. |cruise| image:: /_static/catalog_thumbnails/cruise_2.png
+.. |cruise| image:: /_static/catalog_thumbnails/sailboat.png
    :scale: 10%
    :align: middle
 

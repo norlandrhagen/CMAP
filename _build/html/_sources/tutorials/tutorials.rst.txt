@@ -37,10 +37,12 @@ Tutorials
   :align: middle
   :target: XY.html
 
-.. |ct| image:: /_static/tutorial_pics/cruise2.png
-  :scale: 35%
-  :align: middle
+.. |ct| image:: /_static/tutorial_pics/sailboat.png
+  :scale: 30%
+  :class: align-center
   :target: cruise_track.html
+
+
 
 .. |lag| image:: /_static/tutorial_pics/lagrangian.png
    :align: middle
