@@ -41,6 +41,9 @@ Windows
 
 .. code-block:: none
 
+    conda install shapely
+    conda install fiona
+    conda install -c conda-forge geopandas
     pip install opedia
 
 
