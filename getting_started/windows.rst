@@ -1,12 +1,15 @@
-.. _Anaconda Windows: https://www.anaconda.com/download/#windows
+.. _Install Anaconda Distribution (Prefer Python 3+): https://www.anaconda.com/download/#windows
 
 
 Windows
 =======
 
-**Install Anaconda Distribution (Prefer Python 3+)**
++----------------------------------------------------+
+|`Install Anaconda Distribution (Prefer Python 3+)`_ |
++----------------------------------------------------+
 
-`Anaconda Windows`_
+
+
 
 .. note::
 

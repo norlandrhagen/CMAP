@@ -1,15 +1,15 @@
-.. _Anaconda Linux: https://www.anaconda.com/download/#linux
 
+.. _Install Anaconda Distribution (Prefer Python 3+): https://www.anaconda.com/download/#linux
 
 
 Linux
 =====
 
 
++----------------------------------------------------+
+|`Install Anaconda Distribution (Prefer Python 3+)`_ |
++----------------------------------------------------+
 
-**Install Anaconda Distribution (Prefer Python 3+)**
-
-`Anaconda Linux`_
 
 **Install Additional Python Modules**
 
@@ -21,3 +21,14 @@ Open Terminal and then enter:
     conda install -c anaconda freetds
 
     pip install opedia
+
+
+
+|
+
+
+**Linux Installation Tutorial Video**
+
+.. raw:: html
+
+    <iframe src="https://www.youtube.com/embed/TTrsVGmkFDE"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>

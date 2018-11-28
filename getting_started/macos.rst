@@ -1,13 +1,16 @@
-.. _Anaconda macOS: https://www.anaconda.com/download/#macos
+
+.. _Install Anaconda Distribution (Prefer Python 3+): https://www.anaconda.com/download/#macos
 
 
 macOS
 =====
 
 
-**Install Anaconda Distribution (Prefer Python 3+)**
++----------------------------------------------------+
+|`Install Anaconda Distribution (Prefer Python 3+)`_ |
++----------------------------------------------------+
 
-`Anaconda macOS`_
+
 
 
 **Install Additional Python Modules**
