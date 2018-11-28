@@ -21,7 +21,7 @@ The Simons Ocean Atlas is an open source database service to unify, visualize, a
   :maxdepth: 1
 
   getting_started/overview.rst
-  getting_started/getting_started.rst
+  getting_started/installation.rst
 
   catalog/catalog
 

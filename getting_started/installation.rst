@@ -3,9 +3,9 @@
 .. _Anaconda macOS: https://www.anaconda.com/download/#macos
 .. _Anaconda Linux: https://www.anaconda.com/download/#linux
 
-.. _Windows Tutorial: windows.html
-.. _macOS Tutorial: macos.html
-.. _Linux Tutorial: linux.html
+.. _Windows: windows.html
+.. _macOS: macos.html
+.. _Linux: linux.html
 
 
 
@@ -28,14 +28,10 @@
 
 
 
-Getting Started
-===============
-
-
-
-
 Installation
-^^^^^^^^^^^^
+============
+
+
 
 The Simons Ocean Atlas is currently in development, but can be used in its present state.
 The two options for using the Ocean Atlas are either through a GUI (Graphical User Interface) for Windows and macOS or through a command line interface for Windows, macOS or Linux.
@@ -43,13 +39,11 @@ Future developments of the Simons Ocean Atlas should be browser based and operat
 
 
 .. table::
-    :widths:  grid
-
 
     +------------------------+------------------------+------------------------+
     |      |windows|         |     |macOS|            |          |linux|       |
     +========================+========================+========================+
-    | `Windows Tutorial`_    |    `macOS Tutorial`_   |    `Linux Tutorial`_   |
+    | `Windows`_             |    `macOS`_            |    `Linux`_            |
     +------------------------+------------------------+------------------------+
 
 
