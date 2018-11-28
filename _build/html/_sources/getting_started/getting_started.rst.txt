@@ -3,6 +3,29 @@
 .. _Anaconda macOS: https://www.anaconda.com/download/#macos
 .. _Anaconda Linux: https://www.anaconda.com/download/#linux
 
+.. _Windows Tutorial: windows.html
+.. _macOS Tutorial: macos.html
+.. _Linux Tutorial: linux.html
+
+
+
+
+.. |windows| image:: /_static/installation_icons/windows.png
+   :align: middle
+   :scale: 20%
+   :target: windows.html
+
+.. |macOS| image:: /_static/installation_icons/macOS.png
+   :align: middle
+   :scale: 20%
+   :target: macos.html
+
+.. |linux| image:: /_static/installation_icons/linux.png
+   :align: middle
+   :scale: 20%
+   :target: linux.html
+
+
 
 
 Getting Started
@@ -18,78 +41,21 @@ The Simons Ocean Atlas is currently in development, but can be used in its prese
 The two options for using the Ocean Atlas are either through a GUI (Graphical User Interface) for Windows and macOS or through a command line interface for Windows, macOS or Linux.
 Future developments of the Simons Ocean Atlas should be browser based and operating system agnostic.
 
-Windows
-^^^^^^^
 
-**Install Anaconda Distribution (Prefer Python 3+)**
-
-`Anaconda Windows`_
-
-.. note::
-
-    When installing Anaconda for windows make sure to choose the: "**Add Anaconda to my PATH environment variable**" option.
-
-|
-
-**Install Additional Python Modules**
+.. table::
+    :widths:  grid
 
 
-
-.. note::
-
-    Run Command Prompt as Administrator and then enter:
-
-.. code-block:: none
-
-    conda install shapely
-    conda install fiona
-    conda install -c conda-forge geopandas
-    pip install opedia
+    +------------------------+------------------------+------------------------+
+    |      |windows|         |     |macOS|            |          |linux|       |
+    +========================+========================+========================+
+    | `Windows Tutorial`_    |    `macOS Tutorial`_   |    `Linux Tutorial`_   |
+    +------------------------+------------------------+------------------------+
 
 
-|
+.. toctree::
+  :hidden:
 
-macOS
-^^^^^^^^
-
-
-**Install Anaconda Distribution (Prefer Python 3+)**
-
-`Anaconda macOS`_
-
-
-**Install Additional Python Modules**
-
-Open Terminal and then enter:
-
-.. code-block:: none
-
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install unixodbc
-    brew install freetds --with-unixodbc
-
-    pip install opedia
-
-
-
-|
-
-Linux
-^^^^^
-
-
-
-**Install Anaconda Distribution (Prefer Python 3+)**
-
-`Anaconda Linux`_
-
-**Install Additional Python Modules**
-
-Open Terminal and then enter:
-
-.. code-block:: none
-
-    conda install -c anaconda unixodbc
-    conda install -c anaconda freetds
-
-    pip install opedia
+  windows
+  macos
+  linux

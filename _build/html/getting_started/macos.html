@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Getting Started &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
+  <title>macOS &mdash; Simons Ocean Atlas 0.0.1 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Windows" href="windows.html" />
-    <link rel="prev" title="Overview" href="overview.html" />
+    <link rel="next" title="Linux" href="linux.html" />
+    <link rel="prev" title="Windows" href="windows.html" />
     <link href="../_static/style.css" rel="stylesheet" type="text/css">
 
 
@@ -87,10 +87,10 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="getting_started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="getting_started.html#installation">Installation</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="windows.html">Windows</a></li>
-<li class="toctree-l3"><a class="reference internal" href="macos.html">macOS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">macOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="linux.html">Linux</a></li>
 </ul>
 </li>
@@ -145,13 +145,15 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Getting Started</li>
+          <li><a href="getting_started.html">Getting Started</a> &raquo;</li>
+        
+      <li>macOS</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/getting_started/getting_started.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/getting_started/macos.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -164,34 +166,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="getting-started">
-<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>The Simons Ocean Atlas is currently in development, but can be used in its present state.
-The two options for using the Ocean Atlas are either through a GUI (Graphical User Interface) for Windows and macOS or through a command line interface for Windows, macOS or Linux.
-Future developments of the Simons Ocean Atlas should be browser based and operating system agnostic.</p>
-<table border="1" class="colwidths-given docutils">
-<colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><a class="reference external" href="windows.html"><img alt="windows" class="align-middle" src="../_images/windows.png" style="width: 100.0px; height: 100.0px;" /></a></th>
-<th class="head"><a class="reference external" href="macos.html"><img alt="macOS" class="align-middle" src="../_images/macOS.png" style="width: 100.0px; height: 100.0px;" /></a></th>
-<th class="head"><a class="reference external" href="linux.html"><img alt="linux" class="align-middle" src="../_images/linux.png" style="width: 82.80000000000001px; height: 100.0px;" /></a></th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference external" href="windows.html">Windows Tutorial</a></td>
-<td><a class="reference external" href="macos.html">macOS Tutorial</a></td>
-<td><a class="reference external" href="linux.html">Linux Tutorial</a></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-</div>
+  <div class="section" id="macos">
+<h1>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h1>
+<p><strong>Install Anaconda Distribution (Prefer Python 3+)</strong></p>
+<p><a class="reference external" href="https://www.anaconda.com/download/#macos">Anaconda macOS</a></p>
+<p><strong>Install Additional Python Modules</strong></p>
+<p>Open Terminal and then enter:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+brew install unixodbc
+brew install freetds --with-unixodbc
+
+pip install opedia
+</pre></div>
 </div>
 </div>
 
@@ -203,10 +189,10 @@ Future developments of the Simons Ocean Atlas should be browser based and operat
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="windows.html" class="btn btn-neutral float-right" title="Windows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="linux.html" class="btn btn-neutral float-right" title="Linux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="overview.html" class="btn btn-neutral" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="windows.html" class="btn btn-neutral" title="Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
