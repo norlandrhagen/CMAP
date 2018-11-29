@@ -24,3 +24,13 @@ Open Terminal and then enter:
     brew install freetds --with-unixodbc
 
     pip install opedia
+
+
+|
+
+
+**macOS Installation Tutorial Video**
+
+.. raw:: html
+
+    <iframe src="https://www.youtube.com/embed/4wofokh8SJ4"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>

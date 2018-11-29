@@ -1,0 +1,83 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Front</title>
+      
+      
+        
+          
+        <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.css" type="text/css" />
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.13.0.min.js"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            <div class="bk-root" id="ee0b4b96-9c95-425e-8a35-813f94458d0e"></div>
+          
+        
+      
+      
+        <script type="application/json" id="dc4e3eec-c42d-4f92-9ed9-06575520d1b9">
+          {"ba8ec53a-815a-4c6f-a232-2821015794b8":{"roots":{"references":[{"attributes":{},"id":"9e030416-b723-402a-8a7d-dfa6c180d549","type":"Column"}],"root_ids":["9e030416-b723-402a-8a7d-dfa6c180d549"]},"title":"Bokeh Application","version":"0.13.0"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('dc4e3eec-c42d-4f92-9ed9-06575520d1b9').textContent;
+                  var render_items = [{"docid":"ba8ec53a-815a-4c6f-a232-2821015794b8","roots":{"9e030416-b723-402a-8a7d-dfa6c180d549":"ee0b4b96-9c95-425e-8a35-813f94458d0e"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        embed_document(root);
+                        clearInterval(timer);
+                      }
+                      attempts++;
+                      if (attempts > 100) {
+                        console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing")
+                        clearInterval(timer);
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

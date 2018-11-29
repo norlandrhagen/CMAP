@@ -75,14 +75,3 @@ macOS
 .. raw:: html
 
     <iframe src="https://www.youtube.com/embed/uUDXwTyOfsk"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
-
-
-|
-|
-
-Windows
-^^^^^^^
-
-.. raw:: html
-
-    <iframe src="https://www.youtube.com/embed/XhWMyocZYeI"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>

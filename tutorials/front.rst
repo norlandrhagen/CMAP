@@ -60,7 +60,7 @@ Jupyter_
 
 .. raw:: html
 
-    <iframe src="../_static/RM_large.html"  frameborder = 0  height="1000px" width="100%">></iframe>
+    <iframe src="../_static/tutorial_plots/front.html"  frameborder = 0  height="1000px" width="100%">></iframe>
 
 
 GUI Tutorial
@@ -74,14 +74,3 @@ macOS
 .. raw:: html
 
     <iframe src="https://www.youtube.com/embed/MFiA8O13PT8"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
-
-
-|
-|
-
-Windows
--------
-
-.. raw:: html
-
-    <iframe src="https://www.youtube.com/embed/XhWMyocZYeI"  frameborder = 0  height="700x" width="80%" allowfullscreen></iframe>
