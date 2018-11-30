@@ -10,7 +10,7 @@ HOT
   :scale: 10%
   :align: middle
 
-.. |hot| image:: /_static/catalog_thumbnails/hot.png
+.. |hot| image:: /_static/catalog_thumbnails/aloha.png
  :scale: 6%
  :align: middle
 
