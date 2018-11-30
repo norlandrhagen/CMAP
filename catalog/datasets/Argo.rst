@@ -50,10 +50,12 @@ http://argo.jcommops.org
 
 The Argo Program is part of the Global Ocean Observing System.
 
-http://doi.org/10.17882/42182
 
 How to Acknowledge
 ******************
+
+
+http://doi.org/10.17882/42182
 
 Version History
 ***************
