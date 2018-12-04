@@ -2,7 +2,7 @@
 
 .. _Github: https://github.com/mdashkezari/opedia
 
-.. _Slack: https://join.slack.com/t/simons-ocean-atlas/shared_invite/enQtNDg1NjkwOTM2OTgxLTY0NTY0ODM0N2E0NjkwZGVjMzdhM2E5NzJkYTE2OWFiMGEwYWE1ZmQyMDIwNGY2MzE1ZjE3MWM4Y2U5N2QzNmM
+.. _Slack: https://join.slack.com/t/cmap-project/shared_invite/enQtNDkyNzkwODgzODkwLTFhYWIwYWRiN2RjMDdjNWU0MzBiZTkyZjQ3ODE2ZmMwMGI1OTYzNjhjMWNlODkyMGNiMTNjNTdlOTZkMWNmMGE
 
 
 

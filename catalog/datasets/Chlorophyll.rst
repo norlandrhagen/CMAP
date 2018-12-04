@@ -53,5 +53,7 @@ http://cmems-resources.cls.fr/documents/QUID/CMEMS-OC-QUID-009-030-032-033-081-0
 How to Acknowledge
 ******************
 
+E.U. Copernicus Marine Service Information
+
 Version History
 ***************

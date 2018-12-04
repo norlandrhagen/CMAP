@@ -6,8 +6,3 @@ API Reference
 =============
 
 Github_
-
-|
-
-
-More to come soon.

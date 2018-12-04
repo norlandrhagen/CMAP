@@ -54,5 +54,7 @@ Bentamy A., H-L Ayina, P. Queffeulou, D. Croize-Fillon ; 2006 : Improved Near Re
 How to Acknowledge
 ******************
 
+E.U. Copernicus Marine Service Information
+
 Version History
 ***************

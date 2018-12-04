@@ -53,5 +53,7 @@ http://cmems-resources.cls.fr/documents/PUM/CMEMS-SL-PUM-008-032-051.pdf
 How to Acknowledge
 ******************
 
+E.U. Copernicus Marine Service Information
+
 Version History
 ***************
