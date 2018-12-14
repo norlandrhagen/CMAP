@@ -66,7 +66,7 @@ Table of Variables
 Data Source
 ***********
 
-Simons Ocean Atlas
+CMAP
 
 https://github.com/mdashkezari/opedia/tree/master/CS
 

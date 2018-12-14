@@ -20,7 +20,7 @@ Oceanography is a multidisciplinary field which involves synthesizing physical, 
 
 
 
-This project's goal is to establish a unifying data structure and streamline the process of subsetting, extracting, and visualizing data. We propose that the space and time information should act as the linking chain between data sets, as every single data point must be annotated with its own space and time data. Therefore, all data sets hosted in the Simons Ocean Atlas have the following simple data structure:
+This project's goal is to establish a unifying data structure and streamline the process of subsetting, extracting, and visualizing data. We propose that the space and time information should act as the linking chain between data sets, as every single data point must be annotated with its own space and time data. Therefore, all data sets hosted in CMAP have the following simple data structure:
 
 
 +------+-----+-----+-------------------+-----------------+-----+-----------------+

@@ -21,7 +21,7 @@ FAQ
 Who to Contact
 --------------
 
-If you have questions about using the Ocean Atlas feel free to contact either:
+If you have questions about using CMAP feel free to contact either:
 
 - Raphael Hagen (nrhagen@uw.edu)
 - Mohammad D. Ashkezari (mdehghan@uw.edu)
@@ -36,7 +36,7 @@ Or join our Slack_ channel.
 How to Contribute
 -----------------
 
-You can contribute directly to the Simons Ocean Atlas via the Github_ page or you can make suggestions via email or Slack_.
+You can contribute directly to CMAP via the Github_ page or you can make suggestions via email or Slack_.
 
 |
 

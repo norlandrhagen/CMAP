@@ -2,11 +2,11 @@
 .. _Simons: https://www.simonsfoundation.org/
 
 
-Simons Ocean Atlas
-==================
+CMAP - Simons Collaborative Marine Atlas Project
+================================================
 
 
-The Simons Ocean Atlas is an open source database service to unify, visualize, and analyze ocean data sets such as field campaign observations, remote sensing satellite data, and model outputs. The project is supported by the Simons_ Foundation .
+CMAP is an open source database service to unify, visualize, and analyze ocean data sets such as field campaign observations, remote sensing satellite data, and model outputs. The project is supported by the Simons_ Foundation .
 
 
 |

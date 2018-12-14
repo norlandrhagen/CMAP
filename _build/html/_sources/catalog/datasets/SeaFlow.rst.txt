@@ -53,7 +53,7 @@ Table of Variables
 Data Source
 ***********
 
-Simons Ocean Atlas
+CMAP
 
 Armbrust Lab, UW
 

@@ -26,7 +26,7 @@ Dataset Description
 *******************
 
 
-The Simons Ocean Atlas contains **Satellite Altimetry** records from 2013-01-01 through 2017-05-15 collected from the Copernicus Marine Environment Monitoring Service. The dataset is generated from remotely sensed satellite data and contains multiple ocean altimetry products.
+CMAP contains **Satellite Altimetry** records from 2013-01-01 through 2017-05-15 collected from the Copernicus Marine Environment Monitoring Service. The dataset is generated from remotely sensed satellite data and contains multiple ocean altimetry products.
 The dataset has a spatial resolution of 1/4° X 1/4° and a daily temporal resolution.
 
 

@@ -33,9 +33,9 @@ Installation
 
 
 
-The Simons Ocean Atlas is currently in development, but can be used in its present state.
+CMAP is currently in development, but can be used in its present state.
 The two options for using the Ocean Atlas are either through a GUI (Graphical User Interface) for Windows and macOS or through a command line interface for Windows, macOS or Linux.
-Future developments of the Simons Ocean Atlas should be browser based and operating system agnostic.
+Future developments of CMAP should be browser based and operating system agnostic.
 
 
 .. table::
