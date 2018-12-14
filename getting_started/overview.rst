@@ -32,7 +32,7 @@ This project's goal is to establish a unifying data structure and streamline the
 Project Process Flow
 ^^^^^^^^^^^^^^^^^^^^
 
-Simons Foundation supports various ocean research programs and cruise expeditions. The results of these endeavors are shared with the scientific community and general public through the Simons Ocean Atlas. All data sets are first registered in formal digital archive repositories (such as zenodo.org) and obtain academically citable Digital Object Identifiers (DOI). The atlas also encompass a wide range of external data sets such as global satellite data and model outputs (see  :ref:`Catalog`). We then ingest all data sets into a database system using the data structure mentioned above.  Finally, the API and application layers provide the user with the access to the database system where data set subsets can be retrieved and visualized.
+Simons Foundation supports various ocean research programs and cruise expeditions. The results of these endeavors are shared with the scientific community and general public through CMAP. All data sets are first registered in formal digital archive repositories (such as zenodo.org) and obtain academically citable Digital Object Identifiers (DOI). The atlas also encompass a wide range of external data sets such as global satellite data and model outputs (see  :ref:`Catalog`). We then ingest all data sets into a database system using the data structure mentioned above.  Finally, the API and application layers provide the user with the access to the database system where data set subsets can be retrieved and visualized.
 
 .. figure:: ../_static/process_flow.png
    :scale: 60 %

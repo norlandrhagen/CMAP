@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('..'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'CMAP - Simons Collaborative Marine Atlas Project'
+project = 'CMAP'
 copyright = '2018, Mohammad Dehghani  & Raphael Hagen'
 author = 'Mohammad Dehghani & Raphael Hagen'
 
@@ -85,7 +85,7 @@ html_theme = 'sphinx_rtd_theme'
 
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = 'CMAP - Simons Collaborative Marine Atlas Project'
+html_short_title = 'CMAP'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
