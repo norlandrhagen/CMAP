@@ -27,6 +27,8 @@ Dataset Description
 *******************
 
 .. image:: ../../_static/badge_logo.png
+  :target: https://mybinder.org/v2/gh/norlandrhagen/test_binder/master?filepath=flombaum_visualization_test.ipynb
+
 
 
 SeaFlow is a new environmental flow cytometer designed by the Armbrust lab to be deployed on oceanographic research vessels to monitor continuously photosynthetic microorganisms. Since its first deployment in 2008, the SeaFlow instrument has collected over 200,000 samples in surface waters of the North Pacific and Atlantic Ocean. The geographical distribution of marine phytoplankton, their optical characteristics (size and pigment content), and their dynamics in relation to environmental factors are of major interest for the oceanographers.
