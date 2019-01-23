@@ -91,7 +91,8 @@ html_short_title = 'CMAP'
 # of the sidebar.
 # html_logo = '_static/caustics_grid.png'
 # html_logo = '_static/soa_logo_small.png'
-html_logo = '_static/earth_wind.gif'
+# html_logo = '_static/earth_wind.gif'
+html_logo = '_static/pacific_sst_year.gif'
 
 
 
