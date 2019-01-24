@@ -16,7 +16,7 @@ ESV - Exact Amplicon Sequence Variants
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 | Datset Name                   | Coverage | Sensor   |  Make       |  Spatial Resolution    | Temporal Resolution  |  Start Date  |  End Date  |
 +===============================+==========+==========+=============+========================+======================+==============+============+
-|:ref:`ESV`                     | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  1987-09-17  | 2008-11-10 |
+|:ref:`ESV`                     | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  2012-04-11  | 2012-05-11 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
 
@@ -26,7 +26,7 @@ Dataset Description
 *******************
 
 
-CMAP contains **Chlorophyll Concentration** records from 2012-01-01 through 2016-12-31 collected from the Ocean Colour Thematic Center which is part of the Copernicus Marine Environment Monitoring Service. The data is generated from ESA and NASA satellite missions, specifically from MERIS, SeaWiFS and MODIS.
+CMAP contains **ESV - Exact Amplicon Sequence Variants** records from 2012-04-11  through  2012-05-11 collected from the Ocean Colour Thematic Center which is part of the Copernicus Marine Environment Monitoring Service. The data is generated from ESA and NASA satellite missions, specifically from MERIS, SeaWiFS and MODIS.
   The dataset has a spatial resolution of 4km X 4km and a daily temporal resolution.
 
 Global distributions of the marine Cyanobacteria Prochlorococcus and Synechococcus

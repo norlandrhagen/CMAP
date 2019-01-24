@@ -30,18 +30,8 @@ Dataset Description
   :target: https://mybinder.org/v2/gh/norlandrhagen/test_binder/master?filepath=flombaum_visualization_test.ipynb
 
 
-CMAP contains **Chlorophyll Concentration** records from 2012-01-01 through 2016-12-31 collected from the Ocean Colour Thematic Center which is part of the Copernicus Marine Environment Monitoring Service. The data is generated from ESA and NASA satellite missions, specifically from MERIS, SeaWiFS and MODIS.
-  The dataset has a spatial resolution of 4km X 4km and a daily temporal resolution.
-
-Global distributions of the marine Cyanobacteria Prochlorococcus and Synechococcus
-
-  The Global Database of Prochlorococcus and Synechococcus contains ocean samples of both of these lineages. Samples consist on flow cytometry cell counts and its associated ancillary information, such as the geographical location and date, and as nutrient and temperature. Records have also associated nutrients and temperature from the World Ocean Atlas, and photosynthetically active radiation obtained from SeaWiFS satellites.
-
-
-
-To predict the global distributions of Prochlorococcus and Synechococcus, we first compiled a global dataset. The dataset consisted of 35,129 and 37,699 observations of abundance, respectively, and contained data from a total of 103 cruises and time series with samples from all major ocean regions
-
-
+CMAP contains a record of **Global distributions of marine Cyanobacteria Prochlorococcus and Synechococcus**  from 1987-09-17 through 2008-11-10.
+These data were compiled by **Flombaum et al** from a total of 103 cruises from all major ocean regions.
 
 
 .. raw:: html
