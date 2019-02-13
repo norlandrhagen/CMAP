@@ -26,9 +26,6 @@ SeaFlow
 Dataset Description
 *******************
 
-.. image:: ../../_static/badge_logo.png
-  :target: https://mybinder.org/v2/gh/norlandrhagen/test_binder/master?filepath=flombaum_visualization_test.ipynb
-
 
 
 
