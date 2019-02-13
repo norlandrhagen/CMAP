@@ -27,7 +27,7 @@ Chlorophyll
 Dataset Description
 *******************
 
-CMAP contains **Chlorophyll Concentration** records from 2012-01-01 through 2016-12-31 collected from the Ocean Colour Thematic Center which is part of the Copernicus Marine Environment Monitoring Service. The data is generated from ESA and NASA satellite missions, specifically from MERIS, SeaWiFS and MODIS.
+Simons CMAP contains **Chlorophyll Concentration** records from 2012-01-01 through 2016-12-31 collected from the Ocean Colour Thematic Center which is part of the Copernicus Marine Environment Monitoring Service. The data is generated from ESA and NASA satellite missions, specifically from MERIS, SeaWiFS and MODIS.
 The dataset has a spatial resolution of 4km X 4km and a daily temporal resolution.
 
 More information can be found Here_

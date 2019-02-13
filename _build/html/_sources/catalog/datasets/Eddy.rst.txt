@@ -26,7 +26,7 @@ Eddy
 Dataset Description
 *******************
 
-CMAP contains **Eddy** records from 2013-01-01 through 2017-05-15 collected from AVISO+. The dataset was developed and validated in between collaboration between Aviso+ and with D.Chelton  and M. Schlax at the Oregon State University.
+Simons CMAP contains **Eddy** records from 2013-01-01 through 2017-05-15 collected from AVISO+. The dataset was developed and validated in between collaboration between Aviso+ and with D.Chelton  and M. Schlax at the Oregon State University.
 This dataset has a spatial resolution of 1/4° X 1/4° and a daily temporal resolution. Each Eddy has associated (cyclonic/anticyclonic), speed, radius metadata.
 
 

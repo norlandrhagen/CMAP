@@ -26,7 +26,7 @@ Dataset Description
 *******************
 
 
-CMAP contains **ESV - Exact Amplicon Sequence Variants** records from 2012-04-11  through  2012-05-11 collected from the Ocean Colour Thematic Center which is part of the Copernicus Marine Environment Monitoring Service. The data is generated from ESA and NASA satellite missions, specifically from MERIS, SeaWiFS and MODIS.
+Simons CMAP contains **ESV - Exact Amplicon Sequence Variants** records from 2012-04-11  through  2012-05-11 collected from the Ocean Colour Thematic Center which is part of the Copernicus Marine Environment Monitoring Service. The data is generated from ESA and NASA satellite missions, specifically from MERIS, SeaWiFS and MODIS.
   The dataset has a spatial resolution of 4km X 4km and a daily temporal resolution.
 
 Global distributions of the marine Cyanobacteria Prochlorococcus and Synechococcus
@@ -57,7 +57,7 @@ Table of Variables
 Data Source
 ***********
 
-CMAP
+Simons CMAP
 
 Armbrust Lab, UW
 

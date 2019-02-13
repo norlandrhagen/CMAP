@@ -30,7 +30,7 @@ Dataset Description
   :target: https://mybinder.org/v2/gh/norlandrhagen/test_binder/master?filepath=flombaum_visualization_test.ipynb
 
 
-CMAP contains a record of **Global distributions of marine Cyanobacteria Prochlorococcus and Synechococcus**  from 1987-09-17 through 2008-11-10.
+Simons CMAP contains a record of **Global distributions of marine Cyanobacteria Prochlorococcus and Synechococcus**  from 1987-09-17 through 2008-11-10.
 These data were compiled by **Flombaum et al** from a total of 103 cruises from all major ocean regions.
 
 
@@ -51,7 +51,7 @@ Table of Variables
 Data Source
 ***********
 
-CMAP
+Simons CMAP
 
 Armbrust Lab, UW
 

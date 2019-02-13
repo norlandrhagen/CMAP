@@ -66,7 +66,7 @@ Table of Variables
 Data Source
 ***********
 
-CMAP
+Simons CMAP
 
 https://github.com/mdashkezari/opedia/tree/master/CS
 

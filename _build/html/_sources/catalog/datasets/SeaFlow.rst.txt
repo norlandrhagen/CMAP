@@ -51,7 +51,7 @@ Table of Variables
 Data Source
 ***********
 
-CMAP
+Simons CMAP
 
 Armbrust Lab, UW
 

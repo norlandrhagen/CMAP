@@ -33,9 +33,9 @@ Installation
 
 
 
-CMAP is currently in development, but can be used in its present state.
-The two options for using CMAP are either through a GUI (Graphical User Interface) for Windows and macOS or through a command line interface for Windows, macOS or Linux.
-Future developments of CMAP should be browser based and operating system agnostic.
+Simons CMAP is currently in development, but can be used in its present state.
+The two options for using Simons CMAP are either through a GUI (Graphical User Interface) for Windows and macOS or through a command line interface for Windows, macOS or Linux.
+Future developments of Simons CMAP should be browser based and operating system agnostic.
 
 
 .. table::

@@ -2,7 +2,7 @@
 
 .. _Github: https://github.com/mdashkezari/opedia
 
-.. _Slack: https://join.slack.com/t/cmap-project/shared_invite/enQtNDkyNzkwODgzODkwLTFhYWIwYWRiN2RjMDdjNWU0MzBiZTkyZjQ3ODE2ZmMwMGI1OTYzNjhjMWNlODkyMGNiMTNjNTdlOTZkMWNmMGE
+.. _Slack: https://join.slack.com/t/Simons CMAP-project/shared_invite/enQtNDkyNzkwODgzODkwLTFhYWIwYWRiN2RjMDdjNWU0MzBiZTkyZjQ3ODE2ZmMwMGI1OTYzNjhjMWNlODkyMGNiMTNjNTdlOTZkMWNmMGE
 
 
 
@@ -21,7 +21,7 @@ FAQ
 Who to Contact
 --------------
 
-If you have questions about using CMAP feel free to contact either:
+If you have questions about using Simons CMAP feel free to contact either:
 
 - Raphael Hagen (nrhagen@uw.edu)
 - Mohammad D. Ashkezari (mdehghan@uw.edu)
@@ -36,7 +36,7 @@ Or join our Slack_ channel.
 How to Contribute
 -----------------
 
-You can contribute directly to CMAP via the Github_ page or you can make suggestions via email or Slack_.
+You can contribute directly to Simons CMAP via the Github_ page or you can make suggestions via email or Slack_.
 
 |
 
