@@ -34,29 +34,25 @@ Simons CMAP contains a record of **Global distributions of marine Cyanobacteria 
 These data were compiled by **Flombaum et al** from a total of 103 cruises from all major ocean regions.
 
 
-.. raw:: html
-
-    <iframe src="../../_static/cruise-track.html"  frameborder = 0  height="1000px" width="100%">></iframe>
-
 
 Table of Variables
 ******************
 
 .. raw:: html
 
-    <iframe src="../../_static/var_tables/SeaFlow/SeaFlow.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+    <iframe src="../../_static/var_tables/Flombaum/flombaum.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
 |
 
 Data Source
 ***********
 
-Simons CMAP
-
-Armbrust Lab, UW
+Data provided by Pedro Flombaum et al. and is available at **http://gdps.cima.fcen.uba.ar/**
 
 How to Acknowledge
 ******************
+
+https://doi.org/10.1073/pnas.1307701110
 
 Version History
 ***************
