@@ -40,7 +40,7 @@ Table of Variables
 
 .. raw:: html
 
-    <iframe src="../../_static/var_tables/Flombaum/flombaum.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+    <iframe src="../../_static/var_tables/Flombaum/Flombaum.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
 |
 
