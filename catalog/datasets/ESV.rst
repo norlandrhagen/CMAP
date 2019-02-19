@@ -41,14 +41,14 @@ Table of Variables
 
 Data Source
 ***********
-
-https://doi.org/10.3389/fmicb.2016.00649
-https://doi.org/10.1038/srep19054
-https://doi.org/10.3389/fmicb.2016.00590
+Jed Fuhrman lab, USC
+Jesse McNicho (mcnichol@alum.mit.edu)
 
 How to Acknowledge
 ******************
 
+https://doi.org/10.1038/srep19054
+https://doi.org/10.3389/fmicb.2016.00649
 
 Version History
 ***************
