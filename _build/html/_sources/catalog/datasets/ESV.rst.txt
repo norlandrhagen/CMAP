@@ -26,7 +26,7 @@ Dataset Description
 *******************
 
 
-Simons CMAP contains **ESV - Exact Amplicon Sequence Variants** records from 2012-04-11 through  2012-05-11.
+Simons CMAP contains **ESV - Exact Amplicon Sequence Variants** records from 2012-04-11 through 2012-05-11.
 
 
 
@@ -41,14 +41,14 @@ Table of Variables
 
 Data Source
 ***********
-Jed Fuhrman lab, USC
-Jesse McNicho (mcnichol@alum.mit.edu)
+| Jed Fuhrman lab, USC
+| Jesse McNicho (mcnichol@alum.mit.edu)
 
 How to Acknowledge
 ******************
 
-https://doi.org/10.1038/srep19054
-https://doi.org/10.3389/fmicb.2016.00649
+| https://doi.org/10.1038/srep19054
+| https://doi.org/10.3389/fmicb.2016.00649
 
 Version History
 ***************
