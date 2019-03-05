@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cruise Planning &mdash; CMAP 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API Reference" href="../API_ref/API_reference.html" />
+    <link rel="prev" title="SQL Queries" href="sql.html" />
+    <link href="../_static/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> CMAP
+          
+
+          
+            
+            <img src="../_static/pacific_sst_year.gif" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../catalog/catalog.html">Data Catalog</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="get_catalog.html">Retrieve Data Catalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="regional_map.html">Plot Regional Map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section.html">Section Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time_series.html">Plot Time Series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="depth_profile.html">Plot Depth Profile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="XY.html">Plot XY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="histogram.html">Plot Histogram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ESV.html">Exact Amplicon Sequence Variants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="section.html">Section Plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cruise_track.html">Colocalize Cruise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lagrangian.html">Lagrangian Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eddy.html">Eddy Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="front.html">Front Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_data.html">Colocalize Custom Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="retrieve_data.html">Retrieve Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sql.html">SQL Queries</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cruise Planning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-1-surface-maps-satellite">Example 1: Surface Maps (Satellite)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#code-tutorial">Code Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#example-2-surface-organisms-maps-model">Example 2: Surface Organisms Maps (Model)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Code Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#example-3-surface-maps-model">Example 3: Surface Maps (Model)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Code Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#example-4-section-plots-model">Example 4: Section plots (Model)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Code Tutorial</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../API_ref/API_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../FAQ/FAQ.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">CMAP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>Cruise Planning</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/cruise_planning.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cruise-planning">
+<h1>Cruise Planning<a class="headerlink" href="#cruise-planning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="example-1-surface-maps-satellite">
+<h2>Example 1: Surface Maps (Satellite)<a class="headerlink" href="#example-1-surface-maps-satellite" title="Permalink to this headline">¶</a></h2>
+<p><strong>Create surface maps using near-real-time satellite data.</strong></p>
+<p>Notes:</p>
+<ul class="simple">
+<li>Pisces model is a weekly-averaged global model with spatial resolution  1/2° × 1/2°  (data is available only at one-week intervals).</li>
+<li>Satellite SST data set is a daily-global product with spatial resolution   1/4° × 1/4° .</li>
+</ul>
+<div class="section" id="code-tutorial">
+<h3>Code Tutorial<a class="headerlink" href="#code-tutorial" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotRegional</span> <span class="k">as</span> <span class="n">REG</span>
+
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblsst_AVHRR_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblAltimetry_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblCHL_OI_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblLCS_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblLCS_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblWind_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblSSS_NRT&#39;</span><span class="p">]</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sst&#39;</span><span class="p">,</span> <span class="s1">&#39;sla_nrt&#39;</span><span class="p">,</span> <span class="s1">&#39;chl_nrt&#39;</span><span class="p">,</span> <span class="s1">&#39;ftle_nrt&#39;</span><span class="p">,</span> <span class="s1">&#39;disp_nrt&#39;</span><span class="p">,</span> <span class="s1">&#39;wind_stress&#39;</span><span class="p">,</span> <span class="s1">&#39;sss&#39;</span><span class="p">]</span>
+<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2019-03-02&#39;</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2019-03-02&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">70</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">80</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;surface_satellite&#39;</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>       <span class="c1"># True if you you want to save data in .csv format</span>
+
+<span class="n">REG</span><span class="o">.</span><span class="n">regionalMap</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+</pre></div>
+</div>
+<iframe src="../_static/tutorial_plots/surface_satellite.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="example-2-surface-organisms-maps-model">
+<h2>Example 2: Surface Organisms Maps (Model)<a class="headerlink" href="#example-2-surface-organisms-maps-model" title="Permalink to this headline">¶</a></h2>
+<p><strong>Create surface maps using Darwin monthly climatology data.</strong></p>
+<p>Notes:</p>
+<ul class="simple">
+<li>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° × 1/2°</li>
+</ul>
+<div class="section" id="id1">
+<h3>Code Tutorial<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotRegional</span> <span class="k">as</span> <span class="n">REG</span>
+
+
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblDarwin_Plankton_Climatology&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Plankton_Climatology&#39;</span><span class="p">]</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;prokaryote_c01_darwin_clim&#39;</span><span class="p">,</span> <span class="s1">&#39;prokaryote_c02_darwin_clim&#39;</span><span class="p">]</span>
+<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2019-03-02&#39;</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2019-03-02&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">70</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">80</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;organism_model&#39;</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>       <span class="c1"># True if you you want to save data in .csv format</span>
+
+<span class="n">REG</span><span class="o">.</span><span class="n">regionalMap</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+</pre></div>
+</div>
+<iframe src="../_static/tutorial_plots/organism_model.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="example-3-surface-maps-model">
+<h2>Example 3: Surface Maps (Model)<a class="headerlink" href="#example-3-surface-maps-model" title="Permalink to this headline">¶</a></h2>
+<p><strong>Create a surface maps using near-real-time model data.</strong></p>
+<p>Notes:</p>
+<ul class="simple">
+<li>Pisces model is a weekly-averaged global model with spatial resolution 1/2° × 1/2° (data is available only at one-week intervals).</li>
+</ul>
+<div class="section" id="id2">
+<h3>Code Tutorial<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotRegional</span> <span class="k">as</span> <span class="n">REG</span>
+
+
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblMercator_MLD_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">]</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;mld_nrt&#39;</span><span class="p">,</span> <span class="s1">&#39;NO3&#39;</span><span class="p">,</span> <span class="s1">&#39;PO4&#39;</span><span class="p">,</span> <span class="s1">&#39;Fe&#39;</span><span class="p">,</span> <span class="s1">&#39;O2&#39;</span><span class="p">]</span>
+<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2019-03-02&#39;</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2019-03-02&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">70</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="o">-</span><span class="mi">80</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;surface_model&#39;</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>       <span class="c1"># True if you you want to save data in .csv format</span>
+
+<span class="n">REG</span><span class="o">.</span><span class="n">regionalMap</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+</pre></div>
+</div>
+<iframe src="../_static/tutorial_plots/surface_model.html"  frameborder = 0  height="1000px" width="100%">></iframe><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="example-4-section-plots-model">
+<h2>Example 4: Section plots (Model)<a class="headerlink" href="#example-4-section-plots-model" title="Permalink to this headline">¶</a></h2>
+<p><strong>Create section maps using monthly climatology data from Darwin and near-real-time data from PISCES model.</strong></p>
+<p>Notes:</p>
+<ul class="simple">
+<li>Darwin_Climatology is a monthly climatology version of the Darwin model with spatial resolution  1/2° × 1/2°</li>
+<li>Pisces model is a weekly-averaged global model with spatial resolution 1/2° × 1/2° (data is available only at one-week intervals).</li>
+</ul>
+<div class="section" id="id3">
+<h3>Code Tutorial<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">opedia</span> <span class="kn">import</span> <span class="n">plotSection</span> <span class="k">as</span> <span class="n">SEC</span>
+
+<span class="n">tables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tblDarwin_Nutrient_Climatology&#39;</span><span class="p">,</span> <span class="s1">&#39;tblDarwin_Nutrient_Climatology&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">,</span> <span class="s1">&#39;tblPisces_NRT&#39;</span><span class="p">]</span>
+<span class="n">variables</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NH4_darwin_clim&#39;</span><span class="p">,</span> <span class="s1">&#39;SiO2_darwin_clim&#39;</span><span class="p">,</span> <span class="s1">&#39;Fe&#39;</span><span class="p">,</span> <span class="s1">&#39;NO3&#39;</span><span class="p">,</span> <span class="s1">&#39;CHL&#39;</span><span class="p">,</span> <span class="s1">&#39;PO4&#39;</span><span class="p">,</span> <span class="s1">&#39;O2&#39;</span><span class="p">]</span>
+<span class="n">startDate</span> <span class="o">=</span> <span class="s1">&#39;2019-03-02&#39;</span>
+<span class="n">endDate</span> <span class="o">=</span> <span class="s1">&#39;2019-03-02&#39;</span>
+<span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">55</span>
+<span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">159</span><span class="p">,</span> <span class="o">-</span><span class="mi">157</span>
+<span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;SEC&#39;</span>
+<span class="n">exportDataFlag</span> <span class="o">=</span> <span class="bp">False</span>                  <span class="c1"># True if you you want to save data in .csv format</span>
+
+<span class="n">SEC</span><span class="o">.</span><span class="n">sectionMap</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">startDate</span><span class="p">,</span> <span class="n">endDate</span><span class="p">,</span> <span class="n">lat1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">lon1</span><span class="p">,</span> <span class="n">lon2</span><span class="p">,</span> <span class="n">depth1</span><span class="p">,</span> <span class="n">depth2</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">exportDataFlag</span><span class="p">)</span>
+</pre></div>
+</div>
+<iframe src="../_static/tutorial_plots/SEC.html"  frameborder = 0  height="1000px" width="100%">></iframe></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../API_ref/API_reference.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sql.html" class="btn btn-neutral float-left" title="SQL Queries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Mohammad Dehghani  &amp; Raphael Hagen
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ <script type="text/javascript">
+    $(document).ready(function() {
+        $(".toggle > *").hide();
+        $(".toggle .header").show();
+        $(".toggle .header").click(function() {
+            $(this).parent().children().not(".header").toggle(400);
+            $(this).parent().children(".header").toggleClass("open");
+        })
+    });
+</script>
+
+
+</body>
+</html>

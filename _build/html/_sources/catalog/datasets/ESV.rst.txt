@@ -42,7 +42,7 @@ Table of Variables
 Data Source
 ***********
 | Jed Fuhrman lab, USC
-| Jesse McNichol ("*mcnichol@alum.mit.edu*")
+| Jesse McNichol (mcnichol@alum.mit.edu)
 
 How to Acknowledge
 ******************

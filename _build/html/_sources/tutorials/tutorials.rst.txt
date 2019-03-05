@@ -69,7 +69,11 @@ Tutorials
   :align: middle
   :target: sql.html
 
-|
+.. |cp| image:: /_static/tutorial_pics/cruise2.png
+  :align: middle
+  :scale: 30%
+  :target: cruise_planning.html
+
 
 
 
@@ -100,7 +104,10 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
 +---------------------------+---------------------------+---------------------------+
 | **Custom Data**           |**Retrieve Dataset Subset**| **SQL Queries**           |
 +---------------------------+---------------------------+---------------------------+
-
+| |cp|                      |                           |                           |
++---------------------------+---------------------------+---------------------------+
+| **Cruise Planning**       |                           |                           |
++---------------------------+---------------------------+---------------------------+
 
 
 .. toctree::
@@ -123,3 +130,4 @@ The tutorials include both GUI and script approaches. The GUI tutorials may incl
   custom_data
   retrieve_data
   sql
+  cruise_planning
