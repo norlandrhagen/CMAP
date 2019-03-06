@@ -1,7 +1,12 @@
 
+.. _Jupyter Notebook: https://github.com/mdashkezari/opedia/blob/master/notebooks/Gradients3.ipynb
+
+
 Cruise Planning
 ===============
 
+
+`Jupyter Notebook`_
 
 
 Example 1: Surface Maps (Satellite)
@@ -10,7 +15,7 @@ Example 1: Surface Maps (Satellite)
 **Create surface maps using near-real-time satellite data.**
 
 Notes:
-
+- **Not all plots are displayed in this tutorial due to html size issues**
 - Pisces model is a weekly-averaged global model with spatial resolution  1/2° × 1/2°  (data is available only at one-week intervals).
 - Satellite SST data set is a daily-global product with spatial resolution   1/4° × 1/4° .
 
