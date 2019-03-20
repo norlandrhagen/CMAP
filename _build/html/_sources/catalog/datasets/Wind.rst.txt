@@ -16,11 +16,11 @@ Wind
 
 
 
-+------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
-| Datset Name            | Coverage | Sensor |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
-+========================+==========+========+=============+============================+======================+==============+============+
-| :ref:`Wind`            | |globe|  | |sat|  | Observation |     1/4° X 1/4°            |     Six Hourly       |  2012-11-15  | 2017-12-04 |
-+------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
++-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
+| Datset Name                   | Coverage | Sensor   |  Make       |  Spatial Resolution    | Temporal Resolution  |  Start Date  |  End Date  |
++===============================+==========+==========+=============+========================+======================+==============+============+
+| :ref:`Wind`                   | |globe|  | |sat|    | Observation |     1/4° X 1/4°        |     Six Hourly       |  2012-11-15  | 2019-03-06 |
++-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
 
 
@@ -28,7 +28,7 @@ Dataset Description
 *******************
 
 The IFREMER CERSAT Global Blended Mean Wind Fields include wind components (meridional and zonal), wind module, wind stress.
-The associated error estimates are also provided. They are estimated from scatterometers ASCAT and OSCAT retrievals and from ECMWF operational wind analysis with a horizontal resolution of 0.25x0.25 degrees and 6 hours in time, and available at synoptic time 00h:00; 06h:00; 12h:00; 18h:00 since January, 1st 2013.
+The associated error estimates are also provided. They are estimated from scatterometers ASCAT and OSCAT retrievals and from ECMWF operational wind analysis with a horizontal resolution of 0.25x0.25 degrees and 6 hours in time, and available at synoptic time 00h:00; 06h:00; 12h:00; 18h:00.
 
 
 Table of Variables

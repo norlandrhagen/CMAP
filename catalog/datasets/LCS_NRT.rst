@@ -1,11 +1,11 @@
 :orphan:
 
-.. _LCS:
+.. _LCS_NRT:
 
 
+LCS Near-Real-Time
+******************
 
-LCS
-***
 
 .. |globe| image:: /_static/catalog_thumbnails/globe.png
    :scale: 10%
@@ -16,11 +16,11 @@ LCS
 
 
 
-+------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
-| Datset Name            | Coverage | Sensor |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
-+========================+==========+========+=============+============================+======================+==============+============+
-| :ref:`LCS`             |  |globe| | |sat|  | Observation |     0.04° X 0.04°          |         Daily        |  2014-01-01  | 2017-05-01 |
-+------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
++-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
+| Datset Name                   | Coverage | Sensor   |  Make       |  Spatial Resolution    | Temporal Resolution  |  Start Date  |  End Date  |
++===============================+==========+==========+=============+========================+======================+==============+============+
+| :ref:`LCS_NRT`                |  |globe| | |sat|    | Observation |     0.04° X 0.04°      |         Daily        |  2019-02-27  | 2019-03-20 |
++-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
 Dataset Description
 *******************
@@ -29,7 +29,7 @@ Dataset Description
 
 
 
-**LCS (Lagrangian Coherent Structures)** is a daily-global altimetry-derived [link to altimetry data set] and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.
+** Near-Real-Time LCS (Lagrangian Coherent Structures)** are a daily-global altimetry-derived and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.
 
 A grid of passive tracers (hypothetical massless particles) is initialized over the global domain with an initial uniform spacing of 4 km x 4 km. A flow map is then approximated by integrating particle trajectories for a fix period of time, :math:`\tau=15` days. At its fundamental levels, local Lyapunov exponents provide a metric for exponential rate of divergence for a pair of adjacent tracers:
 

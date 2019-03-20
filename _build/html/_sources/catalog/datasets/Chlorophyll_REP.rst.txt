@@ -2,12 +2,12 @@
 
 .. _Here: http://cmems-resources.cls.fr/documents/QUID/CMEMS-OC-QUID-009-030-032-033-081-082-083-085-086.pdf
 
-.. _Chlorophyll:
+.. _Chlorophyll_REP:
 
 
 
-Chlorophyll
-***********
+Chlorophyll Reprocessed
+***********************
 
 .. |globe| image:: /_static/catalog_thumbnails/globe.png
    :scale: 10%
@@ -18,13 +18,12 @@ Chlorophyll
 
 
 
-+------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
-| Datset Name            | Coverage | Sensor |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
-+========================+==========+========+=============+============================+======================+==============+============+
-| :ref:`Chlorophyll`     |  |globe| | |sat|  | Observation |        4km X 4km           |         Daily        |  2012-01-01  | 2016-12-31 |
-+------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
-| Chlorophyll NRT        |  |globe| | |sat|  | Observation |        4km X 4km           |         Daily        |  2019-01-01  | 2019-03-06 |
-+------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
++-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
+| Datset Name                   | Coverage | Sensor   |  Make       |  Spatial Resolution    | Temporal Resolution  |  Start Date  |  End Date  |
++===============================+==========+==========+=============+========================+======================+==============+============+
+| :ref:`Chlorophyll_REP`        |  |globe| | |sat|    | Observation |        4km X 4km       |         Daily        |  2012-01-01  | 2016-12-31 |
++-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
+
 
 Dataset Description
 *******************
@@ -32,7 +31,6 @@ Dataset Description
 Simons CMAP contains **Chlorophyll Concentration** records from 2012-01-01 through 2016-12-31 collected from the Ocean Colour Thematic Center which is part of the Copernicus Marine Environment Monitoring Service. The data is generated from ESA and NASA satellite missions, specifically from MERIS, SeaWiFS and MODIS.
 The dataset has a spatial resolution of 4km X 4km and a daily temporal resolution.
 
-In addition to these reprocessed data, there are also Near-Real-Time (NRT) records from 2019-01-01 - 2019-03-06.
 
 More information can be found Here_
 
