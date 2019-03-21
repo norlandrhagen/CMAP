@@ -29,7 +29,7 @@ Dataset Description
 
 
 
-** Near-Real-Time LCS (Lagrangian Coherent Structures)** are a daily-global altimetry-derived and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.
+**Near-Real-Time LCS (Lagrangian Coherent Structures)** are a daily-global altimetry-derived and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.
 
 A grid of passive tracers (hypothetical massless particles) is initialized over the global domain with an initial uniform spacing of 4 km x 4 km. A flow map is then approximated by integrating particle trajectories for a fix period of time, :math:`\tau=15` days. At its fundamental levels, local Lyapunov exponents provide a metric for exponential rate of divergence for a pair of adjacent tracers:
 
