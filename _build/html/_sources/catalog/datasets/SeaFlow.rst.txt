@@ -14,19 +14,17 @@ SeaFlow
   :align: middle
 
 
-+------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
-| Datset Name            | Coverage | Sensor |  Make       |     Spatial Resolution     | Temporal Resolution  |  Start Date  |  End Date  |
-+========================+==========+========+=============+============================+======================+==============+============+
-| :ref:`SeaFlow`         | |seaflow|||cruise|| Observation |     Irregular              |    Three Minutes     |  2010-22-10  | 2017-06-13 |
-+------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
++-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
+| Datset Name                   | Coverage | Sensor   |  Make       |  Spatial Resolution    | Temporal Resolution  |  Start Date  |  End Date  |
++===============================+==========+==========+=============+========================+======================+==============+============+
+| :ref:`SeaFlow`                | |seaflow|||cruise|  | Observation |     Irregular          |    Three Minutes     |  2003-01-06  | 2015-12-21 |
++-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
 
 
 
 Dataset Description
 *******************
-
-
 
 
 SeaFlow is a new environmental flow cytometer designed by the Armbrust lab to be deployed on oceanographic research vessels to monitor continuously photosynthetic microorganisms. Since its first deployment in 2008, the SeaFlow instrument has collected over 200,000 samples in surface waters of the North Pacific and Atlantic Ocean. The geographical distribution of marine phytoplankton, their optical characteristics (size and pigment content), and their dynamics in relation to environmental factors are of major interest for the oceanographers.
