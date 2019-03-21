@@ -198,21 +198,21 @@
 
 <span class="sd">&quot;&quot;&quot;Define the plot&quot;&quot;&quot;</span>
 <span class="k">def</span> <span class="nf">plot</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">lon</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">lon</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">lat</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">lat</span><span class="p">)],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">field</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> &#39;</span> <span class="o">+</span> <span class="n">dt1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">lon</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">lon</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">lat</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">lat</span><span class="p">)],</span> <span class="n">origin</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">field</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> &#39;</span> <span class="o">+</span> <span class="n">dt1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="sd">&quot;&quot;&quot;Construct the query statement&quot;&quot;&quot;</span>
 <span class="k">def</span> <span class="nf">prepareQuery</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
-<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT [time], lat, lon, depth, </span><span class="si">%s</span><span class="s2"> FROM </span><span class="si">%s</span><span class="s2"> WHERE &quot;</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;[time] BETWEEN&#39;</span><span class="si">%s</span><span class="s2">&#39; AND &#39;</span><span class="si">%s</span><span class="s2">&#39; AND &quot;</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;lat BETWEEN </span><span class="si">%f</span><span class="s2"> AND </span><span class="si">%f</span><span class="s2"> AND &quot;</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;lon BETWEEN </span><span class="si">%f</span><span class="s2"> AND </span><span class="si">%f</span><span class="s2"> AND &quot;</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;depth BETWEEN </span><span class="si">%f</span><span class="s2"> AND </span><span class="si">%f</span><span class="s2"> &quot;</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;ORDER BY [time], lat, lon, depth &quot;</span>
-<span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">%</span> <span class="n">args</span>
-<span class="k">return</span> <span class="n">query</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT [time], lat, lon, depth, </span><span class="si">%s</span><span class="s2"> FROM </span><span class="si">%s</span><span class="s2"> WHERE &quot;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;[time] BETWEEN&#39;</span><span class="si">%s</span><span class="s2">&#39; AND &#39;</span><span class="si">%s</span><span class="s2">&#39; AND &quot;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;lat BETWEEN </span><span class="si">%f</span><span class="s2"> AND </span><span class="si">%f</span><span class="s2"> AND &quot;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;lon BETWEEN </span><span class="si">%f</span><span class="s2"> AND </span><span class="si">%f</span><span class="s2"> AND &quot;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;depth BETWEEN </span><span class="si">%f</span><span class="s2"> AND </span><span class="si">%f</span><span class="s2"> &quot;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">+</span> <span class="s2">&quot;ORDER BY [time], lat, lon, depth &quot;</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">%</span> <span class="n">args</span>
+    <span class="k">return</span> <span class="n">query</span>
 
 <span class="sd">&quot;&quot;&quot;Retrieve regional data and plot&quot;&quot;&quot;</span>
 <span class="c1">############## set parameters ################</span>
@@ -263,7 +263,7 @@
     <span class="n">query</span> <span class="o">=</span> <span class="n">query</span> <span class="o">%</span> <span class="n">args</span>
     <span class="k">return</span> <span class="n">query</span>
 
-<span class="sd">&quot;&quot;&quot;Retrieve time-series data and plot&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;Retrieve time-series datcd a and plot&quot;&quot;&quot;</span>
 <span class="c1">############## set parameters ################</span>
 <span class="n">table</span> <span class="o">=</span> <span class="s1">&#39;tblsst_AVHRR_OI_NRT&#39;</span>
 <span class="n">variable</span> <span class="o">=</span> <span class="s1">&#39;sst&#39;</span>

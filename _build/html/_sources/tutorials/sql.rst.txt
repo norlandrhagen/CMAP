@@ -19,21 +19,21 @@ If you are familiar with SQL or T-SQL language, you can use "dbFetch()" function
 
     """Define the plot"""
     def plot(dt, lat, lon, data):
-    plt.imshow(data, extent=[np.min(lon), np.max(lon), np.min(lat), np.max(lat)], origin='bottom', vmin=0, vmax=1e-4)
-    plt.title(field + '\n ' + dt1)
-    plt.colorbar()
-    plt.show()
+        plt.imshow(data, extent=[np.min(lon), np.max(lon), np.min(lat), np.max(lat)], origin='bottom', vmin=0, vmax=1e-4)
+        plt.title(field + '\n ' + dt1)
+        plt.colorbar()
+        plt.show()
 
     """Construct the query statement"""
     def prepareQuery(args):
-    query = "SELECT [time], lat, lon, depth, %s FROM %s WHERE "
-    query = query + "[time] BETWEEN'%s' AND '%s' AND "
-    query = query + "lat BETWEEN %f AND %f AND "
-    query = query + "lon BETWEEN %f AND %f AND "
-    query = query + "depth BETWEEN %f AND %f "
-    query = query + "ORDER BY [time], lat, lon, depth "
-    query = query % args
-    return query
+        query = "SELECT [time], lat, lon, depth, %s FROM %s WHERE "
+        query = query + "[time] BETWEEN'%s' AND '%s' AND "
+        query = query + "lat BETWEEN %f AND %f AND "
+        query = query + "lon BETWEEN %f AND %f AND "
+        query = query + "depth BETWEEN %f AND %f "
+        query = query + "ORDER BY [time], lat, lon, depth "
+        query = query % args
+        return query
 
     """Retrieve regional data and plot"""
     ############## set parameters ################
@@ -92,7 +92,7 @@ If you are familiar with SQL or T-SQL language, you can use "dbFetch()" function
         query = query % args
         return query
 
-    """Retrieve time-series data and plot"""
+    """Retrieve time-series datcd a and plot"""
     ############## set parameters ################
     table = 'tblsst_AVHRR_OI_NRT'
     variable = 'sst'
