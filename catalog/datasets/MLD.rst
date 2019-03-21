@@ -1,9 +1,9 @@
 :orphan:
 
-.. _Mixing-Layer-Depth NRT:
+.. _Mixed-Layer-Depth NRT:
 
 
-Mixing-Layer-Depth NRT
+Mixed-Layer-Depth NRT
 **********************
 
 .. |globe| image:: /_static/catalog_thumbnails/globe.png
@@ -17,13 +17,13 @@ Mixing-Layer-Depth NRT
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 | Datset Name                   | Coverage | Sensor   |  Make       |  Spatial Resolution    | Temporal Resolution  |  Start Date  |  End Date  |
 +===============================+==========+==========+=============+========================+======================+==============+============+
-| :ref:`Mixing-Layer-Depth NRT` |  |globe| | |comp|   |   Model     |     1/12° X 1/12°      |         Daily        | 2019-02-20   | 2019-03-20 |
+| :ref:`Mixed-Layer-Depth NRT`  |  |globe| | |comp|   |   Model     |     1/12° X 1/12°      |         Daily        | 2019-02-20   | 2019-03-20 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
 Dataset Description
 *******************
 
-**Mixing-Layer-Depth** is a model derived ocean surface product collected from the Operational Mercator Global Ocean Analysis and Forecast System.
+**Mixed-Layer-Depth** is a model derived ocean surface product collected from the Operational Mercator Global Ocean Analysis and Forecast System.
 The data has 1/12° degree horizontal resolution with regular longitude/latitude intervals and an equirectangular projection.
 
 Table of Variables
