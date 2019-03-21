@@ -39,7 +39,9 @@ Data Source
 ***********
 
 Remote Sensing Systems, Santa Rosa, CA, USA
+
 http://www.remss.com/missions/smap/
+
 https://podaac-opendap.jpl.nasa.gov/opendap/allData/smap/L3/RSS/V3/8day_running/SCI/70KM
 
 How to Acknowledge

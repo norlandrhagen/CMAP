@@ -1,9 +1,9 @@
 :orphan:
 
-.. _Mixing-Layer-Depth_NRT:
+.. _Mixing-Layer-Depth NRT:
 
 
-Mixing-Layer-Depth_NRT
+Mixing-Layer-Depth NRT
 **********************
 
 .. |globe| image:: /_static/catalog_thumbnails/globe.png
@@ -17,7 +17,7 @@ Mixing-Layer-Depth_NRT
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 | Datset Name                   | Coverage | Sensor   |  Make       |  Spatial Resolution    | Temporal Resolution  |  Start Date  |  End Date  |
 +===============================+==========+==========+=============+========================+======================+==============+============+
-| :ref:`Mixing-Layer-Depth_NRT` |  |globe| | |comp|   |   Model     |     1/12° X 1/12°      |         Daily        | 2019-02-20   | 2019-03-20 |
+| :ref:`Mixing-Layer-Depth NRT` |  |globe| | |comp|   |   Model     |     1/12° X 1/12°      |         Daily        | 2019-02-20   | 2019-03-20 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
 Dataset Description

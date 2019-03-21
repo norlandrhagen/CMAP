@@ -59,7 +59,7 @@ Table of Variables
 
 .. raw:: html
 
-    <iframe src="../../_static/var_tables/LCS/LCS.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+    <iframe src="../../_static/var_tables/LCS_NRT/LCS_NRT.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
 |
 
