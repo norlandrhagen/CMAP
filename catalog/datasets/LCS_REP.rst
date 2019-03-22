@@ -22,6 +22,16 @@ LCS Reprocessed
 | :ref:`LCS_REP`                |  |globe| | |sat|    | Observation |     0.04° X 0.04°      |         Daily        |  2014-01-01  | 2017-05-01 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
+
+Table of Variables
+******************
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/LCS_REP/LCS_REP.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+|
+
 Dataset Description
 *******************
 
@@ -53,15 +63,6 @@ After integrating the particles for the fixed period of time, :math:`\tau=15`, F
 
 Please refer to the documentation below for more detailed information regarding FTLE mathematical framework.
 
-
-Table of Variables
-******************
-
-.. raw:: html
-
-    <iframe src="../../_static/var_tables/LCS/LCS.html"  frameborder = 0 height = '300px' width="100%">></iframe>
-
-|
 
 Data Source
 ***********

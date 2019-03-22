@@ -22,11 +22,6 @@ SOCAT
 | :ref:`SOCAT`           | |globe|  ||cruise|| Observation |     Irregular              |        Irregular     |  2003-01-06  | 2015-12-21 |
 +------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
 
-Dataset Description
-*******************
-
-The Surface Ocean CO₂ Atlas (SOCAT) is a synthesis activity for quality-controlled, surface ocean fCO₂ (fugacity of carbon dioxide) observations by the international marine carbon research community (>100 contributors). SOCAT data is publicly available, discoverable and citable. SOCAT enables quantification of the ocean carbon sink and ocean acidification and evaluation of ocean biogeochemical models. SOCAT, which celebrates its 10th anniversary in 2017, represents a milestone in biogeochemical and climate research and in informing policy.
-
 Table of Variables
 ******************
 
@@ -34,7 +29,13 @@ Table of Variables
 
     <iframe src="../../_static/var_tables/SOCAT/SOCAT.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
-|
+
+
+Dataset Description
+*******************
+
+The Surface Ocean CO₂ Atlas (SOCAT) is a synthesis activity for quality-controlled, surface ocean fCO₂ (fugacity of carbon dioxide) observations by the international marine carbon research community (>100 contributors). SOCAT data is publicly available, discoverable and citable. SOCAT enables quantification of the ocean carbon sink and ocean acidification and evaluation of ocean biogeochemical models. SOCAT, which celebrates its 10th anniversary in 2017, represents a milestone in biogeochemical and climate research and in informing policy.
+
 
 Data Source
 ***********

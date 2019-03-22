@@ -19,6 +19,14 @@ ESV - Exact Amplicon Sequence Variants
 |:ref:`ESV`                     | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  2012-04-11  | 2012-05-11 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
+Table of Variables
+******************
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/ESV/ESV.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+
 
 
 
@@ -30,14 +38,6 @@ Simons CMAP contains **ESV - Exact Amplicon Sequence Variants** records from 201
 
 
 
-Table of Variables
-******************
-
-.. raw:: html
-
-    <iframe src="../../_static/var_tables/ESV/ESV.html"  frameborder = 0 height = '300px' width="100%">></iframe>
-
-|
 
 Data Source
 ***********

@@ -24,13 +24,6 @@ Sea Surface Temperature
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
 
-Dataset Description
-*******************
-
-Simons CMAP contains **Sea Surface Temperature** records from 2013-01-01 through 2017-05-15 collected from the Group for High Resolution Sea Surface Temperature (GHRSST) project. Data is gathered from the from a combination of in-situ sensors and satellite radiometer missions. The data is an interpolated product with the spatial resolution of 0.25 degrees and a daily temporal resolution.
-
-More information can be found Here_
-
 
 Table of Variables
 ******************
@@ -39,7 +32,14 @@ Table of Variables
 
     <iframe src="../../_static/var_tables/Near-Real-Time%20SST%20AVHRR_OI/Near-Real-Time%20SST%20AVHRR_OI.html"  frameborder = 0 height = '200px' width="100%">></iframe>
 
-|
+
+Dataset Description
+*******************
+
+Simons CMAP contains **Sea Surface Temperature** records from 2013-01-01 through 2017-05-15 collected from the Group for High Resolution Sea Surface Temperature (GHRSST) project. Data is gathered from the from a combination of in-situ sensors and satellite radiometer missions. The data is an interpolated product with the spatial resolution of 0.25 degrees and a daily temporal resolution.
+
+More information can be found Here_
+
 
 Data Source
 ***********

@@ -23,6 +23,15 @@ Argo
 +------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
 
 
+Table of Variables
+******************
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/Argo_BGC_REP/Argo_BGC_REP.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+
+
 Dataset Description
 *******************
 

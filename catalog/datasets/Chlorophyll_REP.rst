@@ -25,6 +25,17 @@ Chlorophyll Reprocessed
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
 
+Table of Variables
+******************
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/Reprocessed%20CHL_OI/Reprocessed%20CHL_OI.html"  frameborder = 0 height = '200px' width="100%">></iframe>
+
+
+
+
+
 Dataset Description
 *******************
 
@@ -35,15 +46,6 @@ The dataset has a spatial resolution of 4km X 4km and a daily temporal resolutio
 More information can be found Here_
 
 
-
-Table of Variables
-******************
-
-.. raw:: html
-
-    <iframe src="../../_static/var_tables/Reprocessed%20CHL_OI/Reprocessed%20CHL_OI.html"  frameborder = 0 height = '200px' width="100%">></iframe>
-
-|
 
 Data Source
 ***********

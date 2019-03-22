@@ -22,15 +22,6 @@ Altimetry Reprocessed
 | :ref:`Altimetry_REP`          |  |globe| | |sat|    | Observation |     1/4° X 1/4°        |         Daily        |  2013-01-01  | 2018-06-10 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
-Dataset Description
-*******************
-
-
-Simons CMAP contains **Reprocessed Satellite Altimetry** records from 2013-01-01 through 2018-06-10 collected from the Copernicus Marine Environment Monitoring Service. The dataset is generated from remotely sensed satellite data and contains multiple ocean altimetry products.
-The dataset has a spatial resolution of 1/4° X 1/4° and a daily temporal resolution.
-
-
-
 Table of Variables
 ******************
 
@@ -39,7 +30,16 @@ Table of Variables
 
     <iframe src="../../_static/var_tables/Reprocessed%20Altimetry/Reprocessed%20Altimetry.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
-|
+
+
+
+Dataset Description
+*******************
+
+
+Simons CMAP contains **Reprocessed Satellite Altimetry** records from 2013-01-01 through 2018-06-10 collected from the Copernicus Marine Environment Monitoring Service. The dataset is generated from remotely sensed satellite data and contains multiple ocean altimetry products.
+The dataset has a spatial resolution of 1/4° X 1/4° and a daily temporal resolution.
+
 
 
 

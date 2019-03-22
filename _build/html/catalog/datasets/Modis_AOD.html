@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LCS &mdash; CMAP 0.0.1 documentation</title>
+  <title>MODIS Aerosol Optical Depth &mdash; CMAP 0.0.1 documentation</title>
   
 
   
@@ -138,13 +138,13 @@
     
       <li><a href="../../index.html">Docs</a> &raquo;</li>
         
-      <li>LCS</li>
+      <li>MODIS Aerosol Optical Depth</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/catalog/datasets/LCS.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/catalog/datasets/Modis_AOD.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -157,17 +157,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="lcs">
-<span id="id1"></span><h1>LCS<a class="headerlink" href="#lcs" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="modis-aerosol-optical-depth">
+<span id="modis-aod"></span><h1>MODIS Aerosol Optical Depth<a class="headerlink" href="#modis-aerosol-optical-depth" title="Permalink to this headline">¶</a></h1>
 <table border="1" class="docutils">
 <colgroup>
-<col width="18%" />
-<col width="8%" />
-<col width="6%" />
+<col width="23%" />
+<col width="7%" />
+<col width="7%" />
 <col width="10%" />
-<col width="21%" />
-<col width="17%" />
-<col width="11%" />
+<col width="18%" />
+<col width="16%" />
+<col width="10%" />
 <col width="9%" />
 </colgroup>
 <thead valign="bottom">
@@ -182,50 +182,41 @@
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="#lcs"><span class="std std-ref">LCS</span></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#modis-aod"><span class="std std-ref">MODIS Aerosol Optical Depth</span></a></td>
 <td><a class="reference internal" href="../../_images/globe.png"><img alt="globe" class="align-middle" src="../../_images/globe.png" style="width: 51.2px; height: 51.2px;" /></a></td>
 <td><a class="reference internal" href="../../_images/satellite.png"><img alt="sat" class="align-middle" src="../../_images/satellite.png" style="width: 51.2px; height: 51.2px;" /></a></td>
 <td>Observation</td>
-<td>0.04° X 0.04°</td>
-<td>Daily</td>
-<td>2014-01-01</td>
-<td>2017-05-01</td>
+<td>1° X 1°</td>
+<td>Monthly Gridded</td>
+<td>2002-07-01</td>
+<td>2019-02-01</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="dataset-description">
-<h1>Dataset Description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h1>
-<p><strong>LCS (Lagrangian Coherent Structures)</strong> is a daily-global altimetry-derived [link to altimetry data set] and gridded product calculating Finite-Time Lyapunov Exponents (FTLE). It characterizes the transport properties of the ocean surface currents from a Lagrangian frame of reference.</p>
-<p>A grid of passive tracers (hypothetical massless particles) is initialized over the global domain with an initial uniform spacing of 4 km x 4 km. A flow map is then approximated by integrating particle trajectories for a fix period of time, <span class="math notranslate nohighlight">\(\tau=15\)</span> days. At its fundamental levels, local Lyapunov exponents provide a metric for exponential rate of divergence for a pair of adjacent tracers:</p>
-<div class="math notranslate nohighlight">
-\[\begin{equation} \label{Eq:Lyapunov}
-\Lambda = \lim_{|\delta x(t_0)| \to 0}  \lim_{t \to \infty} \frac{1}{t} \log \frac{\delta x(t)}{\delta x(t_0)}
-\end{equation}\]</div>
-<p>such that <span class="math notranslate nohighlight">\(\Lambda\)</span> is the Lyapunov exponent, and <span class="math notranslate nohighlight">\(\delta x(t)\)</span>, <span class="math notranslate nohighlight">\(\delta x(0)\)</span> represent the separation between the tracers at times <span class="math notranslate nohighlight">\(t\)</span> and <span class="math notranslate nohighlight">\(t_0\)</span>, receptively.</p>
-<div class="figure">
-<a class="reference internal image-reference" href="../../_images/grid_crop.png"><img alt="../../_images/grid_crop.png" src="../../_images/grid_crop.png" style="width: 75%;" /></a>
-</div>
-<p>After integrating the particles for the fixed period of time, <span class="math notranslate nohighlight">\(\tau=15\)</span>, FTLE fields are computed to demonstrate the local dispersion as well as local displacements (see example figures below). The particles can be integrated either forward or backward in time. The local maxima of the FTLE scalar field (ridges) can be interpreted as stable and unstable manifolds of the flow field in the case of forward and backward integration, respectively.</p>
-<div class="figure">
-<a class="reference internal image-reference" href="../../_images/displacement_dispersion.png"><img alt="../../_images/displacement_dispersion.png" src="../../_images/displacement_dispersion.png" style="width: 100%;" /></a>
-</div>
-<p>Please refer to the documentation below for more detailed information regarding FTLE mathematical framework.</p>
-</div>
 <div class="section" id="table-of-variables">
 <h1>Table of Variables<a class="headerlink" href="#table-of-variables" title="Permalink to this headline">¶</a></h1>
-<iframe src="../../_static/var_tables/LCS/LCS.html"  frameborder = 0 height = '300px' width="100%">></iframe><div class="line-block">
-<div class="line"><br /></div>
+<iframe src="../../_static/var_tables/tblModis_AOD_REP/tblModis_AOD_REP.html"  frameborder = 0 height = '150px' width="100%">></iframe><div class="section" id="data-details">
+<h2>Data Details<a class="headerlink" href="#data-details" title="Permalink to this headline">¶</a></h2>
+<p>Aerosol Optical Depth values were extracted from the MODIS MYD08_M3 dataset. This is a level-3 gridded atmospheric monthly global joint product. It contains monthly 1 x 1 degree grid average values of atmospheric parameters related to atmospheric aerosol particle properties, total ozone burden, atmospheric water vapor, cloud optical and physical properties, and atmospheric stability indices. This product also provides standard deviations, quality assurance assurance weighted means and other statistically derived quantities for each parameter. The level-3 atmosphere monthly global product (MYD08_M3) consists of approximately 800 statistical data sets (SDSs). Essentially all level-3 MODIS atmosphere monthly global parameters are derived from the scientific parameters of MODIS Atmosphere Daily Global Joint Product (MYD08_D3). Statistics are computed over a 1 degree equal-angle lat-lon grid that spans a (calendar) monthly interval. Since the grid cells are 1 degree by 1 degree, the output grid is always 360 pixels in width and 180 pixels in length.</p>
+<p>(<a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/l3-atmosphere/MYD08_M3/">https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/l3-atmosphere/MYD08_M3/</a>)</p>
+</div>
+<div class="section" id="dataset-description">
+<h2>Dataset Description<a class="headerlink" href="#dataset-description" title="Permalink to this headline">¶</a></h2>
+<p>Atmospheric aerosols play a major role in Earth’s radiative budget. Yet aerosols are one of the greatest sources of uncertainty in climate modeling. Radiative forcing by aerosols may explain the difference between observed and modeled trends in average global temperature. In fact, the interaction with solar and terrestrial radiation by aerosols perturbs the radiative budget via scattering and absorption of sunlight.</p>
+<p>By acting as Cloud Condensation Nuclei or Ice Nuclei, aerosol particles also modify cloud microphysics and therefore may change cloud radiative properties. The direct effect of aerosols on Earth’s radiation budget and the indirect effect of aerosols on cloud albedo may have a cooling effect that could counter balance the warming due to the increase in carbon dioxide concentration. Present estimates of the aerosols’ forcing on global climate range from minus 0.6 watts per square meter to minus 4.0 watts per square meter, when combining both the direct and indirect effects of sulfate aerosols and biomass burning aerosols. Dust originating from local area change is also suspected to be a major climate forcing. The direct aerosol effect is due to direct reflection of sunlight to space by aerosol particles and the indirect effect is by the modification of cloud properties, which in turn modifies the radiative budget.</p>
+<p>Many recent studies show the importance of including aerosols in climate models to observe and measure human influence on atmospheric chemistry and climate change. The Moderate Resolution Imaging Spectroradiometer (MODIS) aboard NASA’s Terra and Aqua satellites is used to monitor aerosol optical thickness (proportional to the aerosol total loading) and size distribution (integrated on the vertical column) of the ambient (undisturbed) aerosol, over most of the globe (oceans and the moist parts of the continents) on a daily basis. MODIS is used to monitor aerosols’ mass concentration, optical properties, and radiative forcing. Over land, aerosol optical thickness is derived using the dark target approach, and the method is limited to moist (and some semi-arid) parts of the continents, excluding snow and ice cover. The aerosol data product algorithms take advantage of MODIS’ wide spectral range and high spatial resolution with daily global coverage. These unique MODIS characteristics allow excellent cloud rejection while maintaining high statistics of cloud-free pixels. The instrument’s wide spectral range allows sophisticated derivation of aerosol size distribution over the ocean and efficient identification of pixels with dark surface cover over the land. MODIS’ aerosol information is used to study aerosol climatology, to monitor the sources and sinks of specific aerosol types (such as sulfates and other industrial/urban aerosol and biomass burning aerosol), to serve as inputs for climate modeling and detection of the finger prints of anthropogenic climate change, and to perform atmospheric corrections of remotely-sensed surface reflectance over the land.</p>
+<p>(Description provided by NASA Earth Observations <a class="reference external" href="https://neo.sci.gsfc.nasa.gov/view.php?datasetId=MODAL2_M_AER_OD&amp;date=2019-01-01">https://neo.sci.gsfc.nasa.gov/view.php?datasetId=MODAL2_M_AER_OD&amp;date=2019-01-01</a>)</p>
 </div>
 </div>
 <div class="section" id="data-source">
 <h1>Data Source<a class="headerlink" href="#data-source" title="Permalink to this headline">¶</a></h1>
-<p>Simons CMAP</p>
-<p><a class="reference external" href="https://github.com/mdashkezari/opedia/tree/master/CS">https://github.com/mdashkezari/opedia/tree/master/CS</a></p>
-<p><a class="reference external" href="https://github.com/mdashkezari/opedia/tree/master/CS/docs/CS.pdf">https://github.com/mdashkezari/opedia/tree/master/CS/docs/CS.pdf</a></p>
+<p><a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/l3-atmosphere/MYD08_M3/">https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/l3-atmosphere/MYD08_M3/</a></p>
 </div>
 <div class="section" id="how-to-acknowledge">
 <h1>How to Acknowledge<a class="headerlink" href="#how-to-acknowledge" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://modaps.modaps.eosdis.nasa.gov/services/about/products/c61/MYD08_M3.html">https://modaps.modaps.eosdis.nasa.gov/services/about/products/c61/MYD08_M3.html</a></p>
+<p><a class="reference external" href="http://dx.doi.org/10.5067/MODIS/MYD08_M3.061">http://dx.doi.org/10.5067/MODIS/MYD08_M3.061</a></p>
 </div>
 <div class="section" id="version-history">
 <h1>Version History<a class="headerlink" href="#version-history" title="Permalink to this headline">¶</a></h1>

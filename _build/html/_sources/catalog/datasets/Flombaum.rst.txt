@@ -21,6 +21,14 @@ Flombaum (Cyanobacteria)
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
 
+Table of Variables
+******************
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/Flombaum/Flombaum.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+
 
 
 Dataset Description
@@ -35,14 +43,6 @@ These data were compiled by **Flombaum et al** from a total of 103 cruises from 
 
 
 
-Table of Variables
-******************
-
-.. raw:: html
-
-    <iframe src="../../_static/var_tables/Flombaum/Flombaum.html"  frameborder = 0 height = '300px' width="100%">></iframe>
-
-|
 
 Data Source
 ***********

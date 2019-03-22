@@ -22,9 +22,16 @@ LCS Near-Real-Time
 | :ref:`LCS_NRT`                |  |globe| | |sat|    | Observation |     0.04° X 0.04°      |         Daily        |  2019-02-27  | 2019-03-20 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
+Table of Variables
+******************
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/LCS_NRT/LCS_NRT.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+
+
 Dataset Description
 *******************
-
 
 
 
@@ -54,14 +61,6 @@ After integrating the particles for the fixed period of time, :math:`\tau=15`, F
 Please refer to the documentation below for more detailed information regarding FTLE mathematical framework.
 
 
-Table of Variables
-******************
-
-.. raw:: html
-
-    <iframe src="../../_static/var_tables/LCS_NRT/LCS_NRT.html"  frameborder = 0 height = '300px' width="100%">></iframe>
-
-|
 
 Data Source
 ***********

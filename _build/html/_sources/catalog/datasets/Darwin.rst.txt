@@ -21,13 +21,6 @@ Darwin
 | :ref:`Darwin`          |  |globe| | |comp| |   Model     |     1/2° X 1/2°            | Monthly Climatology  |  1999        |    2011    |
 +------------------------+----------+--------+-------------+----------------------------+----------------------+--------------+------------+
 
-
-
-Dataset Description
-*******************
-
-The Darwin Project is an initiative to advance the development and application of novel models of marine microbes and microbial communities, identifying the relationships of individuals and communities to their environment, connecting cellular-scale processes to global microbial community structure.
-
 Table of Variables
 ******************
 
@@ -37,7 +30,12 @@ Table of Variables
 
 
 
-|
+
+Dataset Description
+*******************
+
+The Darwin Project is an initiative to advance the development and application of novel models of marine microbes and microbial communities, identifying the relationships of individuals and communities to their environment, connecting cellular-scale processes to global microbial community structure.
+
 
 Data Source
 ***********
@@ -54,4 +52,3 @@ https://doi.org/10.5194/bg-12-4447-2015
 
 Version History
 ***************
- 

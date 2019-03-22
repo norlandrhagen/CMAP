@@ -1,6 +1,6 @@
 :orphan:
 
-.. _Mixed-Layer-Depth NRT:
+.. _MLD:
 
 
 Mixed-Layer-Depth NRT
@@ -17,8 +17,18 @@ Mixed-Layer-Depth NRT
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 | Datset Name                   | Coverage | Sensor   |  Make       |  Spatial Resolution    | Temporal Resolution  |  Start Date  |  End Date  |
 +===============================+==========+==========+=============+========================+======================+==============+============+
-| :ref:`Mixed-Layer-Depth NRT`  |  |globe| | |comp|   |   Model     |     1/12° X 1/12°      |         Daily        | 2019-02-20   | 2019-03-20 |
+| :ref:`MLD`                    |  |globe| |  |comp|  |   Model     |     1/12° X 1/12°      |         Daily        | 2019-02-20   | 2019-03-20 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
+
+
+Table of Variables
+******************
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/Mercator-MLD/Mercator-MLD.html"  frameborder = 0 height = '150px' width="100%">></iframe>
+
+
 
 Dataset Description
 *******************
@@ -26,14 +36,6 @@ Dataset Description
 **Mixed-Layer-Depth** is a model derived ocean surface product collected from the Operational Mercator Global Ocean Analysis and Forecast System.
 The data has 1/12° degree horizontal resolution with regular longitude/latitude intervals and an equirectangular projection.
 
-Table of Variables
-******************
-
-.. raw:: html
-
-    <iframe src="../../_static/var_tables/Mercator-MLD/Mercator-MLD.html"  frameborder = 0 height = '300px' width="100%">></iframe>
-
-|
 
 Data Source
 ***********

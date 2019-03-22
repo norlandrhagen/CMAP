@@ -20,12 +20,6 @@ Pisces
 | :ref:`Pisces`                 |  |globe| | |comp|   |   Model     |     1/2° X 1/2°        |         Weekly       | 2011-12-31   | 2019-03-16 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
-Dataset Description
-*******************
-
-Produced by Mercator Ocean in Toulouse, France, Pisces is a global Ocean Biogeochemical analysis product at 1/2°. It is providing a 7-days mean global forecast updated weekly as well as 3D global ocean biogeochemical weekly mean analysis for the past 2 years updated every week. This product includes weekly mean files of dissolved iron, nitrate, phosphate, silicate, dissolved oxygen, chlorophyll concentration, phytoplankton concentration and primary production parameters from the top to the bottom of the Global Ocean on a 1/2° regular grid projection interpolated from the 1/4° ARAKAWA-C native grid. Vertical coverage includes 50 levels ranging from 0 to 5500 meters.
-
-
 Table of Variables
 ******************
 
@@ -34,6 +28,13 @@ Table of Variables
     <iframe src="../../_static/var_tables/Mercator-Pisces/Mercator-Pisces.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
 |
+
+
+Dataset Description
+*******************
+
+Produced by Mercator Ocean in Toulouse, France, Pisces is a global Ocean Biogeochemical analysis product at 1/2°. It is providing a 7-days mean global forecast updated weekly as well as 3D global ocean biogeochemical weekly mean analysis for the past 2 years updated every week. This product includes weekly mean files of dissolved iron, nitrate, phosphate, silicate, dissolved oxygen, chlorophyll concentration, phytoplankton concentration and primary production parameters from the top to the bottom of the Global Ocean on a 1/2° regular grid projection interpolated from the 1/4° ARAKAWA-C native grid. Vertical coverage includes 50 levels ranging from 0 to 5500 meters.
+
 
 Data Source
 ***********

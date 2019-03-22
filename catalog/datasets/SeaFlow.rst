@@ -20,6 +20,12 @@ SeaFlow
 | :ref:`SeaFlow`                | |seaflow|||cruise|  | Observation |     Irregular          |    Three Minutes     |  2003-01-06  | 2015-12-21 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
+Table of Variables
+******************
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/SeaFlow/SeaFlow.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
 
 
@@ -37,14 +43,6 @@ Unlike a conventional flow cytometer, SeaFlow directly analyzes a raw stream of 
     <iframe src="../../_static/cruise-track.html"  frameborder = 0  height="1000px" width="100%">></iframe>
 
 
-Table of Variables
-******************
-
-.. raw:: html
-
-    <iframe src="../../_static/var_tables/SeaFlow/SeaFlow.html"  frameborder = 0 height = '300px' width="100%">></iframe>
-
-|
 
 Data Source
 ***********

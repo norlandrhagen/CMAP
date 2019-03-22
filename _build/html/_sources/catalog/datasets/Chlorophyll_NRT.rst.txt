@@ -24,6 +24,16 @@ Chlorophyll Near-Real-Time
 | :ref:`Chlorophyll_NRT`        |  |globe| | |sat|    | Observation |        4km X 4km       |         Daily        |  2019-01-01  | 2019-03-18 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
+Table of Variables
+******************
+
+.. raw:: html
+
+    <iframe src="../../_static/var_tables/Near-Real-Time%20CHL_OI/Near-Real-Time%20CHL_OI.html"  frameborder = 0 height = '200px' width="100%">></iframe>
+
+
+
+
 
 Dataset Description
 *******************
@@ -36,14 +46,6 @@ More information can be found Here_
 
 
 
-Table of Variables
-******************
-
-.. raw:: html
-
-    <iframe src="../../_static/var_tables/Near-Real-Time%20CHL_OI/Near-Real-Time%20CHL_OI.html"  frameborder = 0 height = '200px' width="100%">></iframe>
-
-|
 
 Data Source
 ***********
