@@ -24,7 +24,6 @@ Wind
 
 
 
-
 Table of Variables
 ******************
 

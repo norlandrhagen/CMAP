@@ -30,6 +30,7 @@ Table of Variables
 
     <iframe src="../../_static/var_tables/Argo_BGC_REP/Argo_BGC_REP.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
+|
 
 
 Dataset Description
@@ -39,14 +40,8 @@ Argo, the broad-scale global array of temperature/salinity profiling floats, is 
 
 Argo consists of nearly 3800 floats and has a rough spatial resolution of ~ 3° X 3°
 
-Table of Variables
-******************
 
-.. raw:: html
 
-    <iframe src="../../_static/var_tables/Argo_BGC_REP/Argo_BGC_REP.html"  frameborder = 0 height = '300px' width="100%">></iframe>
-
-|
 
 Data Source
 ***********
