@@ -28,6 +28,12 @@ Table of Variables
 
     <iframe src="../../_static/var_tables/Darwin-MITgcm%20Climatology/Darwin-MITgcm%20Climatology.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
+|
+
+.. raw:: html
+
+    <iframe src="../../_static/var_plots/prokaryote_c02_darwin_clim.html"  frameborder = 0  height="700px" width="100%">></iframe>
+
 
 
 

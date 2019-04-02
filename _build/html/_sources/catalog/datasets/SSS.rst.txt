@@ -28,6 +28,11 @@ Table of Variables
 
     <iframe src="../../_static/var_tables/SMAP%20ocean%20surface%20salinity/SMAP%20ocean%20surface%20salinity.html"  frameborder = 0 height = '200px' width="100%">></iframe>
 
+|
+
+.. raw:: html
+
+    <iframe src="../../_static/var_plots/sss.html"  frameborder = 0  height="700px" width="100%">></iframe>
 
 
 Dataset Description
