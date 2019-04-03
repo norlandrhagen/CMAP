@@ -33,6 +33,14 @@ Table of Variables
 
 |
 
+|
+
+.. raw:: html
+
+    <iframe src="../../_static/var_plots/wind_stress.html"  frameborder = 0  height="700px" width="100%">></iframe>
+
+
+
 Dataset Description
 *******************
 
