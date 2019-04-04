@@ -33,7 +33,6 @@ Table of Variables
 
 |
 
-|
 
 .. raw:: html
 

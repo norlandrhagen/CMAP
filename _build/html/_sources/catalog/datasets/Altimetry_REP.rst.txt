@@ -30,6 +30,12 @@ Table of Variables
 
     <iframe src="../../_static/var_tables/Reprocessed%20Altimetry/Reprocessed%20Altimetry.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
+|
+
+
+.. raw:: html
+
+    <iframe src="../../_static/var_plots/adt.html"  frameborder = 0  height="700px" width="100%">></iframe>
 
 
 

@@ -31,6 +31,13 @@ Table of Variables
 
     <iframe src="../../_static/var_tables/Near-Real-Time%20Altimetry/Near-Real-Time%20Altimetry.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
+|
+
+
+.. raw:: html
+
+    <iframe src="../../_static/var_plots/sla.html"  frameborder = 0  height="700px" width="100%">></iframe>
+
 
 
 Dataset Description
