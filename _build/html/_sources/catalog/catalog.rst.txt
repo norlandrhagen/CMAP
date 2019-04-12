@@ -82,6 +82,8 @@ Specific data descriptions and variable tables can be found in each dataset tabl
 | | :ref:`Chisholm`             | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  2010-11-19  | 2010-12-12   |
 | | (BiGRAPA1 Cruise)           |          |          |             |                        |                      |              |              |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+--------------+
+| | :ref:`Chisholm_SingleCell`  | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  2010-11-19  | 2010-12-12   |
++-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+--------------+
 | :ref:`SOCAT`                  | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  2003-01-06  | 2015-12-21   |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+--------------+
 | :ref:`SeaFlow`                | |seaflow|||cruise|  | Observation |     Irregular          |    Three Minutes     |  2003-01-06  | 2015-12-21   |
