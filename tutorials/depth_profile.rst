@@ -28,8 +28,8 @@ Code Tutorial
 
     from opedia import plotDepthProfile as DEP
 
-    tables = ['tblArgoMerge_REP', 'tblPisces_NRT', 'tblDarwin_Chl_Climatology', 'chl01_darwin_clim']     # see catalog.csv  for the complete list of tables and variable names
-    variables = ['argo_merge_chl_adj', 'CHL']
+    tables = ['tblArgoMerge_REP', 'tblPisces_NRT', 'tblDarwin_Chl_Climatology']     # see catalog.csv  for the complete list of tables and variable names
+    variables = ['argo_merge_chl_adj', 'CHL', 'chl01_darwin_clim']
     startDate = '2016-04-30'   # PISCES is a weekly model, and here we are using monthly climatology of Darwin model
     endDate = '2016-04-30'
     lat1, lat2 = 20, 24
