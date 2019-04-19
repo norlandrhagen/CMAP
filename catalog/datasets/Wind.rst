@@ -24,6 +24,14 @@ Wind
 
 
 
+.. note::
+  Near-real-time wind data products from IFREMER CERSAT have been suspended as of 2019-03-06. When data operations resume, near-real-time wind data will be provided.
+
+
+|
+
+
+
 Table of Variables
 ******************
 
