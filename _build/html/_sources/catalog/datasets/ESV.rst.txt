@@ -2,7 +2,7 @@
 
 .. _ESV:
 
-ESV - Exact Amplicon Sequence Variants
+ESV - Exact Sequence Variants
 **************************************
 
 .. |cruise| image:: /_static/catalog_thumbnails/sailboat.png
@@ -19,12 +19,19 @@ ESV - Exact Amplicon Sequence Variants
 |:ref:`ESV`                     | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  2012-04-11  | 2012-05-11 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
+.. note::
+  ESV has been updated to include new data on April 23rd 2019.
+
+
+|
+
+
 Table of Variables
 ******************
 
 .. raw:: html
 
-    <iframe src="../../_static/var_tables/ESV/ESV.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+    <iframe src="../../_static/var_tables/tblESV/tblESV.html"  frameborder = 0 height = '300px' width="100%">></iframe>
 
 
 
@@ -34,8 +41,7 @@ Dataset Description
 *******************
 
 
-Simons CMAP contains **ESV - Exact Amplicon Sequence Variants** records from 2012-04-11 through 2012-05-11.
-
+Exact sequence variants derived from the publicly-available data from the R/V Polarstern ANT28-5 cruise, which is a latitudinal transect from the bottom of South America to Europe. This dataset is comprised of various samples from different depths. Qiime2 was used to process sequence data from raw data obtained from NCBI.
 
 
 
@@ -46,9 +52,11 @@ Data Source
 
 How to Acknowledge
 ******************
-
-| https://doi.org/10.1038/srep19054
 | https://doi.org/10.3389/fmicb.2016.00649
+| https://doi.org/10.1002/lno.10487
+| https://doi.org/10.3389/fmicb.2016.00590
+| https://doi.org/10.1038/srep19054
+
 
 Version History
 ***************

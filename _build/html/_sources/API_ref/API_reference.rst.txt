@@ -5,6 +5,14 @@
 API Reference
 =============
 
+
+.. note::
+  API is currently in development
+
+
+|
+
+
 Github_
 
 
