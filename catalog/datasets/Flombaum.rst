@@ -2,8 +2,8 @@
 
 .. _Flombaum:
 
-Flombaum (Cyanobacteria)
-************************
+Global Cyanobacteria (Flombaum)
+*******************************
 
 .. |cruise| image:: /_static/catalog_thumbnails/sailboat.png
    :scale: 10%
@@ -26,7 +26,7 @@ Table of Variables
 
 .. raw:: html
 
-    <iframe src="../../_static/var_tables/Flombaum/Flombaum.html"  frameborder = 0 height = '300px' width="100%">></iframe>
+    <iframe src="../../_static/var_tables/tblFlombaum/tblFlombaum.html"  frameborder = 0 height = '200px' width="100%">></iframe>
 
 
 
@@ -34,12 +34,11 @@ Table of Variables
 Dataset Description
 *******************
 
-.. image:: ../../_static/badge_logo.png
-  :target: https://mybinder.org/v2/gh/norlandrhagen/test_binder/master?filepath=flombaum_visualization_test.ipynb
+.. .. image:: ../../_static/badge_logo.png
+..   :target: https://mybinder.org/v2/gh/norlandrhagen/test_binder/master?filepath=flombaum_visualization_test.ipynb
 
 
-Simons CMAP contains a record of **Global distributions of marine Cyanobacteria Prochlorococcus and Synechococcus**  from 1987-09-17 through 2008-11-10.
-These data were compiled by **Flombaum et al** from a total of 103 cruises from all major ocean regions.
+Historical abundance of Prochlorococcus and Synechococcus from 1987 to 2008 from various studies, compiled by Flombaum et al. PNAS 2013.
 
 
 
