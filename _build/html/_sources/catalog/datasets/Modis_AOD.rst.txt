@@ -37,7 +37,6 @@ Table of Variables
     <iframe src="../../_static/var_plots/AOD.html"  frameborder = 0  height="700px" width="100%">></iframe>
 
 
-|
 
 Data Details
 ============

@@ -23,7 +23,6 @@ ESV - Exact Sequence Variants
   ESV has been updated to include new data on April 23rd 2019.
 
 
-|
 
 
 Table of Variables
@@ -35,7 +34,7 @@ Table of Variables
 
 
 
-
+|
 
 Dataset Description
 *******************
