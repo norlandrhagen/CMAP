@@ -20,6 +20,9 @@ Global Cyanobacteria (Flombaum)
 |:ref:`Flombaum`                | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  1987-09-17  | 2008-11-10 |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+------------+
 
+.. warning::
+  The Global Cyanobacteria (Flombaum) dataset is currently being updated/rebuilt. Longitude values may be incorrect. Current use of this dataset is not recommended.
+
 
 Table of Variables
 ******************
@@ -38,7 +41,12 @@ Dataset Description
 ..   :target: https://mybinder.org/v2/gh/norlandrhagen/test_binder/master?filepath=flombaum_visualization_test.ipynb
 
 
-Historical abundance of Prochlorococcus and Synechococcus from 1987 to 2008 from various studies, compiled by Flombaum et al. PNAS 2013.
+The Global Cyanobacteria dataset in CMAP was compiled by Flombaum et al. It contains global observations of prochlorococcus and synechococcus abundance. The dataset consists of collections from 103 total cruises, sampling in every major ocean region.
+Due to their weak auto-fluoresence, only flow cytometry cell counts were used for prochlorococcus. Flow cytometry and microscope counts of synechococcus were included.
+
+
+The specific cruises used to compile the datasets are listed by the authors in the supporting information for the reference paper.
+(https://www.pnas.org/content/pnas/suppl/2013/05/23/1307701110.DCSupplemental/pnas.201307701SI.pdf?targetid=nameddest%3DST1)
 
 
 
