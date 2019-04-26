@@ -24,7 +24,6 @@ ESV - Exact Sequence Variants
 
 
 
-
 Table of Variables
 ******************
 
@@ -42,6 +41,14 @@ Dataset Description
 
 Exact sequence variants derived from the publicly-available data from the R/V Polarstern ANT28-5 cruise, which is a latitudinal transect from the bottom of South America to Europe. This dataset is comprised of various samples from different depths. Qiime2 was used to process sequence data from raw data obtained from NCBI.
 
+Sample of Cells per mL for 50uM Prefiltered Water
+-------------------------------------------------
+
+.. raw:: html
+
+    <iframe src="../../_static/var_plots/prok_cells_10E05_per_ml.html"  frameborder = 0  height="700px" width="100%">></iframe>
+
+|
 
 
 Data Source
