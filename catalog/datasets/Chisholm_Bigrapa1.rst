@@ -1,12 +1,12 @@
 :orphan:
 
-.. _Chisholm:
-
-Prochlorococcus Abundance and Metadata
-**************************************
+.. _Chisholm_bigrapa1:
 
 BiGRAPA1 Cruise
-=================
+***************
+
+Prochlorococcus Abundance and Metadata for the BigGrapa 1 Cruise
+################################################################
 
 .. |cruise| image:: /_static/catalog_thumbnails/sailboat.png
    :scale: 10%
@@ -18,21 +18,27 @@ BiGRAPA1 Cruise
   :align: middle
 
 
+
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+--------------+
 | Datset Name                   | Coverage | Sensor   |  Make       |     Spatial Resolution | Temporal Resolution  |  Start Date  |  End Date    |
 +===============================+==========+==========+=============+========================+======================+==============+==============+
-| | :ref:`Chisholm`             | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  2010-11-19  | 2010-12-12   |
-| | (BiGRAPA1 Cruise)           |          |          |             |                        |                      |              |              |
+| | :ref:`Chisholm_bigrapa1`    | |globe|  ||cruise|  | Observation |     Irregular          |        Irregular     |  2010-11-19  | 2010-12-12   |
 +-------------------------------+----------+----------+-------------+------------------------+----------------------+--------------+--------------+
 
 Table of Variables
 ******************
+
+CTD Data
+########
 
 .. raw:: html
 
     <iframe src="../../_static/var_tables/tblCTD_Chisholm/tblCTD_Chisholm.html"  frameborder = 0 height = '250px' width="100%">></iframe>
 
 |
+
+Bottle Data
+###########
 
 .. raw:: html
 
@@ -58,7 +64,7 @@ At station 1, the mixed layer samples do not have technical replicates. In the f
 
 
 Prochlorococcus ecotype qPCR counts for the BiG RAPA cruise
-===========================================================
+###########################################################
 
 
 

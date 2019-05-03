@@ -28,7 +28,7 @@ table.docutils td li {
 
 }
 .wy-nav-content {
-    max-width: 1300px !important;
+    max-width: none;
 }
 
 
